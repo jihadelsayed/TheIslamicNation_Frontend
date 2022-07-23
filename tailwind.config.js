@@ -6,7 +6,7 @@ module.exports = {
 
   ],
   mode: "jit",
-  darkMode: "class",//media
+  darkMode: "media",//class
     theme: {
         extend: {
             fontFamily: {

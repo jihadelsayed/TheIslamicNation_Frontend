@@ -92,7 +92,10 @@ export class HeaderComponent implements OnInit {
 
   openDialogLoging() {
     const dialogRef = this.dialog.open(SignInComponent,
-        {width: '600px'}
+        {      maxWidth: '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',}
 
   );
 
