@@ -29,6 +29,8 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MuslimsComponent } from './muslims/muslims.component';
+import { CardMuslimComponent } from './muslims/card-muslim/card-muslim.component';
+import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.component';
 
 
 
@@ -40,7 +42,9 @@ import { MuslimsComponent } from './muslims/muslims.component';
     SignUpComponent,
     SignInComponent,
     SpinnerComponent,
-    MuslimsComponent
+    MuslimsComponent,
+    CardMuslimComponent,
+    DetailMuslimComponent
   ],
   imports: [
     BrowserModule,
