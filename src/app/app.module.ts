@@ -31,6 +31,16 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { MuslimsComponent } from './muslims/muslims.component';
 import { CardMuslimComponent } from './muslims/card-muslim/card-muslim.component';
 import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.component';
+import { QuranComponent } from './quran/quran.component';
+import { HomeComponent } from './home/home.component';
+import { QuranService } from 'src/services/Quran/Quran.service';
+import { AyaComponent } from './quran/aya/aya.component';
+import { ContinentsComponent } from './continents/continents.component';
+import { CountriesComponent } from './continents/countries/countries.component';
+import { StatesComponent } from './continents/countries/states/states.component';
+import { IslamComponent } from './religions/islam/islam.component';
+import { ReligionsComponent } from './religions/religions.component';
+import { EchartsxModule } from 'echarts-for-angular';
 
 
 
@@ -44,7 +54,15 @@ import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.com
     SpinnerComponent,
     MuslimsComponent,
     CardMuslimComponent,
-    DetailMuslimComponent
+    DetailMuslimComponent,
+    CountriesComponent,
+    StatesComponent,
+    QuranComponent,
+    HomeComponent,
+    AyaComponent,
+    ContinentsComponent,
+    IslamComponent,
+    ReligionsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +72,7 @@ import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.com
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    EchartsxModule,
     ToastrModule.forRoot(),
     // FlexLayoutModule,
     SelectionLoaderModule,
@@ -66,7 +85,7 @@ import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.com
     //   registrationStrategy: 'registerWhenStable:30000'
     // })
   ],
-  providers: [UserService,AuthGuard,ChatService,WebsocketService,SearchService,
+  providers: [UserService,AuthGuard,ChatService,WebsocketService,SearchService,QuranService,
     { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })

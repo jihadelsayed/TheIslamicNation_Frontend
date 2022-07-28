@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +8,12 @@
   .content-auto {
     content-visibility: auto;
   }
+}
+a{
+  font-family: 'Droid Arabic Kufi', serif;
+  word-spacing: 1px;
+}
+a{
+  font-family: 'Droid Arabic Kufi', serif;
+  word-spacing: 1px;
 }

@@ -1,0 +1,35 @@
+<section class="bg-white dark:bg-green-900">
+  <div class="container px-6 py-16 mx-auto text-center">
+      <div *ngFor="let ayaah of ayatext" class="max-w-lg mx-auto">
+        <p>{{ayaah.aya[0].bismillah}}</p>
+          <h1 class="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl">
+            <p>سورة {{ayaah.name}}</p>
+
+          </h1>
+          <li *ngFor="let text of ayaah.aya">
+            <a> {{text.text}} </a>
+            <label><i class="fas fa-certificate"></i></label>
+          </li>
+          <p class="mt-6 text-gray-500 dark:text-gray-300">
+              الشرح
+          </p>
+
+          <div class="w-full max-w-sm mx-auto mt-6 bg-transparent border rounded-md dark:border-gray-700 focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 dark:focus-within:border-blue-300 focus-within:ring-opacity-40">
+              <form class="flex flex-col md:flex-row">
+                <button (click)="moveright()" type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+                  اللاحق
+
+                </button>
+                <button id="fehres" routerLink="/quran" type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+                  الفِهْرِس
+
+                </button>
+                  <button (click)="moveLeft()" type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+                    التالي
+
+                  </button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
