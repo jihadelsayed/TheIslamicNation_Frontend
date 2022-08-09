@@ -1,3 +1,7 @@
+import { ArabicComponent } from './languages/arabic/arabic.component';
+import { ReligionsBooksComponent } from './religions-books/religions-books.component';
+import { LanguagesComponent } from './languages/languages.component';
+import { AllahComponent } from './allah/allah.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from 'src/services/auth/auth.guard';
@@ -10,24 +14,38 @@ import { StatesComponent } from './continents/countries/states/states.component'
 
 import { HomeComponent } from './home/home.component';
 import { MuslimsComponent } from './muslims/muslims.component';
-import { AyaComponent } from './quran/aya/aya.component';
-import { QuranComponent } from './quran/quran.component';
 import { IslamComponent } from './religions/islam/islam.component';
 import { ReligionsComponent } from './religions/religions.component';
+import { QuranComponent } from './religions-books/quran/quran.component';
+import { AyaComponent } from './religions-books/quran/aya/aya.component';
 
 
 
 const routes: Routes = [
-  { path:'',component: HomeComponent },
-  // { path:'search',component: SearchComponent },
+  { path:'allah',component: AllahComponent },
+
+  { path:'languages',component: LanguagesComponent },
+  { path:'languages/arabic',component: ArabicComponent },
+
+  { path:'muslims',component: MuslimsComponent },
+
+  { path:'religions',component: ReligionsComponent },
+  { path:'religions/islam',component: IslamComponent },
+
+  { path:'religionsBooks',component: ReligionsBooksComponent },
+  { path:'religionsBooks/quran',component: QuranComponent },
+  { path:'religionsBooks/quran/souwar/:index',component: AyaComponent },
+
   { path:'continents',component: ContinentsComponent },
   { path:'continents/countries',component: StatesComponent },
   { path:'continents/countries/states',component: StatesComponent },
-  { path:'quran',component: QuranComponent },
-  { path:'quran/souwar/:index',component: AyaComponent },
-  { path:'muslims',component: MuslimsComponent },
-  { path:'islam',component: IslamComponent },
-  { path:'religions',component: ReligionsComponent },
+
+  { path:'',component: HomeComponent },
+
+  // { path:'search',component: SearchComponent },
+
+
+
 
   // { path:'chat',component: ChatComponent ,canActivate:[AuthGuard] },
   // { path:'deleteAccount',component: DeleteAccountComponent ,canActivate:[AuthGuard] },
@@ -51,6 +69,7 @@ const routes: Routes = [
   // { path:'CheckoutUnsuccess',component: CheckoutUnsuccessPageComponent, canActivate:[AuthGuard]},
   // { path:'Approved',component: ApprovedPageComponent, canActivate:[AuthGuard]},
   // { path:'orderDetail',component: OrderDetailComponent, canActivate:[AuthGuard]},
+
   // { path:'**',component: ErrorPageComponent }
 
 

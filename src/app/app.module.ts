@@ -31,16 +31,21 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { MuslimsComponent } from './muslims/muslims.component';
 import { CardMuslimComponent } from './muslims/card-muslim/card-muslim.component';
 import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.component';
-import { QuranComponent } from './quran/quran.component';
 import { HomeComponent } from './home/home.component';
 import { QuranService } from 'src/services/Quran/Quran.service';
-import { AyaComponent } from './quran/aya/aya.component';
 import { ContinentsComponent } from './continents/continents.component';
 import { CountriesComponent } from './continents/countries/countries.component';
 import { StatesComponent } from './continents/countries/states/states.component';
 import { IslamComponent } from './religions/islam/islam.component';
 import { ReligionsComponent } from './religions/religions.component';
 import { EchartsxModule } from 'echarts-for-angular';
+import { AllahComponent } from './allah/allah.component';
+import { LanguagesComponent } from './languages/languages.component';
+import { ArabicComponent } from './languages/arabic/arabic.component';
+import { ReligionsBooksComponent } from './religions-books/religions-books.component';
+import { AyaComponent } from './religions-books/quran/aya/aya.component';
+import { QuranComponent } from './religions-books/quran/quran.component';
+import { NamesOfAllahService } from 'src/services/allah/names-of-allah.service';
 
 
 
@@ -62,7 +67,11 @@ import { EchartsxModule } from 'echarts-for-angular';
     AyaComponent,
     ContinentsComponent,
     IslamComponent,
-    ReligionsComponent
+    ReligionsComponent,
+    AllahComponent,
+    LanguagesComponent,
+    ArabicComponent,
+    ReligionsBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +94,7 @@ import { EchartsxModule } from 'echarts-for-angular';
     //   registrationStrategy: 'registerWhenStable:30000'
     // })
   ],
-  providers: [UserService,AuthGuard,ChatService,WebsocketService,SearchService,QuranService,
+  providers: [UserService,AuthGuard,ChatService,WebsocketService,SearchService,QuranService,NamesOfAllahService,
     { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
