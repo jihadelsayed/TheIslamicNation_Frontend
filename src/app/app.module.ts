@@ -42,10 +42,24 @@ import { EchartsxModule } from 'echarts-for-angular';
 import { AllahComponent } from './allah/allah.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { ArabicComponent } from './languages/arabic/arabic.component';
-import { ReligionsBooksComponent } from './religions-books/religions-books.component';
-import { AyaComponent } from './religions-books/quran/aya/aya.component';
-import { QuranComponent } from './religions-books/quran/quran.component';
+
 import { NamesOfAllahService } from 'src/services/allah/names-of-allah.service';
+import { FooterComponent } from './footer/footer.component';
+import { WhoComponent } from './footer/who/who.component';
+import { WhatComponent } from './footer/what/what.component';
+import { WhyComponent } from './footer/why/why.component';
+import { HowComponent } from './footer/how/how.component';
+import { ContactComponent } from './footer/contact/contact.component';
+import { UserMenuComponent } from './header/user-menu/user-menu.component';
+import { UserNotificationsMenuComponent } from './header/user-notifications-menu/user-notifications-menu.component';
+import { FAQComponent } from './footer/faq/faq.component';
+import { CookiesComponent } from './footer/cookies/cookies.component';
+import { PolicyComponent } from './footer/policy/policy.component';
+import { MinistriesComponent } from './ministries/ministries.component';
+import { AyaComponent } from './religions/religions-books/quran/aya/aya.component';
+import { QuranComponent } from './religions/religions-books/quran/quran.component';
+import { ReligionsBooksComponent } from './religions/religions-books/religions-books.component';
+import { CreaturesComponent } from './creatures/creatures.component';
 
 
 
@@ -71,7 +85,20 @@ import { NamesOfAllahService } from 'src/services/allah/names-of-allah.service';
     AllahComponent,
     LanguagesComponent,
     ArabicComponent,
-    ReligionsBooksComponent
+    ReligionsBooksComponent,
+    FooterComponent,
+    WhoComponent,
+    WhatComponent,
+    WhyComponent,
+    HowComponent,
+    ContactComponent,
+    UserMenuComponent,
+    UserNotificationsMenuComponent,
+    FAQComponent,
+    CookiesComponent,
+    PolicyComponent,
+    MinistriesComponent,
+    CreaturesComponent
   ],
   imports: [
     BrowserModule,

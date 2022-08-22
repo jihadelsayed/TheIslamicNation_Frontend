@@ -1,5 +1,14 @@
+import { CreaturesComponent } from './creatures/creatures.component';
+import { MinistriesComponent } from './ministries/ministries.component';
+import { PolicyComponent } from './footer/policy/policy.component';
+import { CookiesComponent } from './footer/cookies/cookies.component';
+import { FAQComponent } from './footer/faq/faq.component';
+import { ContactComponent } from './footer/contact/contact.component';
+import { WhyComponent } from './footer/why/why.component';
+import { WhatComponent } from './footer/what/what.component';
+import { WhoComponent } from './footer/who/who.component';
+import { HowComponent } from './footer/how/how.component';
 import { ArabicComponent } from './languages/arabic/arabic.component';
-import { ReligionsBooksComponent } from './religions-books/religions-books.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { AllahComponent } from './allah/allah.component';
 import { NgModule } from '@angular/core';
@@ -16,8 +25,10 @@ import { HomeComponent } from './home/home.component';
 import { MuslimsComponent } from './muslims/muslims.component';
 import { IslamComponent } from './religions/islam/islam.component';
 import { ReligionsComponent } from './religions/religions.component';
-import { QuranComponent } from './religions-books/quran/quran.component';
-import { AyaComponent } from './religions-books/quran/aya/aya.component';
+import { QuranComponent } from './religions/religions-books/quran/quran.component';
+import { AyaComponent } from './religions/religions-books/quran/aya/aya.component';
+import { ReligionsBooksComponent } from './religions/religions-books/religions-books.component';
+
 
 
 
@@ -27,18 +38,31 @@ const routes: Routes = [
   { path:'languages',component: LanguagesComponent },
   { path:'languages/arabic',component: ArabicComponent },
 
+  { path:'ministries',component: MinistriesComponent },
   { path:'muslims',component: MuslimsComponent },
 
   { path:'religions',component: ReligionsComponent },
   { path:'religions/islam',component: IslamComponent },
 
-  { path:'religionsBooks',component: ReligionsBooksComponent },
-  { path:'religionsBooks/quran',component: QuranComponent },
-  { path:'religionsBooks/quran/souwar/:index',component: AyaComponent },
+  { path:'religions/religionsBooks',component: ReligionsBooksComponent },
+  { path:'religions/religionsBooks/quran',component: QuranComponent },
+  { path:'religions/religionsBooks/quran/souwar/:index',component: AyaComponent },
 
   { path:'continents',component: ContinentsComponent },
   { path:'continents/countries',component: StatesComponent },
   { path:'continents/countries/states',component: StatesComponent },
+
+  { path:'creatures',component: CreaturesComponent },
+
+
+  { path:'how',component: HowComponent },
+  { path:'who',component: WhoComponent },
+  { path:'what',component: WhatComponent },
+  { path:'why',component: WhyComponent },
+  { path:'contact',component: ContactComponent },
+  { path:'faq',component: FAQComponent },
+  { path:'cookies',component: CookiesComponent },
+  { path:'policy',component: PolicyComponent },
 
   { path:'',component: HomeComponent },
 
