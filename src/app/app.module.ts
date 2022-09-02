@@ -28,20 +28,10 @@ import { MaterialModule } from './material';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SpinnerComponent } from './spinner/spinner.component';
-import { MuslimsComponent } from './muslims/muslims.component';
-import { CardMuslimComponent } from './muslims/card-muslim/card-muslim.component';
-import { DetailMuslimComponent } from './muslims/detail-muslim/detail-muslim.component';
-import { HomeComponent } from './home/home.component';
+
 import { QuranService } from 'src/services/Quran/Quran.service';
-import { ContinentsComponent } from './continents/continents.component';
-import { CountriesComponent } from './continents/countries/countries.component';
-import { StatesComponent } from './continents/countries/states/states.component';
-import { IslamComponent } from './religions/islam/islam.component';
-import { ReligionsComponent } from './religions/religions.component';
+
 import { EchartsxModule } from 'echarts-for-angular';
-import { AllahComponent } from './allah/allah.component';
-import { LanguagesComponent } from './languages/languages.component';
-import { ArabicComponent } from './languages/arabic/arabic.component';
 
 import { NamesOfAllahService } from 'src/services/allah/names-of-allah.service';
 import { FooterComponent } from './footer/footer.component';
@@ -55,11 +45,24 @@ import { UserNotificationsMenuComponent } from './header/user-notifications-menu
 import { FAQComponent } from './footer/faq/faq.component';
 import { CookiesComponent } from './footer/cookies/cookies.component';
 import { PolicyComponent } from './footer/policy/policy.component';
-import { MinistriesComponent } from './ministries/ministries.component';
-import { AyaComponent } from './religions/religions-books/quran/aya/aya.component';
-import { QuranComponent } from './religions/religions-books/quran/quran.component';
-import { ReligionsBooksComponent } from './religions/religions-books/religions-books.component';
-import { CreaturesComponent } from './creatures/creatures.component';
+import { AllahComponent } from './header/the-creator/allah/allah.component';
+import { AyaComponent } from './header/religions/religions-books/quran/aya/aya.component';
+import { ArabicComponent } from './header/languages/arabic/arabic.component';
+import { LanguagesComponent } from './header/languages/languages.component';
+import { CreaturesComponent } from './header/creatures/creatures.component';
+import { HomeComponent } from './header/home/home.component';
+import { CardMuslimComponent } from './header/muslims/card-muslim/card-muslim.component';
+import { DetailMuslimComponent } from './header/muslims/detail-muslim/detail-muslim.component';
+import { MuslimsComponent } from './header/muslims/muslims.component';
+import { IslamComponent } from './header/islam/islam.component';
+import { QuranComponent } from './header/religions/religions-books/quran/quran.component';
+import { ReligionsBooksComponent } from './header/religions/religions-books/religions-books.component';
+import { ReligionsComponent } from './header/religions/religions.component';
+import { TheCreatorComponent } from './header/the-creator/the-creator.component';
+import { CountriesComponent } from './header/muslims/continents/countries/countries.component';
+import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
+import { ContinentsComponent } from './header/muslims/continents/continents.component';
+
 
 
 
@@ -75,7 +78,7 @@ import { CreaturesComponent } from './creatures/creatures.component';
     CardMuslimComponent,
     DetailMuslimComponent,
     CountriesComponent,
-    StatesComponent,
+    WhatComponent,
     QuranComponent,
     HomeComponent,
     AyaComponent,
@@ -98,7 +101,8 @@ import { CreaturesComponent } from './creatures/creatures.component';
     CookiesComponent,
     PolicyComponent,
     MinistriesComponent,
-    CreaturesComponent
+    CreaturesComponent,
+    TheCreatorComponent,
   ],
   imports: [
     BrowserModule,

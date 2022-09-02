@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/theislamicnation",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
