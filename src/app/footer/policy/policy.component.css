@@ -30,6 +30,7 @@ mat-expansion-panel{
 mat-accordion{width: 100%;}
 
 mat-expansion-panel, mat-panel-title, mat-panel-description{
-    Background-color:rgb(32, 61, 77);
-    color: rgb(255, 255, 255);}
+  background-color:rgb(32, 61, 77);
+    color: rgb(255, 255, 255);
+}
 

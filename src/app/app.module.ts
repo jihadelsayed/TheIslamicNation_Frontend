@@ -62,6 +62,11 @@ import { TheCreatorComponent } from './header/the-creator/the-creator.component'
 import { CountriesComponent } from './header/muslims/continents/countries/countries.component';
 import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
 import { ContinentsComponent } from './header/muslims/continents/continents.component';
+import { ProvisionsComponent } from './header/islam/provisions/provisions.component';
+import { CreedsComponent } from './header/islam/creeds/creeds.component';
+import { DoctrinesComponent } from './header/islam/doctrines/doctrines.component';
+import { JurisprudencesComponent } from './header/islam/jurisprudences/jurisprudences.component';
+import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillars.component';
 
 
 
@@ -103,6 +108,11 @@ import { ContinentsComponent } from './header/muslims/continents/continents.comp
     MinistriesComponent,
     CreaturesComponent,
     TheCreatorComponent,
+    ProvisionsComponent,
+    CreedsComponent,
+    DoctrinesComponent,
+    JurisprudencesComponent,
+    IslamPillarsComponent,
   ],
   imports: [
     BrowserModule,

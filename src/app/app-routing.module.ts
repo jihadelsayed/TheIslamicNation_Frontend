@@ -1,3 +1,8 @@
+import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillars.component';
+import { JurisprudencesComponent } from './header/islam/jurisprudences/jurisprudences.component';
+import { DoctrinesComponent } from './header/islam/doctrines/doctrines.component';
+import { CreedsComponent } from './header/islam/creeds/creeds.component';
+import { ProvisionsComponent } from './header/islam/provisions/provisions.component';
 import { TheCreatorComponent } from './header/the-creator/the-creator.component';
 import { PolicyComponent } from './footer/policy/policy.component';
 import { CookiesComponent } from './footer/cookies/cookies.component';
@@ -62,6 +67,11 @@ const routes: Routes = [
   { path:'muslims/ministries',component: MinistriesComponent },
 
   { path:'islam',component: IslamComponent },
+  { path:'islam/provisions',component: ProvisionsComponent }, // الاحكام الشرعية
+  { path:'islam/creeds',component: CreedsComponent }, // العقيدة
+  { path:'islam/doctrines',component: DoctrinesComponent }, // الاجتهادات
+  { path:'islam/jurisprudences',component: JurisprudencesComponent }, // الفقه  يختلف بكل زمان ومكان
+  { path:'islam/pillars',component: IslamPillarsComponent }, // أركان الاسلام
 
 
   // footer
