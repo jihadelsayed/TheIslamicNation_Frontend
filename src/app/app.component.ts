@@ -29,7 +29,7 @@ export class AppComponent {
           }
         }, false);
       }
-      this.frameSrc= environment.LoginURL+"#/getCredential"+"?"+ "host="+ window.location.href+"&"+"language="+ window.navigator.language +"&" + "pathname="+window.location.pathname;
+      this.frameSrc= environment.LoginURL+ window.navigator.language.substring(0, 2)+"/#/getCredential"+"?"+ "host="+ window.location.href+"&"+"language="+ window.navigator.language +"&" + "pathname="+window.location.pathname;
       document.getElementById('iframeAccount')["src"] = this.frameSrc;
       console.log(this.frameSrc)
     }

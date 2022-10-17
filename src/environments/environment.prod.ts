@@ -9,5 +9,5 @@ export const environment = {
   CHAT_URL: "wss://palimago.herokuapp.com/ws/chat/",
   SERVER_URL_WITH_OUT_SLASH: "",
   FrontEnd_URL: "https://www.swapynet.com",
-  LoginURL: "https://account.neetechs.com/",
+  LoginURL: "https://accounts.neetechs.com/",
 };
