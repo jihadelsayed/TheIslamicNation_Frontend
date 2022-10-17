@@ -9,5 +9,6 @@ export const environment = {
   CHAT_URL: "wss://theislamicnation.us-east-1.elasticbeanstalk.com/ws/chat/",
   SERVER_URL_WITH_OUT_SLASH: "",
   FrontEnd_URL: "https://main.d2l2e2nscw5pbm.amplifyapp.com",
+  LoginURL: "http://localhost:4442/",
 };
 

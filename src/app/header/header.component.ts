@@ -2,11 +2,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
 import { ChatService } from 'src/services/websocket/chat.service';
-import { SignInComponent } from '../auth/sign-in/sign-in.component';
 import { SignUpComponent } from '../auth/sign-up/sign-up.component';
 
 
@@ -24,8 +24,10 @@ export class HeaderComponent implements OnInit {
     unReedMessages:Observable<any> = JSON.parse(localStorage.getItem('unReedMessages')!)  || []
     messageBadge = 0
     notifications=15;
-    constructor(private http: HttpClient,private router: Router,public dialog: MatDialog,private chatService: ChatService) {
+    constructor(private http: HttpClient,
+      private cookie: CookieService,private router: Router,public dialog: MatDialog,private chatService: ChatService) {
       //connect to websocket
+
       if (localStorage.getItem('userToken') != null){
         this.chatService.connectToWebsocket()
         chatService.messages.subscribe(msg => {
@@ -91,17 +93,21 @@ export class HeaderComponent implements OnInit {
 
 
   openDialogLoging() {
-    const dialogRef = this.dialog.open(SignInComponent,
-        {      maxWidth: '100vw',
-        maxHeight: '100vh',
-        height: '100%',
-        width: '100%',}
+    window.location.href = 'https://accounts.neetechs.com/ar/#/signin/'+"?"+ "host="+ window.location.host+"&"+"language="+ window.navigator.language +"&" + "pathname="+window.location.pathname;
 
-  );
 
-    dialogRef.afterClosed().subscribe((result: any) => {
-      console.log(`Dialog result: ${result}`);
-    });
+
+  //   const dialogRef = this.dialog.open(SignInComponent,
+  //       {      maxWidth: '100vw',
+  //       maxHeight: '100vh',
+  //       height: '100%',
+  //       width: '100%',}
+
+  // );
+
+  //   dialogRef.afterClosed().subscribe((result: any) => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
   }
 
   openDialogSignUp() {

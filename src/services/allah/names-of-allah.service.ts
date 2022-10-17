@@ -10,6 +10,6 @@ export class NamesOfAllahService {
 
   getAllNames() {
     //return this.httpClient.get('./assets/Names_Of_Allah_EN.json');
-    return this.httpClient.get('./assets/Names_Of_Allah_EN.json');
+    return this.httpClient.get('https://neetechss3.s3.eu-north-1.amazonaws.com/Names_Of_Allah_EN.json');
   }
 }

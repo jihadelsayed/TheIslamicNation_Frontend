@@ -28,6 +28,7 @@
     "echarts-for-angular": "^0.4.0",
     "events": "^3.3.0",
     "lodash": "^4.17.21",
+    "ngx-cookie-service": "^14.0.1",
     "ngx-soap": "^0.7.0",
     "ngx-toastr": "^15.0.0",
     "rxjs": "~7.5.0",
