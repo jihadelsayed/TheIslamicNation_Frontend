@@ -4,42 +4,123 @@
   "newProjectRoot": "projects",
   "projects": {
     "theislamicnation": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "ar": "src/locale/messages.ar.xlf",
+          "es": "src/locale/messages.es.xlf",
+          "pt": "src/locale/messages.pt.xlf",
+          "de": "src/locale/messages.de.xlf",
+          "ru": "src/locale/messages.ru.xlf",
+          "sv": "src/locale/messages.sv.xlf",
+          "zh": "src/locale/messages.zh.xlf",
+          "fr": "src/locale/messages.fr.xlf",
+          "en": "src/locale/messages.xlf"
+        }
+      },
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            // for build multiply localization
+            "localize":[
+              "ar",
+              "es",
+              "pt",
+              "ar",
+              "de",
+              "ru",
+              "sv",
+              "zh",
+              "fr",
+              "en"
+            ],
             "outputPath": "dist/theislamicnation",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
+            "es":{
+              "localize":[
+                "es"
+            ]
+            },
+            "en":{
+              "localize":[
+                "en"
+            ]
+            },
+            "pt":{
+              "localize":[
+                "pt"
+            ]
+            },
+            "ar":{
+              "localize":[
+                "ar"
+            ]
+            },
+            "de":{
+              "localize":[
+                "de"
+            ]
+            },
+            "ru":{
+              "localize":[
+                "ru"
+            ]
+            },
+            "sv":{
+              "localize":[
+                "sv"
+            ]
+            },
+            "zh":{
+              "localize":[
+                "zh"
+            ]
+            },
+            "fr":{
+              "localize":[
+                "fr"
+            ]
+            },
             "production": {
               "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "4mb"
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "5mb"
+                  "maximumError": "4kb"
                 }
               ],
               "fileReplacements": [
@@ -50,6 +131,7 @@
               ],
               "outputHashing": "all"
             },
+
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -69,6 +151,34 @@
             },
             "development": {
               "browserTarget": "theislamicnation:build:development"
+            },
+            "ar": {
+              "browserTarget": "theislamicnation:build:ar"
+            },
+            "en": {
+              "browserTarget": "theislamicnation:build:en"
+            },
+            "es": {
+              "browserTarget": "theislamicnation:build:es"
+            },
+            "pt": {
+              "browserTarget": "theislamicnation:build:pt"
+            },
+
+            "de": {
+              "browserTarget": "theislamicnation:build:de"
+            },
+            "ru": {
+              "browserTarget": "theislamicnation:build:ru"
+            },
+            "sv": {
+              "browserTarget": "theislamicnation:build:sv"
+            },
+            "zh": {
+              "browserTarget": "theislamicnation:build:zh"
+            },
+            "fr": {
+              "browserTarget": "theislamicnation:build:fr"
             }
           },
           "defaultConfiguration": "development"
@@ -86,17 +196,27 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        // adding folder
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
+
       }
     }
   }
