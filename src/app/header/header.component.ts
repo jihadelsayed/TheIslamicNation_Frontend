@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -25,7 +24,6 @@ export class HeaderComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    public dialog: MatDialog,
     private chatService: ChatService
     ) {
     //connect to websocket
