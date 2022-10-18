@@ -17,8 +17,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from 'src/services/auth/auth.guard';
 import { NotAuthGuard } from 'src/services/auth/not-auth.guard';
-import { SignInComponent } from './auth/sign-in/sign-in.component';
-import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { CreaturesComponent } from './header/creatures/creatures.component';
 import { HomeComponent } from './header/home/home.component';
 import { ArabicComponent } from './header/languages/arabic/arabic.component';
@@ -99,8 +97,7 @@ const routes: Routes = [
   // { path:'Profile/:username',component: ProfileComponent,canActivate:[NotAuthGuard]},
   // { path:'addservice',component: AddServiceComponent,canActivate:[AuthGuard]},
   // { path:'editservice/:slug',component: EditServiceComponent ,canActivate:[] },
-  { path:'signup',component: SignUpComponent,canActivate:[NotAuthGuard] },
-  { path:'signin',component: SignInComponent,canActivate:[NotAuthGuard] },
+
   // { path:'Profile/:username/profileServices',component: ProfileServicesComponent, canActivate:[AuthGuard] },
   // { path:'aboutUs',component: AboutUsComponent},
   // { path:'cookies',component: CookiesComponent},

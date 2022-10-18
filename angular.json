@@ -209,7 +209,6 @@
             "scripts": []
           }
         },
-        // adding folder
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
