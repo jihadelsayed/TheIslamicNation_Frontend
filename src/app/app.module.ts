@@ -1,10 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { BrowserModule } from '@angular/platform-browser';
+
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ToastrModule } from 'ngx-toastr';
+
 
 // ng ----- Matriall
+import { MaterialModule } from './material';
 
 ///forms
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
@@ -13,9 +18,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 //notification api jeson
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { environment } from '../environments/environment';
 import { httpInterceptor } from 'src/interceptor/http-interceptor';
 import { SelectionLoaderModule } from './selection-loader/selection-loader.module';
 import { UserService } from 'src/services/auth/user.service';
@@ -23,10 +25,6 @@ import { AuthGuard } from 'src/services/auth/auth.guard';
 import { ChatService } from 'src/services/websocket/chat.service';
 import { WebsocketService } from 'src/services/websocket/websocket.service';
 import { SearchService } from 'src/services/search/search.service';
-import { ToastrModule } from 'ngx-toastr';
-import { MaterialModule } from './material';
-import { SignUpComponent } from './auth/sign-up/sign-up.component';
-import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 
 import { QuranService } from 'src/services/Quran/Quran.service';
@@ -76,8 +74,6 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
   declarations: [
     AppComponent,
     HeaderComponent,
-    SignUpComponent,
-    SignInComponent,
     SpinnerComponent,
     MuslimsComponent,
     CardMuslimComponent,
@@ -118,14 +114,19 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     EchartsxModule,
-    ToastrModule.forRoot(),
+    //FormsModule,
+    //ReactiveFormsModule,
     // FlexLayoutModule,
     SelectionLoaderModule,
+    //ToastrModule.forRoot(),
+    // BrowserAnimationsModule,
+    //
+    //
+    //
+    //
+    //
     // AvatarModule,
     // StripeModule.forRoot(""),
     // ServiceWorkerModule.register('ngsw-worker.js', {
