@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 
-//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ToastrModule } from 'ngx-toastr';
 
 
@@ -31,7 +31,7 @@ import { QuranService } from 'src/services/Quran/Quran.service';
 
 import { EchartsxModule } from 'echarts-for-angular';
 
-import { NamesOfAllahService } from 'src/services/allah/names-of-allah.service';
+import { NamesService } from 'src/services/names/names.service';
 import { FooterComponent } from './footer/footer.component';
 import { WhoComponent } from './footer/who/who.component';
 import { WhatComponent } from './footer/what/what.component';
@@ -43,7 +43,7 @@ import { UserNotificationsMenuComponent } from './header/user-notifications-menu
 import { FAQComponent } from './footer/faq/faq.component';
 import { CookiesComponent } from './footer/cookies/cookies.component';
 import { PolicyComponent } from './footer/policy/policy.component';
-import { AllahComponent } from './header/the-creator/allah/allah.component';
+import { namesComponent } from './header/the-creator/names/names.component';
 import { AyaComponent } from './header/religions/religions-books/quran/aya/aya.component';
 import { ArabicComponent } from './header/languages/arabic/arabic.component';
 import { LanguagesComponent } from './header/languages/languages.component';
@@ -65,6 +65,9 @@ import { CreedsComponent } from './header/islam/creeds/creeds.component';
 import { DoctrinesComponent } from './header/islam/doctrines/doctrines.component';
 import { JurisprudencesComponent } from './header/islam/jurisprudences/jurisprudences.component';
 import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillars.component';
+import { LoginMenuComponent } from './header/login-menu/login-menu.component';
+import { MenuComponent } from './header/menu/menu.component';
+import { SearchMenuComponent } from './header/search-menu/search-menu.component';
 
 
 
@@ -86,7 +89,7 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
     ContinentsComponent,
     IslamComponent,
     ReligionsComponent,
-    AllahComponent,
+    namesComponent,
     LanguagesComponent,
     ArabicComponent,
     ReligionsBooksComponent,
@@ -109,6 +112,9 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
     DoctrinesComponent,
     JurisprudencesComponent,
     IslamPillarsComponent,
+    LoginMenuComponent,
+    MenuComponent,
+    SearchMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -121,7 +127,7 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
     // FlexLayoutModule,
     SelectionLoaderModule,
     //ToastrModule.forRoot(),
-    // BrowserAnimationsModule,
+    BrowserAnimationsModule,
     //
     //
     //
@@ -136,7 +142,9 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
     //   registrationStrategy: 'registerWhenStable:30000'
     // })
   ],
-  providers: [UserService,AuthGuard,ChatService,WebsocketService,SearchService,QuranService,NamesOfAllahService,
+  providers: [UserService,AuthGuard,
+    //ChatService,WebsocketService,SearchService,
+    QuranService,NamesService,
     { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })

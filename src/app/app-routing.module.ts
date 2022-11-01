@@ -27,7 +27,7 @@ import { AyaComponent } from './header/religions/religions-books/quran/aya/aya.c
 import { QuranComponent } from './header/religions/religions-books/quran/quran.component';
 import { ReligionsBooksComponent } from './header/religions/religions-books/religions-books.component';
 import { ReligionsComponent } from './header/religions/religions.component';
-import { AllahComponent } from './header/the-creator/allah/allah.component';
+import { namesComponent } from './header/the-creator/names/names.component';
 import { ContinentsComponent } from './header/muslims/continents/continents.component';
 import { StatesComponent } from './header/muslims/continents/countries/states/states.component';
 import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
@@ -54,7 +54,7 @@ const routes: Routes = [
   { path:'religionsBooks/quran/souwar/:index',component: AyaComponent },
 
   { path:'the_creator',component: TheCreatorComponent },
-  { path:'the_creator/allah',component: AllahComponent },
+  { path:'the_creator/names',component: namesComponent },
 
   { path:'creatures',component: CreaturesComponent },
 
@@ -117,7 +117,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
