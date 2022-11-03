@@ -28,8 +28,8 @@ import { QuranComponent } from './header/religions/religions-books/quran/quran.c
 import { ReligionsBooksComponent } from './header/religions/religions-books/religions-books.component';
 import { ReligionsComponent } from './header/religions/religions.component';
 import { namesComponent } from './header/the-creator/names/names.component';
-//import { ContinentsComponent } from './header/muslims/continents/continents.component';
-import { StatesComponent } from './header/muslims/continents/countries/states/states.component';
+//import { routerLink } from './header/muslims/continents/continents.component';
+//import { StatesComponent } from './header/muslims/continents/countries/states/states.component';
 import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
 
 
@@ -44,7 +44,7 @@ const routes: Routes = [
 
 
 
-  //{ path:'continents',component: ContinentsComponent },
+  //{ path:'continents',component: routerLink },
   //{ path:'continents/countries',component: StatesComponent },
   //{ path:'continents/countries/states',component: StatesComponent },
 

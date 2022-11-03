@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ToastrModule } from 'ngx-toastr';
 
 
@@ -12,24 +12,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 
 ///forms
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {FormsModule,
+//  ReactiveFormsModule
+} from '@angular/forms'
 
 ///http request api request
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 //notification api jeson
 import { httpInterceptor } from 'src/interceptor/http-interceptor';
-import { SelectionLoaderModule } from './selection-loader/selection-loader.module';
+//import { SelectionLoaderModule } from './selection-loader/selection-loader.module';
 import { UserService } from 'src/services/auth/user.service';
 import { AuthGuard } from 'src/services/auth/auth.guard';
-import { ChatService } from 'src/services/websocket/chat.service';
-import { WebsocketService } from 'src/services/websocket/websocket.service';
-import { SearchService } from 'src/services/search/search.service';
+//import { ChatService } from 'src/services/websocket/chat.service';
+//import { WebsocketService } from 'src/services/websocket/websocket.service';
+//import { SearchService } from 'src/services/search/search.service';
 import { SpinnerComponent } from './spinner/spinner.component';
 
-import { QuranService } from 'src/services/Quran/Quran.service';
+//import { QuranService } from 'src/services/Quran/Quran.service';
 
-import { EchartsxModule } from 'echarts-for-angular';
+//import { EchartsxModule } from 'echarts-for-angular';
 
 import { NamesService } from 'src/services/names/names.service';
 import { FooterComponent } from './footer/footer.component';
@@ -59,7 +61,7 @@ import { ReligionsComponent } from './header/religions/religions.component';
 import { TheCreatorComponent } from './header/the-creator/the-creator.component';
 import { CountriesComponent } from './header/muslims/continents/countries/countries.component';
 import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
-import { ContinentsComponent } from './header/muslims/continents/continents.component';
+//import { ContinentsComponent } from './header/muslims/continents/continents.component';
 import { ProvisionsComponent } from './header/islam/provisions/provisions.component';
 import { CreedsComponent } from './header/islam/creeds/creeds.component';
 import { DoctrinesComponent } from './header/islam/doctrines/doctrines.component';
@@ -86,7 +88,7 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
     QuranComponent,
     HomeComponent,
     AyaComponent,
-    ContinentsComponent,
+    //ContinentsComponent,
     IslamComponent,
     ReligionsComponent,
     namesComponent,
@@ -121,13 +123,13 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
-    EchartsxModule,
+    //EchartsxModule,
     FormsModule,
-    ReactiveFormsModule,
+    //ReactiveFormsModule,
     // FlexLayoutModule,
-    SelectionLoaderModule,
+    //SelectionLoaderModule,
     //ToastrModule.forRoot(),
-    BrowserAnimationsModule,
+    //BrowserAnimationsModule,
     //
     //
     //
@@ -144,7 +146,7 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
   ],
   providers: [UserService,AuthGuard,
     //ChatService,WebsocketService,SearchService,
-    QuranService,NamesService,
+    //QuranService,NamesService,
     { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
