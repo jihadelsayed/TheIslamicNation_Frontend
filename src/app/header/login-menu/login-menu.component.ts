@@ -12,9 +12,9 @@ export class LoginMenuComponent implements OnInit {
   ngOnInit(): void {
   }
   logIn() {
-    window.location.href = 'https://accounts.neetechs.com/ar/#/signin' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
+    window.location.href = 'https://accounts.neetechs.com/ar/#/signIn' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
   }
   SignUp() {
-    window.location.href = 'https://accounts.neetechs.com/ar/#/signup' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
+    window.location.href = 'https://accounts.neetechs.com/ar/#/signUp' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
   }
 }

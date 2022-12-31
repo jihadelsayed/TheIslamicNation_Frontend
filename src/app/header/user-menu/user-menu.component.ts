@@ -21,8 +21,8 @@ export class UserMenuComponent implements OnInit {
   }
   Logout() {
     localStorage.removeItem('userToken');
-    this.router.navigate(['/login']);
-    location.reload();
+    localStorage.removeItem('UserInfo');
+    window.location.href = 'https://accounts.neetechs.com/ar/#/signOut' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
 
   }
   Subscription() {
