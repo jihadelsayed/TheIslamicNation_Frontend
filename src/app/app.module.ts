@@ -1,4 +1,3 @@
-import { JwtInterceptor } from './../authorization/Jwt-interceptor.interceptor';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -70,6 +69,8 @@ import { LoginMenuComponent } from './header/login-menu/login-menu.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { SearchMenuComponent } from './header/search-menu/search-menu.component';
 import { AuthGuard } from './authorization/services/auth.guard';
+import { JwtInterceptor } from './authorization/Jwt-interceptor.interceptor';
+import { AuthorizationComponent } from './authorization/authorization.component';
 
 
 
@@ -78,6 +79,10 @@ import { AuthGuard } from './authorization/services/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
+
+    // authorization
+    AuthorizationComponent,
+
     // header component
     HeaderComponent,
     LoginMenuComponent,
