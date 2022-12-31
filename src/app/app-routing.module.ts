@@ -15,8 +15,6 @@ import { HowComponent } from './footer/how/how.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from 'src/services/auth/auth.guard';
-import { NotAuthGuard } from 'src/services/auth/not-auth.guard';
 import { CreaturesComponent } from './header/creatures/creatures.component';
 import { HomeComponent } from './header/home/home.component';
 import { ArabicComponent } from './header/languages/arabic/arabic.component';
@@ -31,6 +29,8 @@ import { namesComponent } from './header/the-creator/names/names.component';
 //import { ContinentsComponent } from './header/muslims/continents/continents.component';
 import { StatesComponent } from './header/muslims/continents/countries/states/states.component';
 import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
+import { NotAuthGuard } from './authorization/services/not-auth.guard';
+import { AuthGuard } from './authorization/services/auth.guard';
 
 
 
@@ -69,7 +69,7 @@ const routes: Routes = [
   { path:'islam/creeds',component: CreedsComponent }, // العقيدة
   { path:'islam/doctrines',component: DoctrinesComponent }, // الاجتهادات
   { path:'islam/jurisprudences',component: JurisprudencesComponent }, // الفقه  يختلف بكل زمان ومكان
-  { path:'islam/pillars',component: IslamPillarsComponent }, // أركان الاسلام
+  { path:'islam/pillars',component: IslamPillarsComponent,canActivate:[NotAuthGuard] }, // أركان الاسلام
 
 
   // footer

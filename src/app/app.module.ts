@@ -1,3 +1,4 @@
+import { JwtInterceptor } from './../authorization/Jwt-interceptor.interceptor';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,10 +21,8 @@ import {FormsModule,
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 //notification api jeson
-import { httpInterceptor } from 'src/interceptor/http-interceptor';
 //import { SelectionLoaderModule } from './selection-loader/selection-loader.module';
-import { UserService } from 'src/services/auth/user.service';
-import { AuthGuard } from 'src/services/auth/auth.guard';
+
 //import { ChatService } from 'src/services/websocket/chat.service';
 //import { WebsocketService } from 'src/services/websocket/websocket.service';
 //import { SearchService } from 'src/services/search/search.service';
@@ -70,6 +69,7 @@ import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillar
 import { LoginMenuComponent } from './header/login-menu/login-menu.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { SearchMenuComponent } from './header/search-menu/search-menu.component';
+import { AuthGuard } from './authorization/services/auth.guard';
 
 
 
@@ -156,10 +156,10 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
     //   registrationStrategy: 'registerWhenStable:30000'
     // })
   ],
-  providers: [UserService,AuthGuard,
+  providers: [AuthGuard,
     //ChatService,WebsocketService,SearchService,
     //QuranService,NamesService,
-    { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true }],
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
