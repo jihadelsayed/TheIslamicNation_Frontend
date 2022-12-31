@@ -78,8 +78,30 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
 @NgModule({
   declarations: [
     AppComponent,
+    // header component
     HeaderComponent,
+    LoginMenuComponent,
+    UserMenuComponent,
+    UserNotificationsMenuComponent,
+    MenuComponent,
+    SearchMenuComponent,
+
+    // spinner component
     SpinnerComponent,
+
+    // footer component
+    FooterComponent,
+    WhoComponent,
+    WhatComponent,
+    WhyComponent,
+    HowComponent,
+    ContactComponent,
+    FAQComponent,
+    CookiesComponent,
+    PolicyComponent,
+
+
+    // pages component
     MuslimsComponent,
     CardMuslimComponent,
     DetailMuslimComponent,
@@ -88,24 +110,16 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
     QuranComponent,
     HomeComponent,
     AyaComponent,
-    //ContinentsComponent,
+    //Continents Component,
     IslamComponent,
     ReligionsComponent,
     namesComponent,
     LanguagesComponent,
     ArabicComponent,
     ReligionsBooksComponent,
-    FooterComponent,
-    WhoComponent,
-    WhatComponent,
-    WhyComponent,
-    HowComponent,
-    ContactComponent,
-    UserMenuComponent,
-    UserNotificationsMenuComponent,
-    FAQComponent,
-    CookiesComponent,
-    PolicyComponent,
+
+
+
     MinistriesComponent,
     CreaturesComponent,
     TheCreatorComponent,
@@ -114,9 +128,7 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
     DoctrinesComponent,
     JurisprudencesComponent,
     IslamPillarsComponent,
-    LoginMenuComponent,
-    MenuComponent,
-    SearchMenuComponent,
+
   ],
   imports: [
     BrowserModule,
