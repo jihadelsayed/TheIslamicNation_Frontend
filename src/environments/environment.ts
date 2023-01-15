@@ -10,7 +10,6 @@ export const environment = {
   SERVER_URL_WITH_OUT_SLASH: "",
   FrontEnd_URL: "https://theislamicnation.com",
   //LoginURL: "http://localhost:22958/",
-  //LoginURL: "https://accounts.neetechs.com/",
   LoginURL: "https://accounts.theislamicnation.com/",
 
 };

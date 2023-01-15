@@ -32,7 +32,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            // for build multiply localization
             "localize":[
               "ar",
               "es",
@@ -180,7 +179,7 @@
               "browserTarget": "theislamicnation:build:fr"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
