@@ -1,3 +1,9 @@
+import { IslamPillarsComponent } from './header/islam/islam-pillars/islam-pillars.component';
+import { JurisprudencesComponent } from './header/islam/jurisprudences/jurisprudences.component';
+import { DoctrinesComponent } from './header/islam/doctrines/doctrines.component';
+import { CreedsComponent } from './header/islam/creeds/creeds.component';
+import { ProvisionsComponent } from './header/islam/provisions/provisions.component';
+import { TheCreatorComponent } from './header/the-creator/the-creator.component';
 import { PolicyComponent } from './footer/policy/policy.component';
 import { CookiesComponent } from './footer/cookies/cookies.component';
 import { FAQComponent } from './footer/faq/faq.component';
@@ -9,28 +15,22 @@ import { HowComponent } from './footer/how/how.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreaturesComponent } from './pages/creatures/creatures.component';
-import { HomeComponent } from './pages/home/home.component';
-//import { ContinentsComponent } from './header/muslims/continents/continents.component';
-
-import { NotAuthGuard } from './authorization/services/not-auth.guard';
-import { AuthGuard } from './authorization/services/auth.guard';
-import { CreedsComponent } from './pages/islam/creeds/creeds.component';
-import { DoctrinesComponent } from './pages/islam/doctrines/doctrines.component';
-import { IslamPillarsComponent } from './pages/islam/islam-pillars/islam-pillars.component';
-import { IslamComponent } from './pages/islam/islam.component';
-import { JurisprudencesComponent } from './pages/islam/jurisprudences/jurisprudences.component';
-import { ProvisionsComponent } from './pages/islam/provisions/provisions.component';
-import { ArabicComponent } from './pages/languages/arabic/arabic.component';
-import { LanguagesComponent } from './pages/languages/languages.component';
-import { MinistriesComponent } from './pages/muslims/ministries/ministries.component';
-import { MuslimsComponent } from './pages/muslims/muslims.component';
-import { AyaComponent } from './pages/religions/religions-books/quran/aya/aya.component';
-import { QuranComponent } from './pages/religions/religions-books/quran/quran.component';
-import { ReligionsBooksComponent } from './pages/religions/religions-books/religions-books.component';
-import { ReligionsComponent } from './pages/religions/religions.component';
-import { namesComponent } from './pages/the-creator/names/names.component';
-import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
+import { AuthGuard } from 'src/services/auth/auth.guard';
+import { NotAuthGuard } from 'src/services/auth/not-auth.guard';
+import { CreaturesComponent } from './header/creatures/creatures.component';
+import { HomeComponent } from './header/home/home.component';
+import { ArabicComponent } from './header/languages/arabic/arabic.component';
+import { LanguagesComponent } from './header/languages/languages.component';
+import { MuslimsComponent } from './header/muslims/muslims.component';
+import { IslamComponent } from './header/islam/islam.component';
+import { AyaComponent } from './header/religions/religions-books/quran/aya/aya.component';
+import { QuranComponent } from './header/religions/religions-books/quran/quran.component';
+import { ReligionsBooksComponent } from './header/religions/religions-books/religions-books.component';
+import { ReligionsComponent } from './header/religions/religions.component';
+import { namesComponent } from './header/the-creator/names/names.component';
+//import { routerLink } from './header/muslims/continents/continents.component';
+//import { StatesComponent } from './header/muslims/continents/countries/states/states.component';
+import { MinistriesComponent } from './header/muslims/ministries/ministries.component';
 
 
 
@@ -44,7 +44,7 @@ const routes: Routes = [
 
 
 
-  //{ path:'continents',component: ContinentsComponent },
+  //{ path:'continents',component: routerLink },
   //{ path:'continents/countries',component: StatesComponent },
   //{ path:'continents/countries/states',component: StatesComponent },
 
@@ -69,7 +69,7 @@ const routes: Routes = [
   { path:'islam/creeds',component: CreedsComponent }, // العقيدة
   { path:'islam/doctrines',component: DoctrinesComponent }, // الاجتهادات
   { path:'islam/jurisprudences',component: JurisprudencesComponent }, // الفقه  يختلف بكل زمان ومكان
-  { path:'islam/pillars',component: IslamPillarsComponent,canActivate:[NotAuthGuard] }, // أركان الاسلام
+  { path:'islam/pillars',component: IslamPillarsComponent }, // أركان الاسلام
 
 
   // footer
