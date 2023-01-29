@@ -19,7 +19,6 @@ import { CreedsComponent } from './pages/islam/creeds/creeds.component';
 import { DoctrinesComponent } from './pages/islam/doctrines/doctrines.component';
 import { IslamPillarsComponent } from './pages/islam/islam-pillars/islam-pillars.component';
 import { IslamComponent } from './pages/islam/islam.component';
-import { JurisprudencesComponent } from './pages/islam/jurisprudences/jurisprudences.component';
 import { ProvisionsComponent } from './pages/islam/provisions/provisions.component';
 import { ArabicComponent } from './pages/languages/arabic/arabic.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
@@ -31,30 +30,21 @@ import { ReligionsBooksComponent } from './pages/religions/religions-books/relig
 import { ReligionsComponent } from './pages/religions/religions.component';
 import { namesComponent } from './pages/the-creator/names/names.component';
 import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
-
-
-
-
+import { JurisprudencesComponent } from './pages/islam/jurisprudences/jurisprudences.component';
 
 const routes: Routes = [
-
-
   { path:'religions',component: ReligionsComponent },
   { path:'islam',component: IslamComponent },
-
-
-
   //{ path:'continents',component: ContinentsComponent },
   //{ path:'continents/countries',component: StatesComponent },
   //{ path:'continents/countries/states',component: StatesComponent },
-
   // header
   { path:'religionsBooks',component: ReligionsBooksComponent },
   { path:'religionsBooks/quran',component: QuranComponent },
   { path:'religionsBooks/quran/souwar/:index',component: AyaComponent },
 
-  { path:'the_creator',component: TheCreatorComponent },
-  { path:'the_creator/names',component: namesComponent },
+  { path:'theCreator',component: TheCreatorComponent },
+  { path:'theCreator/names',component: namesComponent },
 
   { path:'creatures',component: CreaturesComponent },
 

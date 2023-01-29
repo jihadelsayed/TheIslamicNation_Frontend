@@ -53,8 +53,8 @@ const routes: Routes = [
   { path:'religionsBooks/quran',component: QuranComponent },
   { path:'religionsBooks/quran/souwar/:index',component: AyaComponent },
 
-  { path:'the_creator',component: TheCreatorComponent },
-  { path:'the_creator/names',component: namesComponent },
+  { path:'theCreator',component: TheCreatorComponent },
+  { path:'theCreator/names',component: namesComponent },
 
   { path:'creatures',component: CreaturesComponent },
 
