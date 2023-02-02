@@ -8,7 +8,7 @@ export class WaitingServiceService {
   private count = 0;
   private spinner$ = new BehaviorSubject<string>('');
 
-  constructor() { }
+  constructor(public styleModeService: StyleModeService) { }
 
   getSpinnerObserver(): Observable<string>{
     return this.spinner$.asObservable();

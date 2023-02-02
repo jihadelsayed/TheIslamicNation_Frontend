@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -73,6 +73,7 @@ import { ReligionsBooksComponent } from './pages/religions/religions-books/relig
 import { ReligionsComponent } from './pages/religions/religions.component';
 import { namesComponent } from './pages/the-creator/names/names.component';
 import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
+import { StyleModeService } from './header/style-mode.service';
 
 
 
@@ -166,7 +167,8 @@ import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
   providers: [AuthGuard,
     //ChatService,WebsocketService,SearchService,
     //QuranService,NamesService,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

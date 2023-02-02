@@ -32,7 +32,7 @@ import { MatMenuModule } from "@angular/material/menu";
 // import { MatSelectModule } from "@angular/material/select";
 // import { MatSidenavModule } from "@angular/material/sidenav";
 // import { MatSliderModule } from "@angular/material/slider";
-// import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 // import { MatSnackBarModule } from "@angular/material/snack-bar";
 // import { MatSortModule } from "@angular/material/sort";
 // import { MatTableModule } from "@angular/material/table";
@@ -65,7 +65,7 @@ import { MatMenuModule } from "@angular/material/menu";
     // MatIconModule,
     // MatInputModule,
     // MatListModule,
-    MatMenuModule
+    MatMenuModule,
     // MatNativeDateModule,
     // MatPaginatorModule,
     // MatProgressBarModule,
@@ -75,7 +75,6 @@ import { MatMenuModule } from "@angular/material/menu";
     // MatSelectModule,
     // MatSidenavModule,
     // MatSliderModule,
-    // MatSlideToggleModule,
     // MatSnackBarModule,
     // MatSortModule,
     // MatTableModule,
@@ -85,6 +84,8 @@ import { MatMenuModule } from "@angular/material/menu";
     // MatTreeModule,
     // PortalModule,
     // ScrollingModule
+    MatSlideToggleModule
+
   ]
 })
 export class MaterialModule {}

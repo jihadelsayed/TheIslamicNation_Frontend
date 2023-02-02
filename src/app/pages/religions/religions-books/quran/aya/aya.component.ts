@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StyleModeService } from 'src/app/header/style-mode.service';
 import { Quran } from 'src/Interface/Quran.model';
 import { QuranService } from 'src/services/Quran/Quran.service';
 
@@ -15,7 +16,7 @@ export class AyaComponent implements OnInit {
   index: number;
 
   constructor(private QuranService: QuranService, private activeLink: ActivatedRoute,
-    public router: Router) { }
+    public router: Router, public styleModeService: StyleModeService) { }
 
   ngOnInit() {
 

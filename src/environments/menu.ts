@@ -26,7 +26,10 @@ export const menu = [
   },
   {
     id: 6,
-    title: "extra",
-    routerLink: "islam",
+    title: "muslims",
+    routerLink: "muslims",
   },
 ]
+// الله الملائكة الجمادات النباتات الجن البشر
+// الجبار جبار مجبار جبريل
+// جبريل معجون من جبروت الله

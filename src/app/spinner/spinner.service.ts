@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { StyleModeService } from '../header/style-mode.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class SpinnerService {
   private count = 0;
   private spinner$ = new BehaviorSubject<string>('');
 
-  constructor() { }
+  constructor(public styleModeService: StyleModeService) { }
 
   getSpinnerObserver(): Observable<string> {
     return this.spinner$.asObservable();

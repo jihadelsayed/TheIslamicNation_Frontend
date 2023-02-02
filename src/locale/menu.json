@@ -5,7 +5,7 @@
     "languages": "Languages",
     "religionsBooks": "Religions Books",
     "islam": "Islam",
-    "extra": "Extra"
+    "muslims": "muslims"
   },
   "ar": {
     "theCreator": "الخالق",
@@ -13,6 +13,6 @@
     "languages": "اللغات",
     "religionsBooks": "كتب الديانات",
     "islam": "الإسلام",
-    "extra": "إضافي"
+    "muslims": "muslims"
   }
 }

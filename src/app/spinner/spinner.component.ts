@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { StyleModeService } from '../header/style-mode.service';
 import { SpinnerService } from './spinner.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class SpinnerComponent implements OnInit {
   showSpinner = false
 
 
-  constructor(private spinnerService: SpinnerService, private cdRef: ChangeDetectorRef) {
+  constructor(private spinnerService: SpinnerService, private cdRef: ChangeDetectorRef,public styleModeService: StyleModeService) {
 
   }
 
