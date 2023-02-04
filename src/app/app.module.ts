@@ -1,6 +1,5 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -73,7 +72,7 @@ import { ReligionsBooksComponent } from './pages/religions/religions-books/relig
 import { ReligionsComponent } from './pages/religions/religions.component';
 import { namesComponent } from './pages/the-creator/names/names.component';
 import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
-import { StyleModeService } from './header/style-mode.service';
+import { AppComponent } from './app.component';
 
 
 

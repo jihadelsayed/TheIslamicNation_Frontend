@@ -15,7 +15,7 @@ export class SelectionLoaderComponent implements OnInit {
   @Input() Cheight: any;
   @Input() circle: boolean | undefined;
 
-  constructor(public styleModeService: StyleModeService) { }
+  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
 
   ngOnInit() {
   }

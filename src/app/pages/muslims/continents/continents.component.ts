@@ -1,5 +1,5 @@
 import { ContinentsService } from './../../../../services/Continents/continents.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import * as echarts from 'echarts';
 //import * as worldMap from 'src/assets/worldMap.json'; // @ts-ignore
 

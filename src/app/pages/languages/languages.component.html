@@ -1,4 +1,4 @@
-<div class="py-3 mt-3 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden">
+<div class="py-3 mt-3 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden ">
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
@@ -44,18 +44,21 @@
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
     routerLink="#">الإندونيسية</a>
 </div>
+<p [ngClass]="styleModeService.mode === 'light' ?
+'max-w-2xl mx-auto my-6 text-center text-gray-500' :
+'max-w-2xl mx-auto my-6 text-center text-gray-300'">
+  الكتب التي نزلت من السماء نزلت باربع لغات
+  السامية هي اللغة العربية المعقدة بها نطق ادم وانتهت الى سام ابن نوح عليه السلام
+  بهذه اللغة نزلت منها مئة صحيفة على ابراهيم
+  الارمية
+  بها نزل التورة على موسى عليه السلام
+  اسم اللغة تغير لان اليهود عبروا الى الكثير من البلدان
+  السريانية
+  هي التي نزل بها الانجيل وترجمها عيسى الى الغة العبرانية
+  الفصيحة العربية
+  باب العربية العراق ويمينها اليمن وبركتها الشام وقلبها مكة وعقلها المدينة
+  النحو والصرف
+  لانهم اهل الحكمة
+  الايمان يمان والفقه يمان والحكمة يمانية
 
-الكتب التي نزلت من السماء نزلت باربع لغات
-السامية هي اللغة العربية المعقدة بها نطق ادم وانتهت الى سام ابن نوح عليه السلام
-بهذه اللغة نزلت منها مئة صحيفة على ابراهيم
-الارمية
-بها نزل التورة على موسى عليه السلام
-اسم اللغة تغير لان اليهود عبروا الى الكثير من البلدان
-السريانية
-هي التي نزل بها الانجيل وترجمها عيسى الى الغة العبرانية
- الفصيحة العربية
-باب العربية العراق ويمينها اليمن وبركتها الشام وقلبها مكة وعقلها المدينة
-النحو والصرف
-لانهم اهل الحكمة
-الايمان يمان والفقه يمان  والحكمة يمانية
-
+</p>

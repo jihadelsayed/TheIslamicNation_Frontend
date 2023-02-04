@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { StyleModeService } from '../header/style-mode.service';
+import { LOCALE_ID } from '@angular/core';
 import { SpinnerService } from './spinner.service';
 
 @Component({

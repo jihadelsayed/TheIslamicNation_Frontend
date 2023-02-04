@@ -44,7 +44,11 @@
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
     routerLink="quran">القران</a>
 </div>
-<p>صورة للاديان مع النجوم
+<p [ngClass]="styleModeService.mode === 'light' ?
+'max-w-2xl mx-auto my-6 text-center text-gray-500' :
+'max-w-2xl mx-auto my-6 text-center text-gray-300'">
+صورة للاديان مع النجوم
+
 
   الواحد للاسلام
   المثلث الماسونية
@@ -57,7 +61,9 @@
   النجمة السداسية لليهود
   النجمة الثمانية للهندوس
 </p>
-<p>
+<p [ngClass]="styleModeService.mode === 'light' ?
+'max-w-2xl mx-auto my-6 text-center text-gray-500' :
+'max-w-2xl mx-auto my-6 text-center text-gray-300'">
 
   اقسام الوحي:
   وحي الحقيقة هو جبريل يزور الانبياء

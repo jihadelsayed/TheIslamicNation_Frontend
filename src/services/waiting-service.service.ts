@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { StyleModeService } from 'src/app/header/style-mode.service';
 
 @Injectable({
   providedIn: 'root'

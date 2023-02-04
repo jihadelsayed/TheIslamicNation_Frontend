@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { StyleModeService } from './header/style-mode.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { StyleModeService } from './header/style-mode.service';
 
 export class AppComponent {
   title = 'theislamicnation';
-  constructor(public styleModeService: StyleModeService) { }
+  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
   ngOnInit() {
     if (!localStorage.getItem('darkMode')) {
       this.checkDarkModePreference();
