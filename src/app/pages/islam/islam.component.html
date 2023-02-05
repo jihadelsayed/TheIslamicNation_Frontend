@@ -2,23 +2,23 @@
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-  routerLink="/islam/provisions">الأحكام الشرعية</a>
+  routerLink="provisions">الأحكام الشرعية</a>
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLinkerLinkerLinkerLinkerLinkerLinkerLink="islam/doctrines">الاجتهادات</a>
+    routerLink="/islam/doctrines">الاجتهادات</a>
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="islam/jurisprudences">الفقه</a>
+    routerLink="/islam/jurisprudences">الفقه</a>
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="islam/creeds">العقيدة</a>
+    routerLink="/islam/creeds">العقيدة</a>
     <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="islam/pillars">اركان الاسلام</a>
+    routerLink="/islam/pillars">اركان الاسلام</a>
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
@@ -27,10 +27,6 @@
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
     routerLink="#">المنبر</a>
-  <a [ngClass]="styleModeService.mode === 'light' ?
-  'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
-  'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="#">المنامات</a>
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
@@ -54,16 +50,17 @@
   <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="religions/religionsBooks/quran">القران</a>
+    routerLink="/religions/religionsBooks/quran">القران</a>
     <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="religions/religionsBooks">الكتب الدينية</a>
+    routerLink="/religions/religionsBooks">الكتب الدينية</a>
     <a [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
     [routerLink]="['/religions/islam']" routerLinkActive="router-link-active">الاسلام</a>
 </div>
 
+<router-outlet></router-outlet>
 
 
