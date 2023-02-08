@@ -26,9 +26,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 //import { SearchService } from 'src/services/search/search.service';
 import { SpinnerComponent } from './spinner/spinner.component';
 
-//import { QuranService } from 'src/services/Quran/Quran.service';
+import { QuranService } from 'src/services/Quran/Quran.service';
 
-//import { EchartsxModule } from 'echarts-for-angular';
+import { EchartsxModule } from 'echarts-for-angular';
 
 import { NamesService } from 'src/services/names/names.service';
 import { FooterComponent } from './footer/footer.component';
@@ -42,8 +42,6 @@ import { UserNotificationsMenuComponent } from './header/user-notifications-menu
 import { FAQComponent } from './footer/faq/faq.component';
 import { CookiesComponent } from './footer/cookies/cookies.component';
 import { PolicyComponent } from './footer/policy/policy.component';
-
-//import { ContinentsComponent } from './header/muslims/continents/continents.component';
 
 import { LoginMenuComponent } from './header/login-menu/login-menu.component';
 import { MenuComponent } from './header/menu/menu.component';
@@ -62,7 +60,6 @@ import { ProvisionsComponent } from './pages/islam/provisions/provisions.compone
 import { ArabicComponent } from './pages/languages/arabic/arabic.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
 import { CardMuslimComponent } from './pages/muslims/card-muslim/card-muslim.component';
-import { CountriesComponent } from './pages/muslims/continents/countries/countries.component';
 import { DetailMuslimComponent } from './pages/muslims/detail-muslim/detail-muslim.component';
 import { MinistriesComponent } from './pages/muslims/ministries/ministries.component';
 import { MuslimsComponent } from './pages/muslims/muslims.component';
@@ -106,27 +103,20 @@ import { AppComponent } from './app.component';
     FAQComponent,
     CookiesComponent,
     PolicyComponent,
-
-
     // pages component
     MuslimsComponent,
     CardMuslimComponent,
     DetailMuslimComponent,
-    CountriesComponent,
     WhatComponent,
     QuranComponent,
     HomeComponent,
     AyaComponent,
-    //Continents Component,
     IslamComponent,
     ReligionsComponent,
     namesComponent,
     LanguagesComponent,
     ArabicComponent,
     ReligionsBooksComponent,
-
-
-
     MinistriesComponent,
     CreaturesComponent,
     TheCreatorComponent,
@@ -135,14 +125,12 @@ import { AppComponent } from './app.component';
     DoctrinesComponent,
     JurisprudencesComponent,
     IslamPillarsComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
-    //EchartsxModule,
     FormsModule,
     //ReactiveFormsModule,
     // FlexLayoutModule,

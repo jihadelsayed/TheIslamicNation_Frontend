@@ -8,6 +8,10 @@ import { LanguagesComponent } from './languages.component';
 
 
 export const languagesRoutes: Routes = [
-  { path:'languages',component: LanguagesComponent },
-  { path:'languages/arabic',component: ArabicComponent },
+  {
+    path: 'languages', component: LanguagesComponent,
+    children: [
+      { path: 'arabic', component: ArabicComponent },
+    ]
+  }
 ];

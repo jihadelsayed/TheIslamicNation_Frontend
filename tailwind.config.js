@@ -6,7 +6,7 @@ module.exports = {
 
   ],
   mode: "jit",
-  darkMode: "media", // class  --  media
+  darkMode: "class", // class  --  media
   theme: {
     extend: {
       colors: {
