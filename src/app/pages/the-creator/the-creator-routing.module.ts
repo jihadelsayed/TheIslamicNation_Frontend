@@ -4,6 +4,9 @@ import { TheCreatorComponent } from './the-creator.component';
 
 
 export const theCreatorRoutes: Routes = [
-  { path:'theCreator',component: TheCreatorComponent },
-  { path:'theCreator/names',component: namesComponent },
+  { path:'theCreator',component: TheCreatorComponent,
+    children: [
+      { path:'',component: namesComponent },
+    ]
+  }
 ];
