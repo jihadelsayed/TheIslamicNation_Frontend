@@ -37,15 +37,17 @@ import { WhatComponent } from './footer/what/what.component';
 import { WhyComponent } from './footer/why/why.component';
 import { HowComponent } from './footer/how/how.component';
 import { ContactComponent } from './footer/contact/contact.component';
-import { UserMenuComponent } from './header/user-menu/user-menu.component';
-import { UserNotificationsMenuComponent } from './header/user-notifications-menu/user-notifications-menu.component';
+
 import { FAQComponent } from './footer/faq/faq.component';
 import { CookiesComponent } from './footer/cookies/cookies.component';
 import { PolicyComponent } from './footer/policy/policy.component';
 
+import { UserMenuComponent } from './header/user-menu/user-menu.component';
+import { UserNotificationsMenuComponent } from './header/user-notifications-menu/user-notifications-menu.component';
 import { LoginMenuComponent } from './header/login-menu/login-menu.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { SearchMenuComponent } from './header/search-menu/search-menu.component';
+
 import { AuthGuard } from './authorization/services/auth.guard';
 import { JwtInterceptor } from './authorization/Jwt-interceptor.interceptor';
 import { AuthorizationComponent } from './authorization/authorization.component';
