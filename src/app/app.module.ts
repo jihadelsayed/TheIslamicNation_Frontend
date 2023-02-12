@@ -105,6 +105,7 @@ import { AppComponent } from './app.component';
     FAQComponent,
     CookiesComponent,
     PolicyComponent,
+
     // pages component
     MuslimsComponent,
     CardMuslimComponent,
