@@ -11,13 +11,13 @@ import { QuranService } from 'src/services/Quran/Quran.service';
 export class QuranComponent implements OnInit {
 
   constructor(private QueranService: QuranService, public styleModeService: StyleModeService) { }
-  Souwar: Quran[];
+  chapters: any;
 
   ngOnInit(): void {
-    this.QueranService.getAllsura().subscribe(
+    this.QueranService.getChapters().subscribe(
       (data: any) => {
         console.log(data)
-        this.Souwar = data
+        this.chapters = data
       })
   }
 

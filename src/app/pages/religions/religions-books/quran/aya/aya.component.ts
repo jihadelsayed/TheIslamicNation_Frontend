@@ -1,5 +1,6 @@
 import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 import { StyleModeService } from 'src/app/header/style-mode.service';
 import { Quran } from 'src/Interface/Quran.model';
 import { QuranService } from 'src/services/Quran/Quran.service';
@@ -11,38 +12,41 @@ import { QuranService } from 'src/services/Quran/Quran.service';
 })
 export class AyaComponent implements OnInit {
 
-  Souwar: Quran[];
-  ayatext: Quran[];
-  index: number;
+  chapter: any;
+  id: number;
 
   constructor(private QuranService: QuranService, private activeLink: ActivatedRoute,
     public router: Router, public styleModeService: StyleModeService) { }
 
   ngOnInit() {
+    this.id = this.activeLink.snapshot.params["id"];
+    this.getChapter();
 
-    this.index = this.activeLink.snapshot.params["index"];
-    this.QuranService.getAllsura().subscribe((data: Quran[]) => {
-      this.Souwar = data;
-      this.ayatext = this.Souwar.filter(x => x.index == this.index);
-    })
 
   }
-  moveright() {
-    if (this.index < 114) {
-      ++this.index;
-      this.router.navigate(["/souwar/" + this.index])
-      window.location.reload();
-    }
+  moveRight() {
+    if (this.id < 114) {
+      this.id--;
+      this.router.navigate(["religionsBooks/quran/chapter/" + this.id]).then(() => {
+        this.getChapter();
+      });
+        }
 
   }
   moveLeft() {
-    if (this.index > 1) {
-      --this.index;
-      this.router.navigate(["/souwar/" + this.index])
-      window.location.reload();
+    if (this.id > 1) {
+      this.id++;
+      this.router.navigate(["religionsBooks/quran/chapter/" + this.id]).then(() => {
+        this.getChapter();
+      });
 
     }
-
+  }
+  getChapter() {
+    this.QuranService.getChapter(this.id).subscribe((data: any) => {
+      console.log(data);
+      this.chapter = data;
+    });
   }
 
 

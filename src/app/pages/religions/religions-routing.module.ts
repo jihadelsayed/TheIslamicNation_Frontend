@@ -11,8 +11,13 @@ export const religionsRoutes: Routes = [
    children: [
     { path:'religionsBooks',component: ReligionsBooksComponent },
     { path:'religionsBooks/quran',component: QuranComponent },
-    { path:'religionsBooks/quran/souwar/:index',component: AyaComponent },
+    { path:'religionsBooks/quran/chapter/:id',component: AyaComponent },
   ]
 },
-
+{ path:'religionsBooks',component: ReligionsBooksComponent ,
+  children: [
+    { path:'quran',component: QuranComponent },
+    { path:'quran/chapter/:id',component: AyaComponent },
+  ]
+},
 ];

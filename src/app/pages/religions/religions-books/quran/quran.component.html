@@ -1,4 +1,4 @@
-<div *ngFor="let Soura of Souwar"
+<div *ngFor="let chapter of chapters"
 [ngClass]="styleModeService.mode === 'light' ?
 'max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md' :
 'max-w-2xl px-8 py-4 mx-auto rounded-lg shadow-md bg-gray-800'"
@@ -13,16 +13,16 @@
   </div>
 
   <div class="mt-2">
-      <a routerLink="quran/souwar/{{Soura.index}}"
+      <a routerLink="chapter/{{chapter.id}}"
       [ngClass]="styleModeService.mode === 'light' ?
       'text-2xl font-bold text-gray-700 hover:text-gray-600 hover:underline' :
       'text-2xl font-bold text-white hover:text-gray-200 hover:underline'"
-      >{{Soura.name}}</a>
+      >{{chapter.name}}</a>
       <p
       [ngClass]="styleModeService.mode === 'light' ?
             'mt-2 text-gray-600' :
             'mt-2 text-gray-300'"
-      >{{Soura.aya[0].text}}</p>
+      >{{chapter.name}}</p>
   </div>
 
   <div class="flex items-center justify-between mt-4">
@@ -30,7 +30,7 @@
     [ngClass]="styleModeService.mode === 'light' ?
     'text-blue-600 hover:underline' :
     'text-blue-400 hover:underline'"
-    routerLink="quran/souwar/{{Soura.index}}">اقرأ</button>
+    routerLink="chapter/{{chapter.id}}">اقرأ</button>
 
 
       <div class="flex items-center">
