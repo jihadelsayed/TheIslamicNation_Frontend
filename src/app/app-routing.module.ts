@@ -17,6 +17,8 @@ import { muslimsRoutes } from './pages/muslims/muslims-routing.module';
 import { religionsRoutes } from './pages/religions/religions-routing.module';
 import { creaturesRoutes } from './pages/creatures/creatures-routing.module';
 import { homeRoutes } from './pages/home/home-routing.module';
+import { angelsRoutes } from './pages/angels/angels-routing.module';
+import { messengersRoutes } from './pages/messengers/messengers-routing.module';
 
 const routes: Routes = [
   // header
@@ -72,6 +74,8 @@ const routes: Routes = [
     RouterModule.forChild(muslimsRoutes), // muslims routes
     RouterModule.forChild(religionsRoutes), // religions routes
     RouterModule.forChild(creaturesRoutes), // creatures routes
+    RouterModule.forChild(messengersRoutes), // messengers routes
+    RouterModule.forChild(angelsRoutes), // angels routes
 
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',useHash: true })],
   exports: [RouterModule]

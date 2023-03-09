@@ -6,21 +6,14 @@
         <source>Log in</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/header/login-menu/login-menu.component.html</context>
-          <context context-type="linenumber">1</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3163044740176820503" datatype="html">
         <source>Get started</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/header/login-menu/login-menu.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="menuTitle" datatype="html">
-        <source> <x id="INTERPOLATION" equiv-text="{{ url.title }}"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/header/menu/menu.component.html</context>
-          <context context-type="linenumber">4,6</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
     </body>

@@ -30,7 +30,6 @@ import { QuranService } from 'src/services/Quran/Quran.service';
 
 import { EchartsxModule } from 'echarts-for-angular';
 
-import { NamesService } from 'src/services/names/names.service';
 import { FooterComponent } from './footer/footer.component';
 import { WhoComponent } from './footer/who/who.component';
 import { WhatComponent } from './footer/what/what.component';
@@ -72,6 +71,12 @@ import { ReligionsComponent } from './pages/religions/religions.component';
 import { namesComponent } from './pages/the-creator/names/names.component';
 import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
 import { AppComponent } from './app.component';
+import { MessengersComponent } from './pages/messengers/messengers.component';
+import { AngelsComponent } from './pages/angels/angels.component';
+import { NamesComponent } from './pages/angels/names/names.component';
+import { TraitsComponent } from './pages/angels/traits/traits.component';
+import { CapacityComponent } from './pages/angels/capacity/capacity.component';
+import { MessengerNamesComponent } from './pages/messengers/messenger-names/messenger-names.component';
 
 
 
@@ -128,6 +133,12 @@ import { AppComponent } from './app.component';
     DoctrinesComponent,
     JurisprudencesComponent,
     IslamPillarsComponent,
+    MessengersComponent,
+    AngelsComponent,
+    NamesComponent,
+    TraitsComponent,
+    CapacityComponent,
+    MessengerNamesComponent,
   ],
   imports: [
     BrowserModule,

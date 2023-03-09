@@ -6,13 +6,18 @@ export const menu = [
   },
   {
     id: 2,
-    title: "creatures",
-    routerLink: "creatures",
+    title: "angels",
+    routerLink: "angels",
   },
+  // {
+  //   id: 3,
+  //   title: "languages",
+  //   routerLink: "languages",
+  // },
   {
     id: 3,
-    title: "languages",
-    routerLink: "languages",
+    title: "messengers",
+    routerLink: "messengers",
   },
   {
     id: 4,
@@ -23,12 +28,13 @@ export const menu = [
     id: 5,
     title: "islam",
     routerLink: "islam",
-  },
+  }
+  ,
   {
-    id: 6,
+    id: 5,
     title: "muslims",
     routerLink: "muslims",
-  },
+  }
 ]
 // الله الملائكة الجمادات النباتات الجن البشر
 // الجبار جبار مجبار جبريل

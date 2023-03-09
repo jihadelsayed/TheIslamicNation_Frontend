@@ -1,18 +1,30 @@
 {
   "en": {
-    "theCreator": "The Creator",
-    "creatures": "Creatures",
-    "languages": "Languages",
-    "religionsBooks": "Religions Books",
-    "islam": "Islam",
-    "muslims": "muslims"
+    "theCreator": "1. Allah",
+    "angels": "2. Angels",
+    "languages": "3. Languages",
+    "messengers": "4. Messengers",
+    "religionsBooks": "5. Holy books",
+    "islam": "6. Islam",
+    "muslims": "6. Muslims"
+
   },
   "ar": {
-    "theCreator": "الخالق",
-    "creatures": "الخلق",
+    "theCreator": "الله",
+    "angels": "الملائكة",
     "languages": "اللغات",
-    "religionsBooks": "كتب الديانات",
-    "islam": "الإسلام",
+    "messengers": "الرسل",
+    "religionsBooks": "الكتب المقدسة",
+    "islam": "الاسلام",
     "muslims": "المسلمين"
+  },
+  "sv": {
+    "theCreator": "Allah",
+    "angels": "Angels",
+    "languages": "Languages",
+    "messengers": "Messengers",
+    "religionsBooks": "Holy books",
+    "islam": "Islam",
+    "muslims": "Muslims"
   }
 }
