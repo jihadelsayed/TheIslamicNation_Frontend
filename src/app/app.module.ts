@@ -71,12 +71,12 @@ import { ReligionsComponent } from './pages/religions/religions.component';
 import { namesComponent } from './pages/the-creator/names/names.component';
 import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
 import { AppComponent } from './app.component';
-import { MessengersComponent } from './pages/messengers/messengers.component';
 import { AngelsComponent } from './pages/angels/angels.component';
 import { NamesComponent } from './pages/angels/names/names.component';
 import { TraitsComponent } from './pages/angels/traits/traits.component';
 import { CapacityComponent } from './pages/angels/capacity/capacity.component';
-import { MessengerNamesComponent } from './pages/messengers/messenger-names/messenger-names.component';
+import { ProphetNamesComponent } from './pages/prophets/prophet-names/prophet-names.component';
+import { ProphetsComponent } from './pages/prophets/prophets.component';
 
 
 
@@ -133,12 +133,12 @@ import { MessengerNamesComponent } from './pages/messengers/messenger-names/mess
     DoctrinesComponent,
     JurisprudencesComponent,
     IslamPillarsComponent,
-    MessengersComponent,
+    ProphetsComponent,
     AngelsComponent,
     NamesComponent,
     TraitsComponent,
     CapacityComponent,
-    MessengerNamesComponent,
+    ProphetNamesComponent,
   ],
   imports: [
     BrowserModule,

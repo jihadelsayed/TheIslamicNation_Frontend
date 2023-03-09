@@ -4,7 +4,7 @@ import { Inject, Injectable, LOCALE_ID } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MessengerNamesServiceService {
+export class ProphetNamesServiceService {
 
 
   constructor(@Inject(LOCALE_ID) public localeId: string, private httpClient: HttpClient) { }
@@ -12,6 +12,6 @@ export class MessengerNamesServiceService {
 
   getAllNames() {
     //return this.httpClient.get('./assets/Names_Of_names_EN.json');
-    
-    return this.httpClient.get('https://raw.githubusercontent.com/davidpales1/TheIslamicNation/main/json/messengers/messengers.'+this.currentLang+'.json');
+
+    return this.httpClient.get('https://raw.githubusercontent.com/davidpales1/TheIslamicNation/main/json/prophets/prophets.'+this.currentLang+'.json');
   }}
