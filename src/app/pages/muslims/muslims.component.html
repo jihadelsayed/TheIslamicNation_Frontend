@@ -44,10 +44,10 @@
     'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
     'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
     routerLink="ministries">الوزارات</a>
-  <a [ngClass]="styleModeService.mode === 'light' ?
+  <a *ngFor="let Muslim of Muslims" [ngClass]="styleModeService.mode === 'light' ?
   'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
   'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
-    routerLink="quran">القران</a>
+    routerLink="quran">{{ Muslim }}</a>
 </div>
 <p [ngClass]="styleModeService.mode === 'light' ?
 'max-w-2xl mx-auto my-6 text-center text-gray-500' :

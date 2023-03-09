@@ -16,8 +16,8 @@ export const menu = [
   // },
   {
     id: 3,
-    title: "messengers",
-    routerLink: "messengers",
+    title: "prophets",
+    routerLink: "prophets",
   },
   {
     id: 4,

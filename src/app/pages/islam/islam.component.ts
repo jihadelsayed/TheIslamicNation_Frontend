@@ -17,6 +17,8 @@ export class IslamComponent implements OnInit {
   ngOnInit(): void {
     this.IslamService.getIslam().subscribe(
       (data: any) => {
+        console.log(data.data)
+
         this.Islam = data.data
       })
   }
