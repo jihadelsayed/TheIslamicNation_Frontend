@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IslamPillarsComponent } from './islam-pillars.component';
+import { HistoryComponent } from './history.component';
 
-describe('IslamPillarsComponent', () => {
-  let component: IslamPillarsComponent;
-  let fixture: ComponentFixture<IslamPillarsComponent>;
+describe('HistoryComponent', () => {
+  let component: HistoryComponent;
+  let fixture: ComponentFixture<HistoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IslamPillarsComponent ]
+      declarations: [ HistoryComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IslamPillarsComponent);
+    fixture = TestBed.createComponent(HistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

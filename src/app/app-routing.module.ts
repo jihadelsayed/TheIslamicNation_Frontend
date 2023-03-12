@@ -11,14 +11,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { islamRoutes } from './pages/islam/islam-routing.module';
-import { languagesRoutes } from './pages/languages/languages-routing.module';
-import { theCreatorRoutes } from './pages/the-creator/the-creator-routing.module';
-import { muslimsRoutes } from './pages/muslims/muslims-routing.module';
-import { religionsRoutes } from './pages/religions/religions-routing.module';
-import { creaturesRoutes } from './pages/creatures/creatures-routing.module';
+import { creaturesRoutes } from './pages/islam/creatures/creatures-routing.module';
 import { homeRoutes } from './pages/home/home-routing.module';
-import { angelsRoutes } from './pages/angels/angels-routing.module';
-import { prophetsRoutes } from './pages/prophets/prophets-routing.module';
+import { rhetoricRoutes } from './pages/islam/rhetoric/rhetoric-routing.module';
+import { muslimsRoutes } from './pages/islam/muslims/muslims-routing.module';
+import { creedsRoutes } from './pages/islam/creeds/creeds-routing.module';
+
 
 const routes: Routes = [
   // header
@@ -69,13 +67,10 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(homeRoutes), // home routes
     RouterModule.forChild(islamRoutes), // islam routes
-    RouterModule.forChild(languagesRoutes), // languages routes
-    RouterModule.forChild(theCreatorRoutes), // the creator routes
+    RouterModule.forChild(rhetoricRoutes), // rhetoric routes
     RouterModule.forChild(muslimsRoutes), // muslims routes
-    RouterModule.forChild(religionsRoutes), // religions routes
     RouterModule.forChild(creaturesRoutes), // creatures routes
-    RouterModule.forChild(prophetsRoutes), // prophets routes
-    RouterModule.forChild(angelsRoutes), // angels routes
+    RouterModule.forChild(creedsRoutes), // angels routes
 
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',useHash: true })],
   exports: [RouterModule]

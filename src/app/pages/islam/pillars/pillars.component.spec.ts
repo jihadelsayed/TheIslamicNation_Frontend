@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LanguagesComponent } from './languages.component';
+import { PillarsComponent } from './pillars.component';
 
-describe('LanguagesComponent', () => {
-  let component: LanguagesComponent;
-  let fixture: ComponentFixture<LanguagesComponent>;
+describe('PillarsComponent', () => {
+  let component: PillarsComponent;
+  let fixture: ComponentFixture<PillarsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LanguagesComponent ]
+      declarations: [ PillarsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LanguagesComponent);
+    fixture = TestBed.createComponent(PillarsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

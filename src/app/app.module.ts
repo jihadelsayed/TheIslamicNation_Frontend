@@ -50,33 +50,34 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
 import { AuthGuard } from './authorization/services/auth.guard';
 import { JwtInterceptor } from './authorization/Jwt-interceptor.interceptor';
 import { AuthorizationComponent } from './authorization/authorization.component';
-import { CreaturesComponent } from './pages/creatures/creatures.component';
+import { CreaturesComponent } from './pages/islam/creatures/creatures.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CreedsComponent } from './pages/islam/creeds/creeds.component';
-import { DoctrinesComponent } from './pages/islam/doctrines/doctrines.component';
-import { IslamPillarsComponent } from './pages/islam/islam-pillars/islam-pillars.component';
+import { PillarsComponent } from './pages/islam/pillars/pillars.component';
 import { IslamComponent } from './pages/islam/islam.component';
-import { JurisprudencesComponent } from './pages/islam/jurisprudences/jurisprudences.component';
+import { JurisprudenceComponent } from './pages/islam/jurisprudence/jurisprudence.component';
 import { ProvisionsComponent } from './pages/islam/provisions/provisions.component';
-import { ArabicComponent } from './pages/languages/arabic/arabic.component';
-import { LanguagesComponent } from './pages/languages/languages.component';
-import { CardMuslimComponent } from './pages/muslims/card-muslim/card-muslim.component';
-import { DetailMuslimComponent } from './pages/muslims/detail-muslim/detail-muslim.component';
-import { MinistriesComponent } from './pages/muslims/ministries/ministries.component';
-import { MuslimsComponent } from './pages/muslims/muslims.component';
-import { AyaComponent } from './pages/religions/religions-books/quran/aya/aya.component';
-import { QuranComponent } from './pages/religions/religions-books/quran/quran.component';
-import { ReligionsBooksComponent } from './pages/religions/religions-books/religions-books.component';
-import { ReligionsComponent } from './pages/religions/religions.component';
-import { namesComponent } from './pages/the-creator/names/names.component';
-import { TheCreatorComponent } from './pages/the-creator/the-creator.component';
+
+
 import { AppComponent } from './app.component';
-import { AngelsComponent } from './pages/angels/angels.component';
-import { NamesComponent } from './pages/angels/names/names.component';
-import { TraitsComponent } from './pages/angels/traits/traits.component';
-import { CapacityComponent } from './pages/angels/capacity/capacity.component';
-import { ProphetNamesComponent } from './pages/prophets/prophet-names/prophet-names.component';
-import { ProphetsComponent } from './pages/prophets/prophets.component';
+import { AngelsComponent } from './pages/islam/creeds/angels/angels.component';
+import { CapacityComponent } from './pages/islam/creeds/angels/capacity/capacity.component';
+import { NamesComponent } from './pages/islam/creeds/angels/names/names.component';
+import { TraitsComponent } from './pages/islam/creeds/angels/traits/traits.component';
+import { ProphetNamesComponent } from './pages/islam/creeds/prophets/prophet-names/prophet-names.component';
+import { ProphetsComponent } from './pages/islam/creeds/prophets/prophets.component';
+import { AyaComponent } from './pages/islam/creeds/religions-books/quran/aya/aya.component';
+import { QuranComponent } from './pages/islam/creeds/religions-books/quran/quran.component';
+import { ReligionsBooksComponent } from './pages/islam/creeds/religions-books/religions-books.component';
+import { namesComponent } from './pages/islam/creeds/the-creator/names/names.component';
+import { TheCreatorComponent } from './pages/islam/creeds/the-creator/the-creator.component';
+import { ArabicComponent } from './pages/islam/rhetoric/arabic/arabic.component';
+import { RhetoricComponent } from './pages/islam/rhetoric/rhetoric.component';
+import { CardMuslimComponent } from './pages/islam/muslims/card-muslim/card-muslim.component';
+import { DetailMuslimComponent } from './pages/islam/muslims/detail-muslim/detail-muslim.component';
+import { MinistriesComponent } from './pages/islam/muslims/ministries/ministries.component';
+import { MuslimsComponent } from './pages/islam/muslims/muslims.component';
+import { HistoryComponent } from './pages/islam/history/history.component';
 
 
 
@@ -120,9 +121,8 @@ import { ProphetsComponent } from './pages/prophets/prophets.component';
     HomeComponent,
     AyaComponent,
     IslamComponent,
-    ReligionsComponent,
     namesComponent,
-    LanguagesComponent,
+    RhetoricComponent,
     ArabicComponent,
     ReligionsBooksComponent,
     MinistriesComponent,
@@ -130,15 +130,15 @@ import { ProphetsComponent } from './pages/prophets/prophets.component';
     TheCreatorComponent,
     ProvisionsComponent,
     CreedsComponent,
-    DoctrinesComponent,
-    JurisprudencesComponent,
-    IslamPillarsComponent,
+    JurisprudenceComponent,
+    PillarsComponent,
     ProphetsComponent,
     AngelsComponent,
     NamesComponent,
     TraitsComponent,
     CapacityComponent,
     ProphetNamesComponent,
+    HistoryComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,11 +2,11 @@ import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { StyleModeService } from 'src/app/header/style-mode.service';
 
 @Component({
-  selector: 'app-islam-pillars',
-  templateUrl: './islam-pillars.component.html',
-  styleUrls: ['./islam-pillars.component.css']
+  selector: 'app-rhetoric',
+  templateUrl: './rhetoric.component.html',
+  styleUrls: ['./rhetoric.component.css']
 })
-export class IslamPillarsComponent implements OnInit {
+export class RhetoricComponent implements OnInit {
 
   constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
 

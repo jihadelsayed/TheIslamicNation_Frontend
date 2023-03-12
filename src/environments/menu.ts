@@ -1,40 +1,40 @@
 export const menu = [
   {
     id: 1,
-    title: "theCreator",
-    routerLink: "theCreator",
+    title: "creed",
+    routerLink: "creed",
   },
   {
     id: 2,
-    title: "angels",
-    routerLink: "angels",
+    title: "pillars",
+    routerLink: "pillars",
   },
-  // {
+  // { // علم البلاغة
   //   id: 3,
-  //   title: "languages",
-  //   routerLink: "languages",
+  //   title: "rhetoric",
+  //   routerLink: "rhetoric",
   // },
   {
     id: 3,
-    title: "prophets",
-    routerLink: "prophets",
+    title: "provisions",
+    routerLink: "provisions",
   },
   {
     id: 4,
-    title: "religionsBooks",
-    routerLink: "religionsBooks",
+    title: "jurisprudence",
+    routerLink: "jurisprudence",
   },
   {
     id: 5,
-    title: "islam",
-    routerLink: "islam",
-  }
-  ,
+    title: "rhetoric",
+    routerLink: "rhetoric",
+  },
   {
-    id: 5,
+    id: 6,
     title: "muslims",
     routerLink: "muslims",
   }
+
 ]
 // الله الملائكة الجمادات النباتات الجن البشر
 // الجبار جبار مجبار جبريل
