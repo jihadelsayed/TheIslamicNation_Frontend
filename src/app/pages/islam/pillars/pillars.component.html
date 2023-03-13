@@ -1,3 +1,9 @@
+<div class="py-3 overflow-y-auto whitespace-nowrap scroll-hidden">
+  <a *ngFor="let pillar of pillars" [ngClass]="styleModeService.mode === 'light' ?
+  'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
+  'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
+    [routerLink]=[pillar.routerLink]>{{ pillar['title'] }}</a>
+</div>
 
 <p>pillars works! اركان الاسلام</p>
 <ol><li><a routerLink="wiki/%D8%A7%D9%84%D8%AA%D9%88%D8%AD%D9%8A%D8%AF_%D9%81%D9%8A_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85" title="التوحيد في الإسلام">شهادة أنّ لا إله إلا الله وأنّ محمداً عبده ورسوله</a></li>
@@ -5,3 +11,4 @@
   <li><a routerLink="wiki/%D8%B2%D9%83%D8%A7%D8%A9" title="زكاة">إيتاء الزكاة</a></li>
   <li><a routerLink="wiki/%D8%B5%D9%88%D9%85" title="صوم">صوم رمضان</a></li>
   <li><a routerLink="wiki/%D8%A7%D9%84%D8%AD%D8%AC_(%D8%AA%D9%88%D8%B6%D9%8A%D8%AD)" class="mw-disambig" title="الحج (توضيح)">حج البيت الحرام لمن استطاع إليه سبيلاً</a></li></ol>
+  <router-outlet></router-outlet>

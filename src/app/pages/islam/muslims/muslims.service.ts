@@ -4,13 +4,15 @@ import { Inject, Injectable, LOCALE_ID } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AngleNamesServiceService {
+export class MuslimsService {
+
 
   constructor(@Inject(LOCALE_ID) public localeId: string, private httpClient: HttpClient) { }
   currentLang = this.localeId || 'en'; // or 'ar'
 
-  getAllNames() {
+  getMuslim() {
     //return this.httpClient.get('./assets/Names_Of_names_EN.json');
-    return this.httpClient.get('https://raw.githubusercontent.com/davidpales1/TheIslamicNation/main/json/islam/creed/angels/angels.'+this.currentLang+'.json');
+    return this.httpClient.get('https://raw.githubusercontent.com/davidpales1/TheIslamicNation/main/json/islam/muslims/muslims.'+this.currentLang+'.json');
   }
 }
+

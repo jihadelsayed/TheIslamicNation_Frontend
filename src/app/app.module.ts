@@ -78,6 +78,11 @@ import { DetailMuslimComponent } from './pages/islam/muslims/detail-muslim/detai
 import { MinistriesComponent } from './pages/islam/muslims/ministries/ministries.component';
 import { MuslimsComponent } from './pages/islam/muslims/muslims.component';
 import { HistoryComponent } from './pages/islam/history/history.component';
+import { TestimonyComponent } from './pages/islam/pillars/testimony/testimony.component';
+import { PrayersComponent } from './pages/islam/pillars/prayers/prayers.component';
+import { CharityComponent } from './pages/islam/pillars/charity/charity.component';
+import { FastingComponent } from './pages/islam/pillars/fasting/fasting.component';
+import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage.component';
 
 
 
@@ -139,6 +144,11 @@ import { HistoryComponent } from './pages/islam/history/history.component';
     CapacityComponent,
     ProphetNamesComponent,
     HistoryComponent,
+    TestimonyComponent,
+    PrayersComponent,
+    CharityComponent,
+    FastingComponent,
+    PilgrimageComponent,
   ],
   imports: [
     BrowserModule,

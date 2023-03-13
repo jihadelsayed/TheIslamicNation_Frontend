@@ -1,7 +1,7 @@
 import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { StyleModeService } from 'src/app/header/style-mode.service';
 import { caliph, primeMinister, minsters } from 'src/data/pyramid';
-import { MuslimService } from './muslim.service';
+import { MuslimsService } from './muslims.service';
 
 @Component({
   selector: 'app-muslims',
@@ -11,7 +11,7 @@ import { MuslimService } from './muslim.service';
 export class MuslimsComponent implements OnInit {
 
   constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService,
-  private MuslimService: MuslimService) { }
+  private muslimsService: MuslimsService) { }
 
   caliph: any[] = caliph;
   primeMinister: any[] = primeMinister;
@@ -20,14 +20,14 @@ export class MuslimsComponent implements OnInit {
 
 
 
-  Muslims: any[];
+  muslims: any[];
 
   ngOnInit(): void {
-    this.MuslimService.getMuslim().subscribe(
+    this.muslimsService.getMuslim().subscribe(
       (data: any) => {
         console.log(data.data)
 
-        this.Muslims = data.data
+        this.muslims = data.data
       })
   }
 

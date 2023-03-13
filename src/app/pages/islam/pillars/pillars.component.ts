@@ -1,5 +1,6 @@
 import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { StyleModeService } from 'src/app/header/style-mode.service';
+import { PillarsService } from './pillars.service';
 
 @Component({
   selector: 'app-pillars',
@@ -8,9 +9,15 @@ import { StyleModeService } from 'src/app/header/style-mode.service';
 })
 export class PillarsComponent implements OnInit {
 
-  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
+  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService, public pillarsService: PillarsService ) { }
+  pillars: any[];
 
   ngOnInit(): void {
+    this.pillarsService.getPillars().subscribe(
+      (data: any) => {
+        console.log(data.data)
+        this.pillars = data.data
+      })
   }
 
 }
