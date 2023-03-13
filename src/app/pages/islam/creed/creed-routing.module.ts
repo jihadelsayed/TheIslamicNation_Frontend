@@ -43,6 +43,18 @@ export const creedRoutes: Routes = [
         children: [
           { path: '', component: namesComponent },
         ]
+      },
+      {
+        path: 'destiny', component: TheCreatorComponent,
+        children: [
+          { path: '', component: namesComponent },
+        ]
+      },
+      {
+        path: 'judgmentDay', component: TheCreatorComponent,
+        children: [
+          { path: '', component: namesComponent },
+        ]
       }
     ]
   },
