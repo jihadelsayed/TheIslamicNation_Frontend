@@ -4,23 +4,24 @@
     "pillars": "pillars",
     "provisions": "provisions",
     "jurisprudence": "jurisprudence",
-    "muslims": "muslims",
-    "rhetoric": "rhetoric"
+    "rhetoric": "rhetoric",
+    "muslims": "muslims"
   },
   "ar": {
     "creed": "العقيدة",
     "pillars": "الاركان",
     "provisions": "الاحكام",
     "jurisprudence": "الفقه",
-    "muslims": "المسلمين",
-    "rhetoric": "البلاغة"
+    "rhetoric": "البلاغة",
+
+    "muslims": "المسلمين"
   },
   "sv": {
     "creed": "creed",
     "pillars": "pelare",
     "provisions": "bestämmelser",
     "jurisprudence": "jurisprudence",
-    "muslims": "muslims",
-    "rhetoric": "retorik"
+    "rhetoric": "retorik",
+    "muslims": "muslims"
   }
 }

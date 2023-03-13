@@ -9,11 +9,6 @@ export const menu = [
     title: "pillars",
     routerLink: "pillars",
   },
-  // { // علم البلاغة
-  //   id: 3,
-  //   title: "rhetoric",
-  //   routerLink: "rhetoric",
-  // },
   {
     id: 3,
     title: "provisions",
@@ -25,7 +20,7 @@ export const menu = [
     routerLink: "jurisprudence",
   },
   {
-    id: 5,
+    id: 4,
     title: "rhetoric",
     routerLink: "rhetoric",
   },
