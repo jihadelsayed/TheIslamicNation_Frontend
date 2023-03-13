@@ -1,5 +1,12 @@
 
-<p>creeds works!
+
+<div class="py-3 overflow-y-auto whitespace-nowrap scroll-hidden">
+  <a *ngFor="let Knot of Creed" [ngClass]="styleModeService.mode === 'light' ?
+  'mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform hover:text-blue-600 hover:underline md:my-0' :
+  'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
+    [routerLink]=[Knot.routerLink]>{{ Knot['title'] }}</a>
+</div>
+<p>creed works!
 العقيدة هي الايمان
 </p>
 https://mawdoo3.com/%D9%85%D8%A7_%D9%87%D9%8A_%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9_%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9

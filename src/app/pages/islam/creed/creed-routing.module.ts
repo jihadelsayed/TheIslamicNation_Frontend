@@ -1,4 +1,4 @@
-import { CreedsComponent } from './creeds.component';
+import { CreedComponent } from './creed.component';
 import { Routes } from '@angular/router';
 import { AngelsComponent } from './angels/angels.component';
 import { CapacityComponent } from './angels/capacity/capacity.component';
@@ -12,9 +12,9 @@ import { ReligionsBooksComponent } from './religions-books/religions-books.compo
 import { TheCreatorComponent } from './the-creator/the-creator.component';
 import { namesComponent } from './the-creator/names/names.component';
 
-export const creedsRoutes: Routes = [
+export const creedRoutes: Routes = [
   {
-    path: 'creed', component: CreedsComponent,
+    path: 'creed', component: CreedComponent,
     children: [
       {
         path: 'angels', component: AngelsComponent,
