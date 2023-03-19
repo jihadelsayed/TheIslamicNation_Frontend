@@ -10,14 +10,8 @@ import { CreedService } from './creed.service';
 export class CreedComponent implements OnInit {
 
   constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService, public CreedService: CreedService ) { }
-  Creed: any[];
 
   ngOnInit(): void {
-    this.CreedService.getCreed().subscribe(
-      (data: any) => {
-        console.log(data.data)
-        this.Creed = data.data
-      })
   }
 
 }

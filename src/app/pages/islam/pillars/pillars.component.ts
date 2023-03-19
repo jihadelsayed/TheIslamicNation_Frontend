@@ -10,14 +10,8 @@ import { PillarsService } from './pillars.service';
 export class PillarsComponent implements OnInit {
 
   constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService, public pillarsService: PillarsService ) { }
-  pillars: any[];
 
   ngOnInit(): void {
-    this.pillarsService.getPillars().subscribe(
-      (data: any) => {
-        console.log(data.data)
-        this.pillars = data.data
-      })
   }
 
 }

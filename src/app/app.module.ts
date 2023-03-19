@@ -83,6 +83,7 @@ import { PrayersComponent } from './pages/islam/pillars/prayers/prayers.componen
 import { CharityComponent } from './pages/islam/pillars/charity/charity.component';
 import { FastingComponent } from './pages/islam/pillars/fasting/fasting.component';
 import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage.component';
+import { SubMenuComponent } from './header/sub-menu/sub-menu.component';
 
 
 
@@ -149,6 +150,7 @@ import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage
     CharityComponent,
     FastingComponent,
     PilgrimageComponent,
+    SubMenuComponent,
   ],
   imports: [
     BrowserModule,
