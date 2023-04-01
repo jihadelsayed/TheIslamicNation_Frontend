@@ -20,6 +20,8 @@
             'mx-4 text-sm leading-5 transition-colors duration-200 transform text-gray-200 hover:text-blue-400 hover:underline md:my-0'"
     routerLink="quran">الداما</a>
 </div>
+<app-aside></app-aside>
+<router-outlet></router-outlet>
 <p [ngClass]="styleModeService.mode === 'light' ?
 'max-w-2xl mx-auto my-6 text-center text-gray-500' :
 'max-w-2xl mx-auto my-6 text-center text-gray-300'">
@@ -51,4 +53,3 @@
   وحي الالهام هذا الوحي موجود عند كل احد حتى الحيوانات والنحل وام موسى
   </p>
 
-<router-outlet></router-outlet>

@@ -1,17 +1,2 @@
 <app-sub-menu></app-sub-menu>
-<div class="grid grid-rows-6 grid-flow-col gap-4">
-
-<div class="row-start-1 ">
-
-<app-aside></app-aside>
-</div>
-<div class="row-start-1">
-  <p [ngClass]="styleModeService.mode === 'light' ?
-  'max-w-2xl mx-auto my-6 text-center text-gray-500' :
-  'max-w-2xl mx-auto my-6 text-center text-gray-300'">
-
-</p>
-
-  <router-outlet></router-outlet>
-</div>
-</div>
+<router-outlet></router-outlet>

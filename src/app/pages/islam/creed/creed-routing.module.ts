@@ -11,49 +11,58 @@ import { QuranComponent } from './religions-books/quran/quran.component';
 import { ReligionsBooksComponent } from './religions-books/religions-books.component';
 import { TheCreatorComponent } from './the-creator/the-creator.component';
 import { namesComponent } from './the-creator/names/names.component';
+import { ContentComponent } from 'src/app/header/content/content.component';
+import { SubMenuComponent } from 'src/app/header/sub-menu/sub-menu.component';
+import { AsideComponent } from 'src/app/header/aside/aside.component';
 
 export const creedRoutes: Routes = [
   {
     path: 'creed', component: CreedComponent,
     children: [
-      {
-        path: 'angels', component: AngelsComponent,
-        children: [
-          { path: '', component: NamesComponent },
-          { path: 'capacity', component: CapacityComponent },
-          { path: 'traits', component: TraitsComponent },
-        ]
-      },
-      {
-        path: 'prophets', component: ProphetsComponent,
-        children: [
-          { path: '', component: ProphetNamesComponent },
+      // {
+      //   path: 'angels', component: AngelsComponent,
+      //   children: [
+      //     { path: '', component: NamesComponent },
+      //     { path: 'capacity', component: CapacityComponent },
+      //     { path: 'traits', component: TraitsComponent },
+      //   ]
+      // },
+      // {
+      //   path: 'prophets', component: ProphetsComponent,
+      //   children: [
+      //     { path: '', component: ProphetNamesComponent },
 
-        ]
-      },
-      {
-        path: 'religionsBooks', component: ReligionsBooksComponent,
+      //   ]
+      // },
+      // {
+      //   path: 'religionsBooks', component: ReligionsBooksComponent,
+      //   children: [
+      //     { path: 'quran', component: QuranComponent },
+      //     { path: 'quran/chapter/:id', component: AyaComponent },
+      //   ]
+      // },
+      // {
+      //   path: 'theCreator', component: TheCreatorComponent,
+      //   children: [
+      //     { path: '', component: namesComponent },
+      //   ]
+      // },
+      // {
+      //   path: 'destiny', component: TheCreatorComponent,
+      //   children: [
+      //     { path: '', component: namesComponent },
+      //   ]
+      // },
+      // {
+      //   path: 'judgmentDay', component: TheCreatorComponent,
+      //   children: [
+      //     { path: '', component: namesComponent },
+      //   ]
+      // },
+      {//ContentComponent
+        path: ':aside', component: AsideComponent,
         children: [
-          { path: 'quran', component: QuranComponent },
-          { path: 'quran/chapter/:id', component: AyaComponent },
-        ]
-      },
-      {
-        path: 'theCreator', component: TheCreatorComponent,
-        children: [
-          { path: '', component: namesComponent },
-        ]
-      },
-      {
-        path: 'destiny', component: TheCreatorComponent,
-        children: [
-          { path: '', component: namesComponent },
-        ]
-      },
-      {
-        path: 'judgmentDay', component: TheCreatorComponent,
-        children: [
-          { path: '', component: namesComponent },
+          { path: ':content', component: ContentComponent },
         ]
       }
     ]

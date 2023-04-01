@@ -85,6 +85,7 @@ import { FastingComponent } from './pages/islam/pillars/fasting/fasting.componen
 import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage.component';
 import { SubMenuComponent } from './header/sub-menu/sub-menu.component';
 import { AsideComponent } from './header/aside/aside.component';
+import { ContentComponent } from './header/content/content.component';
 
 
 
@@ -153,6 +154,7 @@ import { AsideComponent } from './header/aside/aside.component';
     PilgrimageComponent,
     SubMenuComponent,
     AsideComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
