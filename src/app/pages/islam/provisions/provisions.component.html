@@ -1,333 +1,248 @@
 <app-sub-menu></app-sub-menu>
-<div class="w-60 h-full shadow-md bg-white absolute" id="sidenavSecExample">
-  <div class="pt-4 pb-2 px-6">
-    <a href="#!">
-      <div class="flex items-center">
-        <div class="shrink-0">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" class="rounded-full w-10" alt="Avatar">
-        </div>
-        <div class="grow ml-3">
-          <p class="text-sm font-semibold text-blue-600">Jason McCoel</p>
-        </div>
-      </div>
-    </a>
+<div class="grid grid-rows-6 grid-flow-col gap-4">
+
+  <div class="row-start-1 ">
+
+    <app-aside></app-aside>
   </div>
-  <ul class="relative px-1">
-    <li class="relative">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="primary">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path>
-        </svg>
-        <span>Non-collapsible link</span>
-      </a>
-    </li>
-    <li class="relative" id="sidenavSecEx2">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse" data-bs-target="#collapseSidenavSecEx2" aria-expanded="false" aria-controls="collapseSidenavSecEx2">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-          <path fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
-        </svg>
-        <span>Collapsible item 1</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-        </svg>
-      </a>
-      <ul class="relative accordion-collapse collapse" id="collapseSidenavSecEx2" aria-labelledby="sidenavSecEx2" data-bs-parent="#sidenavSecExample">
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 1</a>
-        </li>
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 2</a>
-        </li>
-      </ul>
-    </li>
-    <li class="relative" id="sidenavSecEx3">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse" data-bs-target="#collapseSidenavSecEx3" aria-expanded="false" aria-controls="collapseSidenavSecEx3">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor" d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z"></path>
-        </svg>
-        <span>Collapsible item 2</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-        </svg>
-      </a>
-      <ul class="relative accordion-collapse collapse" id="collapseSidenavSecEx3" aria-labelledby="sidenavSecEx3" data-bs-parent="#sidenavSecExample">
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 3</a>
-        </li>
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 4</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <hr class="my-2">
-  <ul class="relative px-1">
-    <li class="relative">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="primary">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor" d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z"></path>
-        </svg>
-        <span>Non-collapsible link</span>
-      </a>
-    </li>
-    <li class="relative" id="sidenavXxEx2">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse" data-bs-target="#collapseSidenavXxEx2" aria-expanded="false" aria-controls="collapseSidenavXxEx2">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-          <path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path>
-        </svg>
-        <span>Collapsible item 3</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-        </svg>
-      </a>
-      <ul class="relative accordion-collapse collapse" id="collapseSidenavXxEx2" aria-labelledby="sidenavXxEx2" data-bs-parent="#sidenavSecExample">
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 5</a>
-        </li>
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 6</a>
-        </li>
-      </ul>
-    </li>
-    <li class="relative" id="sidenavXxEx3">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse" data-bs-target="#collapseSidenavXxEx3" aria-expanded="false" aria-controls="collapseSidenavXxEx3">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor" d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"></path>
-        </svg>
-        <span>Collapsible item 4</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-        </svg>
-      </a>
-      <ul class="relative accordion-collapse collapse" id="collapseSidenavXxEx3" aria-labelledby="sidenavXxEx3" data-bs-parent="#sidenavSecExample">
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 7</a>
-        </li>
-        <li class="relative">
-          <a href="#!" class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 8</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <div class="text-center bottom-0 absolute w-full">
-    <hr class="m-0">
-    <p class="py-2 text-sm text-gray-700">tailwind-elements.com</p>
-  </div>
-</div>
+  <div class="row-start-1">
+    <p [ngClass]="styleModeService.mode === 'light' ?
+  'max-w-2xl mx-auto my-6 text-center text-gray-500' :
+  'max-w-2xl mx-auto my-6 text-center text-gray-300'">
 
-<p>provisions
-  المذاهب او الفقه
+    </p>
 
-</p>
-
-<div class="columns large-9 medium-9 small-12 left">
-  <div class="article-text">
-    <div id="mw-content-text" lang="ar" dir="rtl" class="mw-content-rtl">
-      <div id="toc" class="toc">
-        <div id="toctitle">
-          <h2>محتويات</h2>
-        </div>
-        <ul>
-          <li class="toclevel-1 tocsection-1"><a
-              routerLink="#.D8.A3.D9.86.D9.88.D8.A7.D8.B9_.D8.A7.D9.84.D8.A3.D8.AD.D9.83.D8.A7.D9.85_.D8.A7.D9.84.D8.B4.D8.B1.D8.B9.D9.8A.D8.A9"><span
-                class="tocnumber">١</span> <span class="toctext"><b>أنواع الأحكام الشرعية</b></span></a>
+    <div class="columns large-9 medium-9 small-12 left">
+      <div class="article-text">
+        <div id="mw-content-text" lang="ar" dir="rtl" class="mw-content-rtl">
+          <div id="toc" class="toc">
+            <div id="toctitle">
+              <h2>محتويات</h2>
+            </div>
             <ul>
-              <li class="toclevel-2 tocsection-2"><a
-                  routerLink="#.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A"><span
-                    class="tocnumber">١.١</span> <span class="toctext">الحكم التكليفي</span></a></li>
-              <li class="toclevel-2 tocsection-3"><a
-                  routerLink="#.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A"><span
-                    class="tocnumber">١.٢</span> <span class="toctext">الحكم الوضعي</span></a></li>
+              <li class="toclevel-1 tocsection-1"><a
+                  routerLink="#.D8.A3.D9.86.D9.88.D8.A7.D8.B9_.D8.A7.D9.84.D8.A3.D8.AD.D9.83.D8.A7.D9.85_.D8.A7.D9.84.D8.B4.D8.B1.D8.B9.D9.8A.D8.A9"><span
+                    class="tocnumber">١</span> <span class="toctext"><b>أنواع الأحكام الشرعية</b></span></a>
+                <ul>
+                  <li class="toclevel-2 tocsection-2"><a
+                      routerLink="#.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A"><span
+                        class="tocnumber">١.١</span> <span class="toctext">الحكم التكليفي</span></a></li>
+                  <li class="toclevel-2 tocsection-3"><a
+                      routerLink="#.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A"><span
+                        class="tocnumber">١.٢</span> <span class="toctext">الحكم الوضعي</span></a></li>
+                </ul>
+              </li>
+              <li class="toclevel-1 tocsection-4"><a
+                  routerLink="#.D9.85.D9.82.D8.A7.D8.B1.D9.86.D8.A9_.D8.A8.D9.8A.D9.86_.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A_.D9.88.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A"><span
+                    class="tocnumber">٢</span> <span class="toctext"><b>مقارنة بين الحكم التكليفي والحكم
+                      الوضعي</b></span></a></li>
+              <li class="toclevel-1 tocsection-5"><a routerLink="#.D8.A7.D9.84.D9.85.D8.B1.D8.A7.D8.AC.D8.B9"><span
+                    class="tocnumber">٣</span> <span class="toctext"><b>المراجع</b></span></a></li>
             </ul>
-          </li>
-          <li class="toclevel-1 tocsection-4"><a
-              routerLink="#.D9.85.D9.82.D8.A7.D8.B1.D9.86.D8.A9_.D8.A8.D9.8A.D9.86_.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A_.D9.88.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A"><span
-                class="tocnumber">٢</span> <span class="toctext"><b>مقارنة بين الحكم التكليفي والحكم
-                  الوضعي</b></span></a></li>
-          <li class="toclevel-1 tocsection-5"><a routerLink="#.D8.A7.D9.84.D9.85.D8.B1.D8.A7.D8.AC.D8.B9"><span
-                class="tocnumber">٣</span> <span class="toctext"><b>المراجع</b></span></a></li>
-        </ul>
+          </div>
+          <ul class="related-articles-list1 columns related-articles-list1_mobile">
+            <li><span class="icon"></span><span>اقرأ أيضاً</span></li>
+            <li><a
+                routerLink="%D8%AD%D9%83%D9%85_%D8%A7%D9%84%D8%B1%D8%A8%D8%A7_%D9%81%D9%8A_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85"><span>
+                  حكم الربا في الاسلام</span></a></li>
+            <li><a
+                routerLink="%D8%A3%D9%86%D9%88%D8%A7%D8%B9_%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84_%D8%A7%D9%84%D8%B1%D8%A8%D9%88%D9%8A%D8%A9"><span>
+                  أنواع الأموال الربوية</span></a></li>
+          </ul>
+          <script type="text/javascript" id="art_leaderboard_mobile">
+            if (checkScenario("Leaderboard") == "mobile") {
+              document.getElementById('art_leaderboard_mobile').insertAdjacentHTML('beforebegin',
+                '<div id="Leaderboard" style="min-height: 100px; margin: 10px auto !important;"></div>');
+            }
+
+          </script>
+
+          <h2><span class="mw-headline"
+              id=".D8.A3.D9.86.D9.88.D8.A7.D8.B9_.D8.A7.D9.84.D8.A3.D8.AD.D9.83.D8.A7.D9.85_.D8.A7.D9.84.D8.B4.D8.B1.D8.B9.D9.8A.D8.A9"><b>أنواع
+                الأحكام الشرعية</b></span></h2>
+          <p>الحكم الشرعي عند الأصوليين ينقسم إلى قسمين: حكم تكليفي، وحكم وضعي.
+          </p>
+          <div id="Outstream"></div>
+          <h3><span class="mw-headline"
+              id=".D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A">الحكم التكليفي</span>
+          </h3>
+          <p>هو خطاب الشارع المتعلّق بأفعال المكلفين على جهة الاقتضاء أو التخيير،<sup
+              id="cite_ref-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6_1-0" class="reference"><a
+                routerLink="#cite_note-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6-1">[١]</a></sup>ويمكن تقسيم الحكم التكليفي
+            كما
+            يأتي:<sup id="cite_ref-300d37f2_9afa_4ef4_9c1e_4da72475d2d5_2-0" class="reference"><a
+                routerLink="#cite_note-300d37f2_9afa_4ef4_9c1e_4da72475d2d5-2">[٢]</a></sup></p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>الواجب</strong></li>
+          </ul>
+          <p>ما أمر به الشارع أمراً جازماً، أو هو ما يثاب فاعله ويُعاقب تاركه.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>المندوب</strong></li>
+          </ul>
+          <p>ما أمر به الشرع أمراً غيرَ جازم، أو هو ما يثاب فاعله ولا يُعاقب تاركه.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>المباح</strong></li>
+          </ul>
+          <p>ما خُيَّر به الشارع بين الفعل والترك، أو هو ما لا يترتب على فعله أو تركه ثواب ولا عقاب.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>المكروه</strong></li>
+          </ul>
+          <p>ما نهى عنه الشارع نهياً غير جازم، أو هو ما يثاب تاركه ولا يعاقب فاعله.
+          </p>
+          <script type="text/javascript" id="art_mpu_mobile">
+            if (checkScenario("MPU") == "mobile") {
+              document.getElementById('art_mpu_mobile').insertAdjacentHTML('beforebegin',
+                '<div id="MPU" style="min-height: 250px; margin-bottom: 20px !important;"></div>');
+            }
+
+          </script>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>المحرَّم</strong></li>
+          </ul>
+          <p>ما نهى عنه الشارع نهياً جازماً، أو هو ما يعاقب فاعله اختياراً ويثاب تاركه.
+          </p>
+          <h3><span class="mw-headline" id=".D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A">الحكم
+              الوضعي</span></h3>
+          <p>خطاب اللَّه -تعالى- الذي اقتضى جعلُ أمرٍ علامة لحكم تكليفي، وجعله مرتبطًا به؛ بكونه سببًا له، أو شرطاً أو
+            مانعاً،<sup id="cite_ref-a205d433_0cb2_4174_b9b1_a229f7d22f6b_3-0" class="reference"><a
+                routerLink="#cite_note-a205d433_0cb2_4174_b9b1_a229f7d22f6b-3">[٣]</a></sup>وينقسم إلى:<sup
+              id="cite_ref-e928996b_1b5e_409f_b175_0b1118d7cf29_4-0" class="reference"><a
+                routerLink="#cite_note-e928996b_1b5e_409f_b175_0b1118d7cf29-4">[٤]</a></sup></p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>السبب</strong></li>
+          </ul>
+          <p>ما يلزم من وجوده وجود الحكم، ومن عدمه العدم، مثاله: <a class="external text"
+              routerLink="https://mawdoo3.com/%D9%85%D8%AA%D9%89_%D9%8A%D9%83%D9%88%D9%86_%D9%88%D9%82%D8%AA_%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D9%84">زوال
+              الشمس</a>، بوجوده تجب صلاة الظهر، وبعدم وجوده لا تجب؛ أي لزم من وجوده وجود الحكم ومن عدمه عدم الحكم.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>الشرط</strong></li>
+          </ul>
+          <p>ما يلزم من عدمه عدم الحكم، ولا يلزم من وجوده وجود ولا عدم، كالطهارة للصلاة؛ فإنّ عدمها يلزم منه عدم صحة
+            الصلاة،
+            ولا يلزم من وجوده وجود الصلاة.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>المانع</strong></li>
+          </ul>
+          <p>ما يلزم من وجوده العدم، ولا يلزم من عدمه وجود ولا عدم، كالقتل من أحد الورثة؛ فإنَّه يلزم من وجوده الحرمان
+            من
+            الإرث.
+          </p>
+          <p>ويترتب على هذه الثلاثة السابقة الأقسام الآتية:<sup id="cite_ref-7be4d25f_e27d_4d76_89ad_34007804f019_5-0"
+              class="reference"><a routerLink="#cite_note-7be4d25f_e27d_4d76_89ad_34007804f019-5">[٥]</a></sup></p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>الصحيح</strong> </li>
+          </ul>
+          <p>ما يعتدُّ به من العبادات، وما ينفذ من المعاملات، كالصلاة مُستوفية الشروط، منتفية عنها الموانع، وكعقد بيع
+            مستوفٍ
+            شروطه، منتفية عنه موانعه.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>الفاسد</strong> </li>
+          </ul>
+          <p>ما لا يعتدُّ به من العبادات، وما لا ينفذ من المعاملات، أو هو ما لم يستوفِ الشروط، أو وجد مانع يمنعه،
+            كالصلاة
+            بغير طهارة، وكبيعِ ما لا يملك.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>العزيمة</strong> </li>
+          </ul>
+          <p>الحكم الثابت <a class="external text"
+              routerLink="https://mawdoo3.com/%D8%AA%D8%B9%D8%B1%D9%8A%D9%81_%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9_%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A%D8%A9">بدليل
+              شرعيٍ</a> خال من معارض راجح، كوجوب الصلوات الخمس.
+          </p>
+          <ul>
+            <li> <span class="ql-ui"></span><strong>الرخصة</strong> </li>
+          </ul>
+          <p>ما شُرع لعذر مع قيام سبب تحريمه لولا العذر، أو ما ثبت على خلاف دليل شرعي لمعارض راجح؛ كأكل الميتة عند
+            الاضطرار.
+          </p>
+          <h2><span class="mw-headline"
+              id=".D9.85.D9.82.D8.A7.D8.B1.D9.86.D8.A9_.D8.A8.D9.8A.D9.86_.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A_.D9.88.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A"><b>مقارنة
+                بين الحكم التكليفي والحكم الوضعي</b></span></h2>
+          <ul>
+            <li> <span class="ql-ui"></span>الحكم التكليفي متعلِّق بفعل العبد أو تركه، أو التخيير بين الفعل والترك،
+              أمَّا
+              الوضعي فهو علامة يترتب عليها الحكم التكليفي وجوداً وعدماً، مثال ذلك: مِلكُ <a class="external text"
+                routerLink="https://mawdoo3.com/%D9%85%D8%A7_%D9%87%D9%88_%D8%A7%D9%84%D9%86%D8%B5%D8%A7%D8%A8_%D9%81%D9%8A_%D8%A7%D9%84%D8%B2%D9%83%D8%A7%D8%A9">نصاب
+                الزكاة</a>، وحولان الحول (حكم وضعي)، يترتب على وجودهما وجوب الزكاة، وهو (حكم تكليفي) يفعلُه المكلَّفُ أو
+              لا
+              يفعلُه، ويترتب على فعله الثواب وعلى تركه العقاب.<sup
+                id="cite_ref-a63aa386_7933_43bd_823d_ed0be4cc8378_6-0" class="reference"><a
+                  routerLink="#cite_note-a63aa386_7933_43bd_823d_ed0be4cc8378-6">[٦]</a></sup></li>
+            <li> <span class="ql-ui"></span>الحكم التكليفي فيه طلب الفعل، أو طلب الترك، أو التخيير بين الفعل والترك،
+              أمَّا
+              الحكم الوضعي فليس فيه طلب ولا تخيير، والحكم التكليفي في مقدور المكلَّف فعلُه أو تركُه، وأمَّا الوضعي فليس
+              داخلاً في مقدور المكلَّف.<sup id="cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-0" class="reference"><a
+                  routerLink="#cite_note-753ba3bb_dede_4da0_a69d_e3d5a7037201-7">[٧]</a></sup></li>
+          </ul>
+          <p>مثال: زوال الشمس (حكم وضعي) ليس فيه طلب فعلٍ أو تركٍ، وليس داخلاً في مقدور المكلَّف، أمَّا وجوب صلاة الظهر
+            فهو
+            (حكم تكليفي) مطلوب فعله، وهو داخل في مقدور المكلَّف.<sup
+              id="cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-1" class="reference"><a
+                routerLink="#cite_note-753ba3bb_dede_4da0_a69d_e3d5a7037201-7">[٧]</a></sup></p>
+          <h2 class="references-title"><span class="mw-headline"
+              id=".D8.A7.D9.84.D9.85.D8.B1.D8.A7.D8.AC.D8.B9"><b>المراجع</b></span> <span
+              class="text-center sign arrow-down"></span></h2>
+          <ol class="references">
+            <li id="cite_note-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6-1"><span class="mw-cite-backlink"><a
+                  routerLink="#cite_ref-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6_1-0">↑</a></span> <span
+                class="reference-text">محمد
+                الزحيلي، <i><a rel="nofollow" class="external text"
+                    routerLink="https://shamela.ws/book/17118/274">الوجيز في أصول
+                    الفقه</a></i>، صفحة 1 -393. بتصرّف.</span>
+            </li>
+            <li id="cite_note-300d37f2_9afa_4ef4_9c1e_4da72475d2d5-2"><span class="mw-cite-backlink"><a
+                  routerLink="#cite_ref-300d37f2_9afa_4ef4_9c1e_4da72475d2d5_2-0">↑</a></span> <span
+                class="reference-text">جلال
+                الدين المحلي، <i><a rel="nofollow" class="external text"
+                    routerLink="https://shamela.ws/book/21547/60">شرح الورقات
+                    في أصول الفقه</a></i>، صفحة 71 -76. بتصرّف.</span>
+            </li>
+            <li id="cite_note-a205d433_0cb2_4174_b9b1_a229f7d22f6b-3"><span class="mw-cite-backlink"><a
+                  routerLink="#cite_ref-a205d433_0cb2_4174_b9b1_a229f7d22f6b_3-0">↑</a></span> <span
+                class="reference-text">محمد
+                الزحيلي، <i><a rel="nofollow" class="external text"
+                    routerLink="https://shamela.ws/book/17118/275#p1">الوجيز في
+                    أصول الفقه</a></i>، صفحة 1 -294. بتصرّف.</span>
+            </li>
+            <li id="cite_note-e928996b_1b5e_409f_b175_0b1118d7cf29-4"><span class="mw-cite-backlink"><a
+                  routerLink="#cite_ref-e928996b_1b5e_409f_b175_0b1118d7cf29_4-0">↑</a></span> <span
+                class="reference-text">عياض
+                السلمي، <i><a rel="nofollow" class="external text" routerLink="https://shamela.ws/book/36379/60#p1">أصول
+                    الفقه
+                    الذي لا يسع الفقه جهله</a></i>، صفحة 56 -59. بتصرّف.</span>
+            </li>
+            <li id="cite_note-7be4d25f_e27d_4d76_89ad_34007804f019-5"><span class="mw-cite-backlink"><a
+                  routerLink="#cite_ref-7be4d25f_e27d_4d76_89ad_34007804f019_5-0">↑</a></span> <span
+                class="reference-text">محمد
+                الزحيلي، <i><a rel="nofollow" class="external text"
+                    routerLink="https://al-maktaba.org/book/33154/424#p1">الوجيز
+                    في أصول الفقه</a></i>، صفحة 1 -423 -426. بتصرّف.</span>
+            </li>
+            <li id="cite_note-a63aa386_7933_43bd_823d_ed0be4cc8378-6"><span class="mw-cite-backlink"><a
+                  routerLink="#cite_ref-a63aa386_7933_43bd_823d_ed0be4cc8378_6-0">↑</a></span> <span
+                class="reference-text">محمد
+                الزحيلي، <i><a rel="nofollow" class="external text"
+                    routerLink="https://shamela.ws/book/17118/275#p1">الوجيز في
+                    أصول الفقه</a></i>، صفحة 1 -294 -295. بتصرّف.</span>
+            </li>
+            <li id="cite_note-753ba3bb_dede_4da0_a69d_e3d5a7037201-7"><span class="mw-cite-backlink"><b>^</b> <a
+                  routerLink="#cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-0"><sup><i><b>أ</b></i></sup></a> <a
+                  routerLink="#cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-1"><sup><i><b>ب</b></i></sup></a></span>
+              <span class="reference-text">محمد الزحيلي، <i><a rel="nofollow" class="external text"
+                    routerLink="https://shamela.ws/book/17118/276#p1">الوجيز في أصول الفقه</a></i>، صفحة 1 -294 -295.
+                بتصرّف.</span>
+            </li>
+          </ol>
+        </div>
+        <!-- End Feedback Feature -->
       </div>
-      <ul class="related-articles-list1 columns related-articles-list1_mobile">
-        <li><span class="icon"></span><span>اقرأ أيضاً</span></li>
-        <li><a
-            routerLink="%D8%AD%D9%83%D9%85_%D8%A7%D9%84%D8%B1%D8%A8%D8%A7_%D9%81%D9%8A_%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85"><span>
-              حكم الربا في الاسلام</span></a></li>
-        <li><a
-            routerLink="%D8%A3%D9%86%D9%88%D8%A7%D8%B9_%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84_%D8%A7%D9%84%D8%B1%D8%A8%D9%88%D9%8A%D8%A9"><span>
-              أنواع الأموال الربوية</span></a></li>
-      </ul>
-      <script type="text/javascript" id="art_leaderboard_mobile">
-        if (checkScenario("Leaderboard") == "mobile") {
-          document.getElementById('art_leaderboard_mobile').insertAdjacentHTML('beforebegin',
-            '<div id="Leaderboard" style="min-height: 100px; margin: 10px auto !important;"></div>');
-        }
-
-      </script>
-
-      <h2><span class="mw-headline"
-          id=".D8.A3.D9.86.D9.88.D8.A7.D8.B9_.D8.A7.D9.84.D8.A3.D8.AD.D9.83.D8.A7.D9.85_.D8.A7.D9.84.D8.B4.D8.B1.D8.B9.D9.8A.D8.A9"><b>أنواع
-            الأحكام الشرعية</b></span></h2>
-      <p>الحكم الشرعي عند الأصوليين ينقسم إلى قسمين: حكم تكليفي، وحكم وضعي.
-      </p>
-      <div id="Outstream"></div>
-      <h3><span class="mw-headline"
-          id=".D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A">الحكم التكليفي</span>
-      </h3>
-      <p>هو خطاب الشارع المتعلّق بأفعال المكلفين على جهة الاقتضاء أو التخيير،<sup
-          id="cite_ref-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6_1-0" class="reference"><a
-            routerLink="#cite_note-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6-1">[١]</a></sup>ويمكن تقسيم الحكم التكليفي كما
-        يأتي:<sup id="cite_ref-300d37f2_9afa_4ef4_9c1e_4da72475d2d5_2-0" class="reference"><a
-            routerLink="#cite_note-300d37f2_9afa_4ef4_9c1e_4da72475d2d5-2">[٢]</a></sup></p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>الواجب</strong></li>
-      </ul>
-      <p>ما أمر به الشارع أمراً جازماً، أو هو ما يثاب فاعله ويُعاقب تاركه.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>المندوب</strong></li>
-      </ul>
-      <p>ما أمر به الشرع أمراً غيرَ جازم، أو هو ما يثاب فاعله ولا يُعاقب تاركه.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>المباح</strong></li>
-      </ul>
-      <p>ما خُيَّر به الشارع بين الفعل والترك، أو هو ما لا يترتب على فعله أو تركه ثواب ولا عقاب.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>المكروه</strong></li>
-      </ul>
-      <p>ما نهى عنه الشارع نهياً غير جازم، أو هو ما يثاب تاركه ولا يعاقب فاعله.
-      </p>
-      <script type="text/javascript" id="art_mpu_mobile">
-        if (checkScenario("MPU") == "mobile") {
-          document.getElementById('art_mpu_mobile').insertAdjacentHTML('beforebegin',
-            '<div id="MPU" style="min-height: 250px; margin-bottom: 20px !important;"></div>');
-        }
-
-      </script>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>المحرَّم</strong></li>
-      </ul>
-      <p>ما نهى عنه الشارع نهياً جازماً، أو هو ما يعاقب فاعله اختياراً ويثاب تاركه.
-      </p>
-      <h3><span class="mw-headline" id=".D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A">الحكم
-          الوضعي</span></h3>
-      <p>خطاب اللَّه -تعالى- الذي اقتضى جعلُ أمرٍ علامة لحكم تكليفي، وجعله مرتبطًا به؛ بكونه سببًا له، أو شرطاً أو
-        مانعاً،<sup id="cite_ref-a205d433_0cb2_4174_b9b1_a229f7d22f6b_3-0" class="reference"><a
-            routerLink="#cite_note-a205d433_0cb2_4174_b9b1_a229f7d22f6b-3">[٣]</a></sup>وينقسم إلى:<sup
-          id="cite_ref-e928996b_1b5e_409f_b175_0b1118d7cf29_4-0" class="reference"><a
-            routerLink="#cite_note-e928996b_1b5e_409f_b175_0b1118d7cf29-4">[٤]</a></sup></p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>السبب</strong></li>
-      </ul>
-      <p>ما يلزم من وجوده وجود الحكم، ومن عدمه العدم، مثاله: <a class="external text"
-          routerLink="https://mawdoo3.com/%D9%85%D8%AA%D9%89_%D9%8A%D9%83%D9%88%D9%86_%D9%88%D9%82%D8%AA_%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D9%84">زوال
-          الشمس</a>، بوجوده تجب صلاة الظهر، وبعدم وجوده لا تجب؛ أي لزم من وجوده وجود الحكم ومن عدمه عدم الحكم.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>الشرط</strong></li>
-      </ul>
-      <p>ما يلزم من عدمه عدم الحكم، ولا يلزم من وجوده وجود ولا عدم، كالطهارة للصلاة؛ فإنّ عدمها يلزم منه عدم صحة الصلاة،
-        ولا يلزم من وجوده وجود الصلاة.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>المانع</strong></li>
-      </ul>
-      <p>ما يلزم من وجوده العدم، ولا يلزم من عدمه وجود ولا عدم، كالقتل من أحد الورثة؛ فإنَّه يلزم من وجوده الحرمان من
-        الإرث.
-      </p>
-      <p>ويترتب على هذه الثلاثة السابقة الأقسام الآتية:<sup id="cite_ref-7be4d25f_e27d_4d76_89ad_34007804f019_5-0"
-          class="reference"><a routerLink="#cite_note-7be4d25f_e27d_4d76_89ad_34007804f019-5">[٥]</a></sup></p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>الصحيح</strong> </li>
-      </ul>
-      <p>ما يعتدُّ به من العبادات، وما ينفذ من المعاملات، كالصلاة مُستوفية الشروط، منتفية عنها الموانع، وكعقد بيع مستوفٍ
-        شروطه، منتفية عنه موانعه.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>الفاسد</strong> </li>
-      </ul>
-      <p>ما لا يعتدُّ به من العبادات، وما لا ينفذ من المعاملات، أو هو ما لم يستوفِ الشروط، أو وجد مانع يمنعه، كالصلاة
-        بغير طهارة، وكبيعِ ما لا يملك.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>العزيمة</strong> </li>
-      </ul>
-      <p>الحكم الثابت <a class="external text"
-          routerLink="https://mawdoo3.com/%D8%AA%D8%B9%D8%B1%D9%8A%D9%81_%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9_%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A%D8%A9">بدليل
-          شرعيٍ</a> خال من معارض راجح، كوجوب الصلوات الخمس.
-      </p>
-      <ul>
-        <li> <span class="ql-ui"></span><strong>الرخصة</strong> </li>
-      </ul>
-      <p>ما شُرع لعذر مع قيام سبب تحريمه لولا العذر، أو ما ثبت على خلاف دليل شرعي لمعارض راجح؛ كأكل الميتة عند الاضطرار.
-      </p>
-      <h2><span class="mw-headline"
-          id=".D9.85.D9.82.D8.A7.D8.B1.D9.86.D8.A9_.D8.A8.D9.8A.D9.86_.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D8.AA.D9.83.D9.84.D9.8A.D9.81.D9.8A_.D9.88.D8.A7.D9.84.D8.AD.D9.83.D9.85_.D8.A7.D9.84.D9.88.D8.B6.D8.B9.D9.8A"><b>مقارنة
-            بين الحكم التكليفي والحكم الوضعي</b></span></h2>
-      <ul>
-        <li> <span class="ql-ui"></span>الحكم التكليفي متعلِّق بفعل العبد أو تركه، أو التخيير بين الفعل والترك، أمَّا
-          الوضعي فهو علامة يترتب عليها الحكم التكليفي وجوداً وعدماً، مثال ذلك: مِلكُ <a class="external text"
-            routerLink="https://mawdoo3.com/%D9%85%D8%A7_%D9%87%D9%88_%D8%A7%D9%84%D9%86%D8%B5%D8%A7%D8%A8_%D9%81%D9%8A_%D8%A7%D9%84%D8%B2%D9%83%D8%A7%D8%A9">نصاب
-            الزكاة</a>، وحولان الحول (حكم وضعي)، يترتب على وجودهما وجوب الزكاة، وهو (حكم تكليفي) يفعلُه المكلَّفُ أو لا
-          يفعلُه، ويترتب على فعله الثواب وعلى تركه العقاب.<sup id="cite_ref-a63aa386_7933_43bd_823d_ed0be4cc8378_6-0"
-            class="reference"><a routerLink="#cite_note-a63aa386_7933_43bd_823d_ed0be4cc8378-6">[٦]</a></sup></li>
-        <li> <span class="ql-ui"></span>الحكم التكليفي فيه طلب الفعل، أو طلب الترك، أو التخيير بين الفعل والترك، أمَّا
-          الحكم الوضعي فليس فيه طلب ولا تخيير، والحكم التكليفي في مقدور المكلَّف فعلُه أو تركُه، وأمَّا الوضعي فليس
-          داخلاً في مقدور المكلَّف.<sup id="cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-0" class="reference"><a
-              routerLink="#cite_note-753ba3bb_dede_4da0_a69d_e3d5a7037201-7">[٧]</a></sup></li>
-      </ul>
-      <p>مثال: زوال الشمس (حكم وضعي) ليس فيه طلب فعلٍ أو تركٍ، وليس داخلاً في مقدور المكلَّف، أمَّا وجوب صلاة الظهر فهو
-        (حكم تكليفي) مطلوب فعله، وهو داخل في مقدور المكلَّف.<sup id="cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-1"
-          class="reference"><a routerLink="#cite_note-753ba3bb_dede_4da0_a69d_e3d5a7037201-7">[٧]</a></sup></p>
-      <h2 class="references-title"><span class="mw-headline"
-          id=".D8.A7.D9.84.D9.85.D8.B1.D8.A7.D8.AC.D8.B9"><b>المراجع</b></span> <span
-          class="text-center sign arrow-down"></span></h2>
-      <ol class="references">
-        <li id="cite_note-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6-1"><span class="mw-cite-backlink"><a
-              routerLink="#cite_ref-c57c0eaf_b0dd_43aa_b6ee_ea58845952a6_1-0">↑</a></span> <span class="reference-text">محمد
-            الزحيلي، <i><a rel="nofollow" class="external text" routerLink="https://shamela.ws/book/17118/274">الوجيز في أصول
-                الفقه</a></i>، صفحة 1 -393. بتصرّف.</span>
-        </li>
-        <li id="cite_note-300d37f2_9afa_4ef4_9c1e_4da72475d2d5-2"><span class="mw-cite-backlink"><a
-              routerLink="#cite_ref-300d37f2_9afa_4ef4_9c1e_4da72475d2d5_2-0">↑</a></span> <span class="reference-text">جلال
-            الدين المحلي، <i><a rel="nofollow" class="external text" routerLink="https://shamela.ws/book/21547/60">شرح الورقات
-                في أصول الفقه</a></i>، صفحة 71 -76. بتصرّف.</span>
-        </li>
-        <li id="cite_note-a205d433_0cb2_4174_b9b1_a229f7d22f6b-3"><span class="mw-cite-backlink"><a
-              routerLink="#cite_ref-a205d433_0cb2_4174_b9b1_a229f7d22f6b_3-0">↑</a></span> <span class="reference-text">محمد
-            الزحيلي، <i><a rel="nofollow" class="external text" routerLink="https://shamela.ws/book/17118/275#p1">الوجيز في
-                أصول الفقه</a></i>، صفحة 1 -294. بتصرّف.</span>
-        </li>
-        <li id="cite_note-e928996b_1b5e_409f_b175_0b1118d7cf29-4"><span class="mw-cite-backlink"><a
-              routerLink="#cite_ref-e928996b_1b5e_409f_b175_0b1118d7cf29_4-0">↑</a></span> <span class="reference-text">عياض
-            السلمي، <i><a rel="nofollow" class="external text" routerLink="https://shamela.ws/book/36379/60#p1">أصول الفقه
-                الذي لا يسع الفقه جهله</a></i>، صفحة 56 -59. بتصرّف.</span>
-        </li>
-        <li id="cite_note-7be4d25f_e27d_4d76_89ad_34007804f019-5"><span class="mw-cite-backlink"><a
-              routerLink="#cite_ref-7be4d25f_e27d_4d76_89ad_34007804f019_5-0">↑</a></span> <span class="reference-text">محمد
-            الزحيلي، <i><a rel="nofollow" class="external text" routerLink="https://al-maktaba.org/book/33154/424#p1">الوجيز
-                في أصول الفقه</a></i>، صفحة 1 -423 -426. بتصرّف.</span>
-        </li>
-        <li id="cite_note-a63aa386_7933_43bd_823d_ed0be4cc8378-6"><span class="mw-cite-backlink"><a
-              routerLink="#cite_ref-a63aa386_7933_43bd_823d_ed0be4cc8378_6-0">↑</a></span> <span class="reference-text">محمد
-            الزحيلي، <i><a rel="nofollow" class="external text" routerLink="https://shamela.ws/book/17118/275#p1">الوجيز في
-                أصول الفقه</a></i>، صفحة 1 -294 -295. بتصرّف.</span>
-        </li>
-        <li id="cite_note-753ba3bb_dede_4da0_a69d_e3d5a7037201-7"><span class="mw-cite-backlink"><b>^</b> <a
-              routerLink="#cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-0"><sup><i><b>أ</b></i></sup></a> <a
-              routerLink="#cite_ref-753ba3bb_dede_4da0_a69d_e3d5a7037201_7-1"><sup><i><b>ب</b></i></sup></a></span> <span
-            class="reference-text">محمد الزحيلي، <i><a rel="nofollow" class="external text"
-                routerLink="https://shamela.ws/book/17118/276#p1">الوجيز في أصول الفقه</a></i>، صفحة 1 -294 -295.
-            بتصرّف.</span>
-        </li>
-      </ol>
     </div>
-
-    <!-- End Feedback Feature -->
-
-
-
+    <router-outlet></router-outlet>
   </div>
 </div>
