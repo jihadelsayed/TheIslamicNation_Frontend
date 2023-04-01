@@ -17,6 +17,9 @@ import { rhetoricRoutes } from './pages/islam/rhetoric/rhetoric-routing.module';
 import { muslimsRoutes } from './pages/islam/muslims/muslims-routing.module';
 import { creedRoutes } from './pages/islam/creed/creed-routing.module';
 import { pillarsRoutes } from './pages/islam/pillars/pillars-routing.module';
+import { AsideComponent } from './header/aside/aside.component';
+import { ContentComponent } from './header/content/content.component';
+import { MenuComponent } from './header/menu/menu.component';
 
 
 const routes: Routes = [
@@ -30,7 +33,17 @@ const routes: Routes = [
   { path:'faq',component: FAQComponent },
   { path:'cookies',component: CookiesComponent },
   { path:'policy',component: PolicyComponent },
-
+  {
+    path: ':menuUrl', component: MenuComponent,
+    children: [
+      {
+        path: ':asideUrl', component: AsideComponent,
+        children: [
+          { path: ':contentUrl', component: ContentComponent },
+        ]
+      }
+    ]
+  },
 
   // { path:'search',component: SearchComponent },
 

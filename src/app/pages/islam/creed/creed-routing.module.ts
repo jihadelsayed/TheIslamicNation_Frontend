@@ -17,7 +17,7 @@ import { AsideComponent } from 'src/app/header/aside/aside.component';
 
 export const creedRoutes: Routes = [
   {
-    path: 'creed', component: CreedComponent,
+    path: ':menuUrl', component: CreedComponent,
     children: [
       // {
       //   path: 'angels', component: AngelsComponent,
@@ -59,10 +59,10 @@ export const creedRoutes: Routes = [
       //     { path: '', component: namesComponent },
       //   ]
       // },
-      {//ContentComponent
-        path: ':aside', component: AsideComponent,
+      {
+        path: ':asideUrl', component: AsideComponent,
         children: [
-          { path: ':content', component: ContentComponent },
+          { path: ':contentUrl', component: ContentComponent },
         ]
       }
     ]
