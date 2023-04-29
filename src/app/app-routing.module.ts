@@ -1,11 +1,4 @@
-import { PolicyComponent } from './footer/policy/policy.component';
-import { CookiesComponent } from './footer/cookies/cookies.component';
-import { FAQComponent } from './footer/faq/faq.component';
-import { ContactComponent } from './footer/contact/contact.component';
-import { WhyComponent } from './footer/why/why.component';
-import { WhatComponent } from './footer/what/what.component';
-import { WhoComponent } from './footer/who/who.component';
-import { HowComponent } from './footer/how/how.component';
+
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,38 +11,16 @@ import { muslimsRoutes } from './pages/islam/muslims/muslims-routing.module';
 import { creedRoutes } from './pages/islam/creed/creed-routing.module';
 import { pillarsRoutes } from './pages/islam/pillars/pillars-routing.module';
 import { AsideComponent } from './header/aside/aside.component';
-import { ContentComponent } from './header/content/content.component';
+import { ContentComponent } from './header/menu/pages/content/content.component';
 import { MenuComponent } from './header/menu/menu.component';
+import { footerRoutes } from './footer/footer-routing.module';
+import { headerRoutes } from './header/header-routing.module';
 
 
 const routes: Routes = [
   // header
   // footer
-  { path:'how',component: HowComponent },
-  { path:'who',component: WhoComponent },
-  { path:'what',component: WhatComponent },
-  { path:'why',component: WhyComponent },
-  { path:'contact',component: ContactComponent },
-  { path:'faq',component: FAQComponent },
-  { path:'cookies',component: CookiesComponent },
-  { path:'policy',component: PolicyComponent },
-  {
-    path: ':menuUrl', component: MenuComponent,
-    children: [
-      {
-        path: ':asideUrl', component: AsideComponent,
-        children: [
-          { path: ':contentUrl', component: ContentComponent },
-        ]
-      }
-    ]
-  },
-
   // { path:'search',component: SearchComponent },
-
-
-
-
   // { path:'chat',component: ChatComponent ,canActivate:[AuthGuard] },
   // { path:'deleteAccount',component: DeleteAccountComponent ,canActivate:[AuthGuard] },
   // { path:'buyservice/:slug',component: BuyServiceComponent ,canActivate:[AuthGuard] },
@@ -71,21 +42,22 @@ const routes: Routes = [
   // { path:'CheckoutUnsuccess',component: CheckoutUnsuccessPageComponent, canActivate:[AuthGuard]},
   // { path:'Approved',component: ApprovedPageComponent, canActivate:[AuthGuard]},
   // { path:'orderDetail',component: OrderDetailComponent, canActivate:[AuthGuard]},
-
   // { path:'**',component: ErrorPageComponent }
-
-
 ];
 
 @NgModule({
   imports: [
+    RouterModule.forChild(footerRoutes), // home routes
     RouterModule.forChild(homeRoutes), // home routes
-    RouterModule.forChild(islamRoutes), // islam routes
-    RouterModule.forChild(rhetoricRoutes), // rhetoric routes
-    RouterModule.forChild(muslimsRoutes), // muslims routes
-    RouterModule.forChild(creaturesRoutes), // creatures routes
-    RouterModule.forChild(creedRoutes), // angels routes
-    RouterModule.forChild(pillarsRoutes), // angels routes
+    RouterModule.forChild(headerRoutes), // islam routes
+
+    //RouterModule.forChild(islamRoutes), // islam routes
+
+    // RouterModule.forChild(rhetoricRoutes), // rhetoric routes
+    // RouterModule.forChild(muslimsRoutes), // muslims routes
+    // RouterModule.forChild(creaturesRoutes), // creatures routes
+    //RouterModule.forChild(creedRoutes), // angels routes
+    // RouterModule.forChild(pillarsRoutes), // angels routes
 
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',useHash: true })],
   exports: [RouterModule]

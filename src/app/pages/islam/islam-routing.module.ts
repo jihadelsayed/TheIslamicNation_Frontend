@@ -15,5 +15,4 @@ export const islamRoutes: Routes = [
   { path:'jurisprudence',component: JurisprudenceComponent }, // الفقه  يختلف بكل زمان ومكان
   { path:'muslim',component: MuslimsComponent }, // الفقه  يختلف بكل زمان ومكان
   { path:'rhetoric',component: RhetoricComponent }, // علم البلاغة
-
 ];

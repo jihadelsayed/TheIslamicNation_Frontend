@@ -83,9 +83,12 @@ import { PrayersComponent } from './pages/islam/pillars/prayers/prayers.componen
 import { CharityComponent } from './pages/islam/pillars/charity/charity.component';
 import { FastingComponent } from './pages/islam/pillars/fasting/fasting.component';
 import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage.component';
-import { SubMenuComponent } from './header/sub-menu/sub-menu.component';
+import { SubMenuComponent } from './header/menu/pages/sub-menu/sub-menu.component';
 import { AsideComponent } from './header/aside/aside.component';
-import { ContentComponent } from './header/content/content.component';
+import { ContentComponent } from './header/menu/pages/content/content.component';
+import { AsideContentComponent } from './header/aside/aside-content/aside-content.component';
+import { PagesComponent } from './header/menu/pages/pages.component';
+import { SubMenuContentComponent } from './header/menu/pages/sub-menu-content/sub-menu-content.component';
 
 
 
@@ -155,6 +158,9 @@ import { ContentComponent } from './header/content/content.component';
     SubMenuComponent,
     AsideComponent,
     ContentComponent,
+    PagesComponent,
+    AsideContentComponent,
+    SubMenuContentComponent,
   ],
   imports: [
     BrowserModule,
