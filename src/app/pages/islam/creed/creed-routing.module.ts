@@ -11,7 +11,6 @@ import { QuranComponent } from './religions-books/quran/quran.component';
 import { ReligionsBooksComponent } from './religions-books/religions-books.component';
 import { TheCreatorComponent } from './the-creator/the-creator.component';
 import { namesComponent } from './the-creator/names/names.component';
-import { ContentComponent } from 'src/app/header/menu/pages/content/content.component';
 import { SubMenuComponent } from 'src/app/header/menu/pages/sub-menu/sub-menu.component';
 import { AsideComponent } from 'src/app/header/aside/aside.component';
 
@@ -62,7 +61,7 @@ export const creedRoutes: Routes = [
       {
         path: ':asideUrl', component: AsideComponent,
         children: [
-          { path: ':contentUrl', component: ContentComponent },
+          // { path: ':contentUrl', component: ContentComponent },
         ]
       }
     ]

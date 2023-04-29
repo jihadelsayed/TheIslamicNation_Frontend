@@ -11,7 +11,6 @@ import { muslimsRoutes } from './pages/islam/muslims/muslims-routing.module';
 import { creedRoutes } from './pages/islam/creed/creed-routing.module';
 import { pillarsRoutes } from './pages/islam/pillars/pillars-routing.module';
 import { AsideComponent } from './header/aside/aside.component';
-import { ContentComponent } from './header/menu/pages/content/content.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { footerRoutes } from './footer/footer-routing.module';
 import { headerRoutes } from './header/header-routing.module';
