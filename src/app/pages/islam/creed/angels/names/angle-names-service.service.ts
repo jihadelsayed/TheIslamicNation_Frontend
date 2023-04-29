@@ -11,6 +11,6 @@ export class AngleNamesServiceService {
 
   getAllNames() {
     //return this.httpClient.get('./assets/Names_Of_names_EN.json');
-    return this.httpClient.get('https://raw.githubusercontent.com/davidpales1/TheIslamicNation/main/json/islam/creed/angels/angels.'+this.currentLang+'.json');
+    return this.httpClient.get('https://raw.githubusercontent.com/jihadelsayed/TheIslamicNation/main/json/islam/creed/angels/angels.'+this.currentLang+'.json');
   }
 }

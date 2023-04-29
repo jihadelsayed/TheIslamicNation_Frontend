@@ -12,7 +12,7 @@ export class CreedService {
 
   getCreed() {
     //return this.httpClient.get('./assets/Names_Of_names_EN.json');
-    return this.httpClient.get('https://raw.githubusercontent.com/davidpales1/TheIslamicNation/main/json/islam/creed/creed.'+this.currentLang+'.json');
+    return this.httpClient.get('https://raw.githubusercontent.com/jihadelsayed/TheIslamicNation/main/json/islam/creed/creed.'+this.currentLang+'.json');
   }
 }
 
