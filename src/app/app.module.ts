@@ -83,13 +83,12 @@ import { PrayersComponent } from './pages/islam/pillars/prayers/prayers.componen
 import { CharityComponent } from './pages/islam/pillars/charity/charity.component';
 import { FastingComponent } from './pages/islam/pillars/fasting/fasting.component';
 import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage.component';
-import { SubMenuComponent } from './header/menu/pages/sub-menu/sub-menu.component';
-import { AsideComponent } from './header/aside/aside.component';
-import { AsideContentComponent } from './header/aside/aside-content/aside-content.component';
-import { PagesComponent } from './header/menu/pages/pages.component';
-import { SubMenuContentComponent } from './header/menu/pages/sub-menu-content/sub-menu-content.component';
 
-
+import { MenuContentComponent } from './header/menu/menu-content/menu-content.component';
+import { SubMenuContentComponent } from './header/menu/menu-content/sub-menu/sub-menu-content/sub-menu-content.component';
+import { SubMenuComponent } from './header/menu/menu-content/sub-menu/sub-menu.component';
+import { AsideContentComponent } from './header/menu/menu-content/sub-menu/sub-menu-content/aside/aside-content/aside-content.component';
+import { AsideComponent } from './header/menu/menu-content/sub-menu/sub-menu-content/aside/aside.component';
 
 
 
@@ -154,10 +153,12 @@ import { SubMenuContentComponent } from './header/menu/pages/sub-menu-content/su
     CharityComponent,
     FastingComponent,
     PilgrimageComponent,
-    SubMenuComponent,
     AsideComponent,
-    PagesComponent,
     AsideContentComponent,
+
+    MenuContentComponent,
+        SubMenuComponent,
+
     SubMenuContentComponent,
   ],
   imports: [
