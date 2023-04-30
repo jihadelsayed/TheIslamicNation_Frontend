@@ -12,6 +12,8 @@ export const environment = {
   SERVER_URL_WITH_OUT_SLASH: "",
   //SERVER_URL: "https://server."+ window.location.hostname.replace(/^[^.]+./, '') +".com/",
   SERVER_URL: "https://server."+ window.location.hostname +"/",
+  JSON_URL: 'https://raw.githubusercontent.com/jihadelsayed/TheIslamicNation/main/json/islam/',
+
   //CHAT_URL: "wss://server."+ window.location.hostname.replace(/^[^.]+./, '') +"/ws/chat/",
   CHAT_URL: "wss://server."+ window.location.hostname +"/ws/chat/",
   FrontEnd_URL: window.location.origin,
