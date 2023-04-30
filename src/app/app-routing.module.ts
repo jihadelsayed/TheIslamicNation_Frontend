@@ -4,12 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { islamRoutes } from './pages/islam/islam-routing.module';
-import { creaturesRoutes } from './pages/islam/creatures/creatures-routing.module';
 import { homeRoutes } from './pages/home/home-routing.module';
-import { rhetoricRoutes } from './pages/islam/rhetoric/rhetoric-routing.module';
-import { muslimsRoutes } from './pages/islam/muslims/muslims-routing.module';
-import { creedRoutes } from './pages/islam/creed/creed-routing.module';
-import { pillarsRoutes } from './pages/islam/pillars/pillars-routing.module';
 import { MenuComponent } from './header/menu/menu.component';
 import { footerRoutes } from './footer/footer-routing.module';
 import { headerRoutes } from './header/header-routing.module';

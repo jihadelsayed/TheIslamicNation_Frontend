@@ -50,39 +50,12 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
 import { AuthGuard } from './authorization/services/auth.guard';
 import { JwtInterceptor } from './authorization/Jwt-interceptor.interceptor';
 import { AuthorizationComponent } from './authorization/authorization.component';
-import { CreaturesComponent } from './pages/islam/creatures/creatures.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CreedComponent } from './pages/islam/creed/creed.component';
-import { PillarsComponent } from './pages/islam/pillars/pillars.component';
 import { IslamComponent } from './pages/islam/islam.component';
-import { JurisprudenceComponent } from './pages/islam/jurisprudence/jurisprudence.component';
-import { ProvisionsComponent } from './pages/islam/provisions/provisions.component';
 
 
 import { AppComponent } from './app.component';
-import { AngelsComponent } from './pages/islam/creed/angels/angels.component';
-import { CapacityComponent } from './pages/islam/creed/angels/capacity/capacity.component';
-import { NamesComponent } from './pages/islam/creed/angels/names/names.component';
-import { TraitsComponent } from './pages/islam/creed/angels/traits/traits.component';
-import { ProphetNamesComponent } from './pages/islam/creed/prophets/prophet-names/prophet-names.component';
-import { ProphetsComponent } from './pages/islam/creed/prophets/prophets.component';
-import { AyaComponent } from './pages/islam/creed/religions-books/quran/aya/aya.component';
-import { QuranComponent } from './pages/islam/creed/religions-books/quran/quran.component';
-import { ReligionsBooksComponent } from './pages/islam/creed/religions-books/religions-books.component';
-import { namesComponent } from './pages/islam/creed/the-creator/names/names.component';
-import { TheCreatorComponent } from './pages/islam/creed/the-creator/the-creator.component';
-import { ArabicComponent } from './pages/islam/rhetoric/arabic/arabic.component';
-import { RhetoricComponent } from './pages/islam/rhetoric/rhetoric.component';
-import { CardMuslimComponent } from './pages/islam/muslims/card-muslim/card-muslim.component';
-import { DetailMuslimComponent } from './pages/islam/muslims/detail-muslim/detail-muslim.component';
-import { MinistriesComponent } from './pages/islam/muslims/ministries/ministries.component';
-import { MuslimsComponent } from './pages/islam/muslims/muslims.component';
-import { HistoryComponent } from './pages/islam/history/history.component';
-import { TestimonyComponent } from './pages/islam/pillars/testimony/testimony.component';
-import { PrayersComponent } from './pages/islam/pillars/prayers/prayers.component';
-import { CharityComponent } from './pages/islam/pillars/charity/charity.component';
-import { FastingComponent } from './pages/islam/pillars/fasting/fasting.component';
-import { PilgrimageComponent } from './pages/islam/pillars/pilgrimage/pilgrimage.component';
+
 
 import { MenuContentComponent } from './header/menu/menu-content/menu-content.component';
 import { SubMenuContentComponent } from './header/menu/menu-content/sub-menu/sub-menu-content/sub-menu-content.component';
@@ -122,37 +95,10 @@ import { AsideComponent } from './header/menu/menu-content/sub-menu/sub-menu-con
     PolicyComponent,
 
     // pages component
-    MuslimsComponent,
-    CardMuslimComponent,
-    DetailMuslimComponent,
     WhatComponent,
-    QuranComponent,
     HomeComponent,
-    AyaComponent,
     IslamComponent,
-    namesComponent,
-    RhetoricComponent,
-    ArabicComponent,
-    ReligionsBooksComponent,
-    MinistriesComponent,
-    CreaturesComponent,
-    TheCreatorComponent,
-    ProvisionsComponent,
-    CreedComponent,
-    JurisprudenceComponent,
-    PillarsComponent,
-    ProphetsComponent,
-    AngelsComponent,
-    NamesComponent,
-    TraitsComponent,
-    CapacityComponent,
-    ProphetNamesComponent,
-    HistoryComponent,
-    TestimonyComponent,
-    PrayersComponent,
-    CharityComponent,
-    FastingComponent,
-    PilgrimageComponent,
+
     AsideComponent,
     AsideContentComponent,
 
