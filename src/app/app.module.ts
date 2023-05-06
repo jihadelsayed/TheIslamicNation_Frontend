@@ -101,10 +101,8 @@ import { AsideComponent } from './header/menu/menu-content/sub-menu/sub-menu-con
 
     AsideComponent,
     AsideContentComponent,
-
     MenuContentComponent,
-        SubMenuComponent,
-
+    SubMenuComponent,
     SubMenuContentComponent,
   ],
   imports: [
