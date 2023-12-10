@@ -1,83 +1,73 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-    "./nuxt.config.{js,ts}",
-
-  ],
+  content: ["./src/**/*.{html,ts}", "./nuxt.config.{js,ts}"],
   mode: "jit",
   darkMode: "class", // class  --  media
   theme: {
     extend: {
       colors: {
         primary: {
-          "50": "#fefce8",
-          "100": "#fef9c3",
-          "200": "#fef08a",
-          "300": "#fde047",
-          "400": "#facc15",
-          "500": "#eab308",
-          "600": "#ca8a04",
-          "700": "#a16207",
-          "800": "#854d0e",
-          "900": "#713f12"
+          50: "#fefce8",
+          100: "#fef9c3",
+          200: "#fef08a",
+          300: "#fde047",
+          400: "#facc15",
+          500: "#eab308",
+          600: "#ca8a04",
+          700: "#a16207",
+          800: "#854d0e",
+          900: "#713f12",
         },
-        primary: {
-          "50": "#fefce8",
-          "100": "#fef9c3",
-          "200": "#fef08a",
-          "300": "#fde047",
-          "400": "#facc15",
-          "500": "#eab308",
-          "600": "#ca8a04",
-          "700": "#a16207",
-          "800": "#854d0e",
-          "900": "#713f12"
-        }
+        transparent: "transparent",
+        current: "currentColor",
+        white: "#f5f5f5",
+        purple: "#3f3cbb",
+        midnight: "#121063",
+        metal: "#565584",
+        tahiti: "#3ab7bf",
+        silver: "#ecebff",
+        "bubble-gum": "#ff77e9",
+        bermuda: "#78dcca",
       },
       fontFamily: {
-        'body': [
-          'Open Sans',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'system-ui',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'Noto Sans',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji'
+        body: [
+          "Open Sans",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "system-ui",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
         ],
-        'sans': [
-          'Open Sans',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'system-ui',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'Noto Sans',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji'
+        sans: [
+          "Open Sans",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "system-ui",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
         ],
-        'roboto': [
-          "Roboto", "sans-serif"
-        ],
-        'inter': [
-          "Inter", "sans-serif"
-        ],
-      }
+        roboto: ["Roboto", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
-}
+};
