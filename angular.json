@@ -5,7 +5,7 @@
   "projects": {
     "theislamicnation": {
       "i18n": {
-        "sourceLocale":"en-US",
+        "sourceLocale": "en-US",
         "locales": {
           "ar": "src/locale/messages.ar.xlf",
           "es": "src/locale/messages.es.xlf",
@@ -27,12 +27,11 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize":[
+            "localize": [
               "ar",
               "es",
               "pt",
@@ -46,21 +45,25 @@
             ],
             "outputPath": "dist/theislamicnation",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "browser": "src/main.ts",  // Use "browser" for universal builds
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
+              "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": [],
-            "ngswConfigPath": "ngsw-config.json"
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "es":{
@@ -191,7 +194,6 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
@@ -201,7 +203,6 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []

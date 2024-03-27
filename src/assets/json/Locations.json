@@ -1,0 +1,8 @@
+
+[
+    { "name": "New York", "image": "assets/category/Location.png" },
+    { "name": "Los Angeles", "image": "assets/category/Location.png" },
+    { "name": "London", "image": "assets/category/Location.png" },
+    { "name": "Tokyo", "image": "assets/category/Location.png" },
+    { "name": "Paris", "image": "assets/category/Location.png" }
+]

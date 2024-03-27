@@ -10,20 +10,24 @@
   }
 }
 body {
+  background-color: #ffffff;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   // font-family: 'Source Sans Pro', sans-serif;
 }
 a {
-  font-family: "Droid Arabic Kufi", serif;
+  font-family: "Roboto", "Droid Arabic Kufi", serif;
   word-spacing: 1px;
 }
 a {
-  font-family: "Droid Arabic Kufi", serif;
+  font-family: "Roboto", "Droid Arabic Kufi", serif;
   word-spacing: 1px;
 }
 p {
-  font-family: "Droid Arabic Kufi", serif;
-  color: aliceblue;
+  font-family: "Roboto", "Droid Arabic Kufi", serif;
+  color: rgb(52, 137, 212);
 }
 .light-mode {
   background-color: #fff;
@@ -33,36 +37,16 @@ p {
   background-color: #333;
   color: #fff;
 }
-body {
-  background-color: #f5f5f5 !important; /* PearlWhite: Background color for the body */
-  font-family: Roboto !important; /* Set a default font family */
-  line-height: 1.6; /* Set the line height for better readability */
+input[type="text"], button, select, textarea, option, img {
+  //* Reset all *///
+  border: none;
+  border: 0px solid #ccc;
+  border-radius: 0px;
+  outline: none;
+  border-radius: 0px;
+  margin: 0px;
+  background-color: transparent;
+
 }
 
-h1 {
-  font-family: "Playfair Display" !important; /* Set a default font family */
 
-  color: #ffc107 !important; /* GoldenYellow: Color of the h1 heading */
-  font-size: 36px; /* Set the font size for the h1 heading */
-}
-
-h2 {
-  font-family: "Playfair Display" !important; /* Set a default font family */
-
-  color: #2e7d32 !important; /* ForestGreen: Color of the h2 heading */
-  font-size: 30px; /* Set the font size for the h2 heading */
-}
-
-p {
-  font-size: 16px; /* Set the font size for paragraphs */
-}
-
-/* You can apply the Earthy Brown color (#795548) to specific elements if needed */
-/* For example, if you want to set the color of a specific class, use the class selector like this: */
-/* .my-class { color: #795548; } */
-
-/* If you have any other elements that you want to style, simply add their corresponding CSS selectors and properties here. */
-/* For example, if you have an <a> (link) element and you want to set its color, you can do this: */
-/* a { color: <your-color>; } */
-
-/* You can also apply the colors to background colors of specific elements, borders, etc. Just use the corresponding CSS properties like background-color, border-color, etc. */

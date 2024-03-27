@@ -1,19 +1,25 @@
-<app-authorization></app-authorization>
-<!-- Nav -->
-<!-- <div class="container px-3 py-3 mx-auto"> -->
-<div [ngClass]="styleModeService.mode === 'light' ? 'bg-white' : 'bg-gray-800'">
 
-  <!-- your content here -->
-  <!-- Container pages -->
-  <div class="max-w-7xl mx-auto text-center mainRoute">
-    <app-header></app-header>
-    <section>
-      <app-spinner></app-spinner>
-      <router-outlet></router-outlet>
-    </section>
-  </div>
-  <!-- Footer -->
-  <!-- <app-footer-bottom ></app-footer-bottom> -->
-  <div class="max-w-7xl mx-auto">
-    <app-footer></app-footer>
-  </div>
+<!-- Header Section -->
+<app-header></app-header>
+
+  <!-- Main Content Section -->
+  <main>
+      <section>
+          <h2>Main Content Section</h2>
+          <p>This is the main content area of your webpage. You can put your content here.</p>
+      </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+      <p>&copy; 2024 Your Website. All rights reserved.</p>
+      <nav>
+          <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+      </nav>
+  </footer>
+
+<router-outlet></router-outlet>

@@ -1,25 +1,15 @@
-import { Component, Inject, LOCALE_ID } from '@angular/core';
-import { StyleModeService } from './header/style-mode.service';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet,HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.scss'
 })
-
 export class AppComponent {
   title = 'theislamicnation';
-  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
-  ngOnInit() {
-    if (!localStorage.getItem('darkMode')) {
-      this.checkDarkModePreference();
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(e => this.checkDarkModePreference());
-    }
-
-  }
-  checkDarkModePreference() {
-    this.styleModeService.setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches)
-
-  }
-
 }

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/theislamicnation/",
+    "public": "dist/theislamicnation/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
