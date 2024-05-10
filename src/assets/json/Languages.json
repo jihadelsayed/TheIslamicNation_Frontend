@@ -1,0 +1,13 @@
+[
+    { "name": "English", "image": "assets/category/Language.png" },
+    { "name": "العربية", "image": "assets/category/Language.png" },
+    { "name": "Español", "image": "assets/category/Language.png" },
+    { "name": "Français", "image": "assets/category/Language.png" },
+    { "name": "Deutsch", "image": "assets/category/Language.png" },
+    { "name": "Português", "image": "assets/category/Language.png" },
+    { "name": "中文", "image": "assets/category/Language.png" },
+    { "name": "日本語", "image": "assets/category/Language.png" },
+    { "name": "한국어", "image": "assets/category/Language.png" },
+    { "name": "русский", "image": "assets/category/Language.png" }
+  ]
+  

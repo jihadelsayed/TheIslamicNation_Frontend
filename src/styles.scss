@@ -10,32 +10,61 @@
   }
 }
 body {
-  background-color: #ffffff;
   letter-spacing: 1px;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   // font-family: 'Source Sans Pro', sans-serif;
-}
-a {
-  font-family: "Roboto", "Droid Arabic Kufi", serif;
-  word-spacing: 1px;
-}
-a {
-  font-family: "Roboto", "Droid Arabic Kufi", serif;
-  word-spacing: 1px;
-}
-p {
-  font-family: "Roboto", "Droid Arabic Kufi", serif;
-  color: rgb(52, 137, 212);
-}
-.light-mode {
-  background-color: #fff;
-  color: #000;
+  background-color: #cdcdcd77;
+  color: black;  
+  h1, h2, h3, h4, h5, h6, a, p,span,img,div {
+    font-family: "Roboto", "Droid Arabic Kufi", serif;
+    color: black;  
+    // color: rgb(52, 137, 212);
+  }
+  .div-mode{
+    background-color: #ffffff!important;
+  }
+  .options{
+    background-color: #d7d7d7ed;
+
+  }
+  .option:hover {
+    background-color: rgb(34, 33, 33);
+    color: #fff;
+  
+  }
+  footer{
+    background-color: #ffffff!important;
+  }
 }
 .dark-mode {
-  background-color: #333;
+  /* Add your dark mode styles here */
+  background-color: #555;
   color: #fff;
+  h1, h2, h3, h4, h5, h6, a, p,span,img,div {
+    font-family: "Roboto", "Droid Arabic Kufi", serif;
+    color: #fff;
+        // color: rgb(52, 137, 212);
+  }
+  .div-mode{
+    background: rgb(58, 75, 108)!important;
+
+    // background-color: #8c502e!important;  
+  }
+  .options{
+    background-color: rgb(34, 33, 33);
+
+  }
+    
+  .option:hover {
+    background-color: #d7d7d7ed;
+    color: black;  
+  
+  }
+  footer{
+    background: rgb(93, 120, 173)!important;
+  }
 }
 input[type="text"], button, select, textarea, option, img {
   //* Reset all *///
