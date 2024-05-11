@@ -4,6 +4,4 @@
 [submodule "src/app/not-found"]
 	path = src/app/not-found
 	url = git@github.com:jihadelsayed/not-found.git
-[submodule "src/app/header"]
-	path = src/app/header
-	url = git@github.com:jihadelsayed/header.git
+
