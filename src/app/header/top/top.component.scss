@@ -1,0 +1,220 @@
+.top{
+    max-width: 1440px;
+    width: 100vw;
+
+    /* Header */
+    height: 68px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 8px;
+}
+.right{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  /* logo 1 */
+  width: 68px;
+  height: 68px;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 268px;
+  background: rgba(24, 7, 7, 0.62);
+  height: 40px;
+  border-radius:5px;
+
+
+}
+.search-bar input[type="text"] {
+  padding: 8px;
+  border: 0px solid #ccc;
+  width: 100%;
+}
+.search-bar button {
+    width: 35px;
+    padding: 0px;
+    background-color: rgb(138, 36, 36);
+    border-radius: 0 5px 5px 0px ;
+
+    height: 100%;
+    cursor: pointer;
+}
+.search-menu {
+  position: relative;
+}
+.search-menu select {
+  width: 35px;
+  padding: 8px;
+}
+
+
+.location-select{
+  margin-left: 25px;
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  min-width: 115px;
+  padding: 0px 20px 0px 20px;
+
+  background: rgba(0, 0, 0, 0);
+
+
+/* Menu item */
+height: 35px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+// overflow: hidden;
+}
+.location-select img {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+
+}
+span{
+  align-items: center;
+  justify-content: center;
+
+}
+.language-select{    
+  
+  margin-left: 25px;}
+.message-button{
+  margin-left: 40px;
+  border-radius: 8px;
+  padding: 0px 20px 0px 20px;
+  background: rgb(33, 137, 112);
+  display: flex;
+align-items: center;
+justify-content: center;
+padding: 5px 15px;
+border: none;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s ease;
+img{
+  width: 30px;
+height: 30px;
+}
+}
+
+.register-button{
+  margin-left: 40px;
+
+}
+
+  
+  .register-button:hover {
+    background-color: #0057b36c;
+  }
+  
+  .icon {
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+.notification-icon{
+  margin-right: 25px;
+
+}
+.profile-select {
+  margin-left: 25px;
+  /* Styles for each respective element */
+  /* Adjust dimensions, colors, etc. as needed */
+}
+
+
+
+//*messages*//
+
+
+  //* drop down *//
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .dropdown-icon {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    right: 100%; /* Dropdown appears from right to left */
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-name {
+  }
+  
+  .profile-pic {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+  }
+  
+
+@media screen and (max-width: 1200px) {
+  .user-name {
+      display: none;
+  }
+  .message-button span{
+    display: none;
+  }
+  .location-select{
+    min-width: 50px!important;
+    padding: 0 10px!important;
+  }
+}

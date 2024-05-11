@@ -1,0 +1,21 @@
+<div class="custom-select" [ngClass]="{ 'open': isOpen }" (click)="toggleDropdown()" tabindex="0">
+    <span class="selected-option">
+        <img [src]="selectedLanguage ? selectedLanguage.image : 'assets/category/Language.png'" alt="{{ selectedLanguage ? selectedLanguage.name : '' }}" class="option-image">
+        <span>{{ selectedLanguage ? selectedLanguage.name : '_' }}</span>
+    </span>
+    <div class="options">
+        <div class="option" *ngFor="let language of languages" (click)="selectLanguage(language)">
+            <img [src]="language.image" alt="{{ language.name }}" class="option-image"> {{ language.name }}
+        </div>
+    </div>
+</div>
+<!-- <img src="assets/category/Language.png" alt="Icon" class="icon">
+
+<select id="languageSelect">
+    <option value="">Select a language</option>
+    <option value="English">English</option>
+    <option value="Spanish">Spanish</option>
+    <option value="French">French</option>
+    <option value="German">German</option>
+    <option value="Japanese">Japanese</option>
+</select> -->

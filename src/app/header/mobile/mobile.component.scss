@@ -1,0 +1,35 @@
+.top{
+    max-width: 1440px;
+    width: 100vw;
+    /* Header */
+    height: 68px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 8px;
+}
+.right{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    /* logo 1 */
+    width: 68px;
+    height: 68px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

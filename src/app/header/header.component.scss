@@ -1,0 +1,54 @@
+header{
+    width: 100vw;
+    
+}
+
+app-top{
+    // background: linear-gradient(90.00deg, rgb(93, 117, 165),rgb(76, 168, 197) 100%);
+    background: rgb(138, 177, 255);
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+app-mobile{
+    // background: linear-gradient(90.00deg, rgb(93, 117, 165),rgb(76, 168, 197) 100%);
+    background: rgb(138, 177, 255);
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+app-bottom {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    background-color: #ffffff;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+app-mobile {
+    display: none;
+}
+@media screen and (max-width: 777px) {
+    app-bottom {
+        display: none;
+    }
+    app-top {
+        display: none;
+    }
+    app-mobile {
+        display: block;
+    }
+}

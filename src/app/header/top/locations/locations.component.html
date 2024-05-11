@@ -1,0 +1,15 @@
+<div class="custom-select" [ngClass]="{ 'open': isOpen }" (click)="toggleDropdown()" tabindex="0">
+    <span class="selected-option">
+        <img [src]="selectedLocation ? selectedLocation.image : 'assets/category/Location.png'" alt="{{ selectedLocation ? selectedLocation.name : 'Select a location' }}" class="option-image">
+       <span>
+        {{ selectedLocation ? selectedLocation.name : 'Location' }}
+       </span> 
+    </span>
+ 
+    <div class="options">
+        <h3>Select a land</h3>
+        <div class="option" *ngFor="let location of locations" (click)="selectLocation(location)">
+            <img [src]="location.image" alt="{{ location.name }}" class="option-image"> {{ location.name }}
+        </div>
+    </div>
+</div>
