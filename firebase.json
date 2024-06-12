@@ -6,15 +6,8 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "appAssociation": "AUTO",  // required for Dynamic Links (default is AUTO if not specified)
-
+    "appAssociation": "AUTO",
     "rewrites": [
-      // {
-      //    "source": "**",
-      //    "destination": "/en/index.html",
-      //    "dynamicLinks": true
-
-      // },
       {
         "source": "/ar{,/**}",
         "destination": "/ar/index.html",
@@ -74,7 +67,7 @@
     "redirects": [
       {
         "source": "/",
-        "destination": "/ar",
+        "destination": "/en",
         "type": 301
       }
     ]
