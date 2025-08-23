@@ -52,6 +52,7 @@
   --font-color-h1: var(--font-color-primary);
   --font-color-h2: var(--font-color-secondary);
   --font-color-h3: var(--font-color-tertiary);
+  
 }
 
 /* ========= DARK THEME ========= */
@@ -139,5 +140,8 @@ $white: #ffffff;
 /* Used in toast as comments hinted */
 $level-bonus-color: #e74c3c; /* red */
 $level-intro-color: #3498db; /* blue */
+$font-color-h1: var(--font-color-h1);
+$font-color-h2: var(--font-color-h2);
+$font-color-h3: var(--font-color-h3);
 
 //

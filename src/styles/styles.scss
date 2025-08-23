@@ -1,7 +1,7 @@
 /* src/styles/styles.scss */
 
 /* Import global variables */
-@use '/src/styles/styles.variables.scss' as *;
+ @use './styles.variables.scss' as *;
 
 /* Reset & Base */
 * {
