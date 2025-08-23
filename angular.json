@@ -29,7 +29,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
             "localize": [
               "ar",
@@ -45,18 +45,38 @@
             ],
             "outputPath": "dist/theislamicnation",
             "index": "src/index.html",
-            "browser": "src/main.ts",  // Use "browser" for universal builds
+            "browser": "src/main.ts", 
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "manifest.webmanifest",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles.font.scss",
+              "src/styles.form.scss",
+              "src/styles.toast.scss",
+  "node_modules/katex/dist/katex.min.css"
+              
+
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -66,62 +86,66 @@
             }
           },
           "configurations": {
-            "es":{
-              "localize":[
+            "es": {
+              "localize": [
                 "es"
-            ]
+              ]
             },
-            "en":{
-              "localize":[
+            "en": {
+              "localize": [
                 "en"
-            ]
+              ]
             },
-            "pt":{
-              "localize":[
+            "pt": {
+              "localize": [
                 "pt"
-            ]
+              ]
             },
-            "ar":{
-              "localize":[
+            "ar": {
+              "localize": [
                 "ar"
-            ]
+              ]
             },
-            "de":{
-              "localize":[
+            "de": {
+              "localize": [
                 "de"
-            ]
+              ]
             },
-            "ru":{
-              "localize":[
+            "ru": {
+              "localize": [
                 "ru"
-            ]
+              ]
             },
-            "sv":{
-              "localize":[
+            "sv": {
+              "localize": [
                 "sv"
-            ]
+              ]
             },
-            "zh":{
-              "localize":[
+            "zh": {
+              "localize": [
                 "zh"
-            ]
+              ]
             },
-            "fr":{
-              "localize":[
+            "fr": {
+              "localize": [
                 "fr"
-            ]
+              ]
+            },
+            "public": {
             },
             "production": {
+               
+                
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "1000kb",
                   "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "6kb"
                 }
               ],
               "fileReplacements": [
@@ -132,7 +156,6 @@
               ],
               "outputHashing": "all"
             },
-
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -145,65 +168,75 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "theislamicnation:build:production"
+              "buildTarget": "theislamicnation:build:production"
             },
             "development": {
-              "browserTarget": "theislamicnation:build:development"
+              "buildTarget": "theislamicnation:build:development"
             },
             "ar": {
-              "browserTarget": "theislamicnation:build:ar"
+              "buildTarget": "theislamicnation:build:ar"
             },
             "en": {
-              "browserTarget": "theislamicnation:build:en"
+              "buildTarget": "theislamicnation:build:en"
             },
             "es": {
-              "browserTarget": "theislamicnation:build:es"
+              "buildTarget": "theislamicnation:build:es"
             },
             "pt": {
-              "browserTarget": "theislamicnation:build:pt"
+              "buildTarget": "theislamicnation:build:pt"
             },
-
             "de": {
-              "browserTarget": "theislamicnation:build:de"
+              "buildTarget": "theislamicnation:build:de"
             },
             "ru": {
-              "browserTarget": "theislamicnation:build:ru"
+              "buildTarget": "theislamicnation:build:ru"
             },
             "sv": {
-              "browserTarget": "theislamicnation:build:sv"
+              "buildTarget": "theislamicnation:build:sv"
             },
             "zh": {
-              "browserTarget": "theislamicnation:build:zh"
+              "buildTarget": "theislamicnation:build:zh"
             },
             "fr": {
-              "browserTarget": "theislamicnation:build:fr"
+              "buildTarget": "theislamicnation:build:fr"
             }
           },
           "defaultConfiguration": "production"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "@angular/build:extract-i18n",
           "options": {
-            "browserTarget": "theislamicnation:build"
+            "buildTarget": "theislamicnation:build"
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
             "main": "src/test.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "manifest.webmanifest",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles.font.scss",
+              "src/styles.form.scss",
+              "src/styles.toast.scss",
+  "node_modules/katex/dist/katex.min.css"
             ],
             "scripts": []
           }
@@ -211,14 +244,42 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
-
       }
     }
   },
   "cli": {
     "analytics": false
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
+    }
   }
 }
