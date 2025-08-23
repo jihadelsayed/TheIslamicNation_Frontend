@@ -1,0 +1,143 @@
+/* src/styles/styles.variables.scss */
+
+/* ========= LIGHT THEME ========= */
+:root {
+  /* Brand */
+  --primary-color: #F2F200;
+  --secondary-color: #87D100;
+  --tertiary-color: #EB7B00;
+  --quaternary-color: #CC6600;
+  --quinary-color: #A6A600;
+  --senary-color: #4D8000;
+  --septenary-color: #FFFFFF;
+
+  /* Highlight */
+  --highlight-color: #E3FCEC;
+  --highlight-secondary-color: #A7F3D0;
+  --highlight-tertiary-color: #34D399;
+  --highlight-quaternary-color: #10B981;
+  --highlight-quinary-color: #059669;
+
+  /* Accent */
+  --accent-color-light: #E0F7FA;
+  --accent-color-medium-light: #B2EBF2;
+  --accent-color-medium: #26C6DA;
+  --accent-color-medium-dark: #00ACC1;
+  --accent-color-dark: #0097A7;
+  --accent-color-darker: #006064;
+  --accent-color-darkest: #004D40;
+
+  /* Neutrals */
+  --neutral-color-light: #F5F5F5;
+  --neutral-color-medium-light: #E0E0E0;
+  --neutral-color-medium: #BDBDBD;
+  --neutral-color-medium-dark: #9E9E9E;
+  --neutral-color-dark: #616161;
+  --neutral-color-darker: #424242;
+  --neutral-color-darkest: #212121;
+
+  /* Fonts */
+  --font-color-primary: #212121;
+  --font-color-secondary: #424242;
+  --font-color-tertiary: #616161;
+  --font-color-paragraph: var(--font-color-secondary);
+  --font-color-link: #10B981;
+  --font-color-link-hover: #059669;
+
+  /* Backgrounds */
+  --card-background: #FFFFFF;
+  --section-background: var(--neutral-color-light);
+
+  /* Headings */
+  --font-color-h1: var(--font-color-primary);
+  --font-color-h2: var(--font-color-secondary);
+  --font-color-h3: var(--font-color-tertiary);
+}
+
+/* ========= DARK THEME ========= */
+.dark-theme {
+  --primary-color: #F2F200;
+  --secondary-color: #87D100;
+  --tertiary-color: #EB7B00;
+  --quaternary-color: #CC6600;
+  --quinary-color: #A6A600;
+  --senary-color: #4D8000;
+  --septenary-color: #161616;
+
+  /* Highlight (same palette) */
+  --highlight-color: #E3FCEC;
+  --highlight-secondary-color: #A7F3D0;
+  --highlight-tertiary-color: #34D399;
+  --highlight-quaternary-color: #10B981;
+  --highlight-quinary-color: #059669;
+
+  /* Accent (same palette) */
+  --accent-color-light: #E0F7FA;
+  --accent-color-medium-light: #B2EBF2;
+  --accent-color-medium: #26C6DA;
+  --accent-color-medium-dark: #00ACC1;
+  --accent-color-dark: #0097A7;
+  --accent-color-darker: #006064;
+  --accent-color-darkest: #004D40;
+
+  /* Neutrals (dark scale) */
+  --neutral-color-light: #303030;
+  --neutral-color-medium-light: #4A4A4A;
+  --neutral-color-medium: #636363;
+  --neutral-color-medium-dark: #7C7C7C;
+  --neutral-color-dark: #AFAFAF;
+  --neutral-color-darker: #E0E0E0;
+  --neutral-color-darkest: #F9F9F9;
+
+  /* Fonts on dark */
+  --font-color-primary: #FFFFFF;
+  --font-color-secondary: #AFAFAF;
+  --font-color-tertiary: #7C7C7C;
+  --font-color-paragraph: var(--font-color-secondary);
+  --font-color-link: #F2F200;
+  --font-color-link-hover: #B3B300;
+
+  /* Backgrounds */
+  --card-background: #303030;
+  --section-background: #161616;
+
+  /* Headings */
+  --font-color-h1: var(--font-color-primary);
+  --font-color-h2: var(--font-color-secondary);
+  --font-color-h3: var(--font-color-tertiary);
+}
+
+/* ========= SCSS ALIASES to CSS VARS ========= */
+/* Use these $-vars anywhere after @use '...styles.variables' as *; */
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiary-color);
+$quaternary-color: var(--quaternary-color);
+$quinary-color: var(--quinary-color);
+
+$highlight-color: var(--highlight-color);
+$highlight-secondary-color: var(--highlight-secondary-color);
+$highlight-tertiary-color: var(--highlight-tertiary-color);
+$highlight-quaternary-color: var(--highlight-quaternary-color);
+$highlight-quinary-color: var(--highlight-quinary-color);
+
+$neutral-color-light: var(--neutral-color-light);
+$neutral-color-medium: var(--neutral-color-medium);
+$neutral-color-medium-dark: var(--neutral-color-medium-dark);
+
+$font-color-primary: var(--font-color-primary);
+$font-color-secondary: var(--font-color-secondary);
+$font-color-tertiary: var(--font-color-tertiary);
+$font-color-paragraph: var(--font-color-paragraph);
+$font-color-link: var(--font-color-link);
+$font-color-link-hover: var(--font-color-link-hover);
+
+$card-background: var(--card-background);
+
+/* Extras used in your files */
+$white: #ffffff;
+/* Used in toast as comments hinted */
+$level-bonus-color: #e74c3c; /* red */
+$level-intro-color: #3498db; /* blue */
+
+//

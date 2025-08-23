@@ -1,13 +1,14 @@
-@use '../../_variables' as vars;
+@use '../../styles/styles.variables.scss' as *;
 
 .main-header {
-  width: 100vw;
+  width: 100%;
   position: sticky;
   top: 0;
+  z-index: 100;
 
   app-top,
   app-mobile {
-    background: vars.$color-primary;
+    background: $primary-color;   // from _variables.scss
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: vars.$color-white;
+    background-color: $white;     // from _variables.scss
   }
 
   app-mobile {
@@ -34,7 +35,7 @@
     }
 
     app-mobile {
-      display: block;
+      display: flex; // keep flex for alignment
     }
   }
 }

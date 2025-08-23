@@ -1,6 +1,5 @@
-@use './styles._variables.scss' as *;
-
-a {
+@use '/src/styles/styles.variables.scss' as *;
+ a {
   color: $tertiary-color; // Was: #F8A242
   text-decoration: none;
 }

@@ -45,11 +45,8 @@
             ],
             "outputPath": "dist/theislamicnation",
             "index": "src/index.html",
-            "browser": "src/main.ts", 
-            "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
-            ],
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -70,16 +67,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/styles.font.scss",
-              "src/styles.form.scss",
-              "src/styles.toast.scss",
-  "node_modules/katex/dist/katex.min.css"
-              
+              "src/styles/styles.variables.scss",
 
+              "src/styles/styles.scss",
+              
+              "src/styles/styles.font.scss",
+              "src/styles/styles.form.scss",
+              "src/styles/styles.toast.scss",
+              "node_modules/katex/dist/katex.min.css"
             ],
-            "stylePreprocessorOptions": { "includePaths": ["src", "node_modules"] }
-,
+            "stylePreprocessorOptions": {
+              "includePaths": ["src", "node_modules"]
+            },
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -89,55 +88,34 @@
           },
           "configurations": {
             "es": {
-              "localize": [
-                "es"
-              ]
+              "localize": ["es"]
             },
             "en": {
-              "localize": [
-                "en"
-              ]
+              "localize": ["en"]
             },
             "pt": {
-              "localize": [
-                "pt"
-              ]
+              "localize": ["pt"]
             },
             "ar": {
-              "localize": [
-                "ar"
-              ]
+              "localize": ["ar"]
             },
             "de": {
-              "localize": [
-                "de"
-              ]
+              "localize": ["de"]
             },
             "ru": {
-              "localize": [
-                "ru"
-              ]
+              "localize": ["ru"]
             },
             "sv": {
-              "localize": [
-                "sv"
-              ]
+              "localize": ["sv"]
             },
             "zh": {
-              "localize": [
-                "zh"
-              ]
+              "localize": ["zh"]
             },
             "fr": {
-              "localize": [
-                "fr"
-              ]
+              "localize": ["fr"]
             },
-            "public": {
-            },
+            "public": {},
             "production": {
-               
-                
               "budgets": [
                 {
                   "type": "initial",
@@ -234,11 +212,13 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/styles.font.scss",
-              "src/styles.form.scss",
-              "src/styles.toast.scss",
-"katex/dist/katex.min.css"
+              "src/styles/styles.variables.scss",
+              "src/styles/styles.scss",
+              
+              "src/styles/styles.font.scss",
+              "src/styles/styles.form.scss",
+              "src/styles/styles.toast.scss",
+              "katex/dist/katex.min.css"
             ],
             "scripts": []
           }
@@ -246,10 +226,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
