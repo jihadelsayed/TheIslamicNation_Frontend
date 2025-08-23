@@ -1,0 +1,32 @@
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    input {
+      padding: 4px 8px;
+    }
+
+    button {
+      margin-left: 8px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

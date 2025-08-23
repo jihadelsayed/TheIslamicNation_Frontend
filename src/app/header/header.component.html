@@ -1,6 +1,10 @@
-<header>
-
+<header class="main-header">
+  <ng-container *ngIf="(showShopHeader$ | async); else defaultHeader">
+    <app-shop-header></app-shop-header>
+  </ng-container>
+  <ng-template #defaultHeader>
     <app-mobile></app-mobile>
     <app-top></app-top>
     <app-bottom class="div-mode"></app-bottom>
+  </ng-template>
 </header>
