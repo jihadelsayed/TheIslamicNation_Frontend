@@ -78,6 +78,8 @@
               
 
             ],
+            "stylePreprocessorOptions": { "includePaths": ["src", "node_modules"] }
+,
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -236,7 +238,7 @@
               "src/styles.font.scss",
               "src/styles.form.scss",
               "src/styles.toast.scss",
-  "node_modules/katex/dist/katex.min.css"
+"katex/dist/katex.min.css"
             ],
             "scripts": []
           }

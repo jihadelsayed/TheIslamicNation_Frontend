@@ -1,0 +1,95 @@
+@use './styles._variables.scss' as *;
+
+a {
+  color: $tertiary-color; // Was: #F8A242
+  text-decoration: none;
+}
+
+a.disabled {
+  pointer-events: none;
+  text-decoration: none;
+  cursor: default;
+  color: $neutral-color-medium; // Was: #BAB4B0
+}
+
+h1 {
+  color: $secondary-color; // Was: #FBD5BD
+  font-family: 'Poppins', sans-serif;
+  font-size: 144px;
+  line-height: 161.8%;
+  margin: 0;
+}
+
+h2 {
+  color: $tertiary-color; // Was: #F8A242
+  font-family: 'Poppins', sans-serif;
+  font-size: 89px;
+  line-height: 161.8%;
+  margin: 0;
+}
+
+h3 {
+  color: $highlight-secondary-color; // Was: #CACE35 — closest match from your palette
+  font-family: 'Poppins', sans-serif;
+  font-size: 55px;
+  line-height: 161.8%;
+  margin: 0;
+}
+
+h4 {
+  color: $highlight-quinary-color; // Was: #FCCAC9 — soft highlight alternative
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  line-height: 161.8%;
+  margin: 0;
+}
+
+h5 {
+  font-size: 21px;
+  line-height: 161.8%;
+  margin: 0;
+  color: $quinary-color; // Was: #C58031
+  font-family: 'Poppins', sans-serif;
+}
+
+h6 {
+  font-size: 13px;
+  line-height: 161.8%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  color: $highlight-quinary-color; // Replacing #c7254e
+  background-color: $highlight-color; // Replacing #f9f2f4
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+span {
+  font-size: 0.9em;
+  color: $neutral-color-medium-dark; // Was: #7f8c8d
+}
+
+.small-text {
+  font-size: 8px;
+  line-height: 161.8%;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+  h1 { font-size: 55px; }
+  h2 { font-size: 34px; }
+  h3 { font-size: 21px; }
+  h4 { font-size: 13px; }
+  h5 { font-size: 8px; }
+  h6 { font-size: 5px; }
+  .small-text { font-size: 3px; }
+  p {
+    font-size: 13px;
+    line-height: 161.8%;
+  }
+}

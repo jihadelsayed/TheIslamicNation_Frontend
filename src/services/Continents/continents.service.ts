@@ -7,6 +7,6 @@ import { Injectable } from '@angular/core';
 export class ContinentsService {
   constructor(private httpClient: HttpClient) { }
   getWorldMap() {
-    return this.httpClient.get('https://neetechss3.s3.eu-north-1.amazonaws.com/worldMap.json');
+    return this.httpClient.get('https://theislamicnations3.s3.eu-north-1.amazonaws.com/worldMap.json');
   }
 }

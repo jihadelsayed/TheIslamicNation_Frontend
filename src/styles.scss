@@ -1,81 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
-// @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@use './styles._variables.scss' as *;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer utilities {
-  .content-auto {
-    content-visibility: auto;
-  }
+
+
+*{
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+  align-items: center; 
+  box-sizing: border-box;
+ //  overflow-x: hidden;
+
 }
-body {
-  letter-spacing: 1px;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  // font-family: 'Source Sans Pro', sans-serif;
-  background-color: #cdcdcd77;
-  color: black;  
-  h1, h2, h3, h4, h5, h6, a, p,span,img,div {
-    font-family: "Roboto", "Droid Arabic Kufi", serif;
-    color: black;  
-    // color: rgb(52, 137, 212);
-  }
-  .div-mode{
-    background-color: #ffffff!important;
-  }
-  .options{
-    background-color: #d7d7d7ed;
-
-  }
-  .option:hover {
-    background-color: rgb(34, 33, 33);
-    color: #fff;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; // Match your fixed header height
   
-  }
-  footer{
-    background-color: #ffffff!important;
-  }
 }
-.dark-mode {
-  /* Add your dark mode styles here */
-  background-color: #555;
-  color: #fff;
-  h1, h2, h3, h4, h5, h6, a, p,span,img,div {
-    font-family: "Roboto", "Droid Arabic Kufi", serif;
-    color: #fff;
-        // color: rgb(52, 137, 212);
-  }
-  .div-mode{
-    background: rgb(58, 75, 108)!important;
 
-    // background-color: #8c502e!important;  
-  }
-  .options{
-    background-color: rgb(34, 33, 33);
+header{
+  z-index: 100;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $neutral-color-light;
+    color: $font-color-paragraph;  // Default paragraph color
+    padding: 0px;
+    margin: 0px;
 
-  }
     
-  .option:hover {
-    background-color: #d7d7d7ed;
-    color: black;  
-  
-  }
-  footer{
-    background: rgb(93, 120, 173)!important;
+    // background-color: hsl(208, 90%, 4%);
+
+}
+.button {
+  background-color: $secondary-color;
+  &:hover {
+    background-color: $tertiary-color;
   }
 }
-input[type="text"], button, select, textarea, option, img {
-  //* Reset all *///
+
+.cta-button {
+  background-color: $tertiary-color;
+  color: #fff;
+  padding: 8px 16px;
   border: none;
-  border: 0px solid #ccc;
-  border-radius: 0px;
-  outline: none;
-  border-radius: 0px;
-  margin: 0px;
-  background-color: transparent;
-
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-top: 16px;
+  &:hover {
+    background-color: $quaternary-color;
+  }
+}
+h2{
+  
+}
+li a{
+    text-decoration: none!important;
+    color: aliceblue;
+    &:hover {
+      text-decoration: underline;
+    }
+}
+li{
+}
+// .container-card {
+//   //max-width: 800px;
+//   margin: 0 auto;
+//   margin-bottom: 64px;
+//   margin-top: 64px;
+//   padding: 20px;
+//   background: #fff;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//   max-width: 1200px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-content: center;
+//   justify-content: center;
+//   align-items: flex-start;
+// }
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px; // optional
+  margin-bottom: 0px; // optional
+  padding: 0;
 }
 
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    padding: 0px;
+}
+
+
+.flex-reverse {
+  flex-direction: row-reverse;
+
+}
+
+//* Global random *//
+hr, br{
+  margin: 64px 0;
+  width: 100%;
+}
+.display_none{
+  display: none;
+}
+  @media (max-width: 800px) {
+    .container-card {
+      width: 100%;
+      padding: 0px;
+    }
+  }
