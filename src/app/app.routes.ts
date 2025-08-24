@@ -249,6 +249,12 @@ export const routes: Routes = [
       },
     ],
   },
+{
+  path: 'roadmap',
+  loadComponent: () =>
+    import('./features/roadmap/roadmap.component').then(m => m.RoadmapComponent),
+  title: 'Roadmap',
+},
 
   // 404
   { path: '**', component: NotFoundComponent, title: 'Not Found' },

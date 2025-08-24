@@ -1,0 +1,21 @@
+ .galaxy-wrap { width:100%; max-width:1200px; margin:0 auto; padding:12px; }
+    .galaxy { width:100%; height:auto; display:block; }
+
+    .orbit { fill:none; stroke: color-mix(in srgb, var(--neutral-color-medium) 30%, transparent); stroke-dasharray:4 6; }
+
+    .link { stroke: var(--font-color-muted); stroke-width:1.5; }
+
+    .planet { cursor:pointer; outline:none; transform-origin:center; }
+    .planet.is-root:hover circle { transform: scale(1.06); stroke: var(--primary-color); transition: transform .2s ease, stroke .2s ease; }
+
+    .planet.is-child { animation: spawn .22s ease-out both; }
+    @keyframes spawn { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+    .label {
+      font: 600 14px/1.2 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      fill: var(--font-color-primary);
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,.25));
+      pointer-events: none;
+      paint-order: stroke; stroke: rgba(0,0,0,.25); stroke-width: 2px;
+    }
+    @media (max-width: 700px) { .label { font-size:12px; } }

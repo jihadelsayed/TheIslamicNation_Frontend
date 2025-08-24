@@ -1,0 +1,66 @@
+  <div class="galaxy-wrap">
+    <svg class="galaxy" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet"
+         role="img" aria-label="Knowledge roadmap">
+
+      <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--font-color-muted)"></path>
+        </marker>
+
+        <radialGradient id="planetGrad" cx="35%" cy="35%" r="80%">
+          <stop offset="0%"  stop-color="var(--card-background)"/>
+          <stop offset="100%" stop-color="var(--neutral-color-medium-light)"/>
+        </radialGradient>
+      </defs>
+
+      <!-- decorative orbits -->
+      <g class="orbits">
+        <ellipse cx="600" cy="350" rx="420" ry="240" class="orbit"></ellipse>
+        <ellipse cx="600" cy="350" rx="300" ry="170" class="orbit"></ellipse>
+        <ellipse cx="600" cy="350" rx="190" ry="110" class="orbit"></ellipse>
+      </g>
+
+      <!-- arrows -->
+      <g class="links">
+        <ng-container *ngFor="let e of drawnEdges">
+          <line [attr.x1]="e.x1" [attr.y1]="e.y1" [attr.x2]="e.x2" [attr.y2]="e.y2"
+                class="link" marker-end="url(#arrow)"></line>
+        </ng-container>
+      </g>
+
+      <!-- planets -->
+      <g class="planets">
+        <ng-container *ngFor="let n of drawnNodes; trackBy: trackById">
+          <g class="planet"
+             [class.is-root]="n.level===0"
+             [class.is-child]="n.isChild"
+             [class.is-active]="expanded.has(n.id)"
+             tabindex="0"
+             (click)="onPlanetClick(n, $event)"
+             (keydown.enter)="onPlanetClick(n, $event)"
+             (keydown.space)="onPlanetClick(n, $event)"
+             [attr.filter]="'url(#glow)'"
+             [attr.transform]="'translate(' + n.x + ',' + n.y + ')'">
+
+            <circle [attr.r]="n.r"
+                    [attr.fill]="'url(#planetGrad)'"
+                    [attr.stroke]="n.colorVar || 'var(--highlight-quaternary-color)'"
+                    stroke-width="3"></circle>
+
+            <image *ngIf="hasIcon(n.id)"
+                   [attr.x]="-n.r*0.55" [attr.y]="-n.r*0.55"
+                   [attr.width]="n.r*1.1" [attr.height]="n.r*1.1"
+                   [attr.href]="'/assets/category/' + iconName(n.id)" />
+
+            <text class="label" text-anchor="middle" [attr.y]="n.r + 22">{{ n.title }}</text>
+          </g>
+        </ng-container>
+      </g>
+    </svg>
+  </div>
