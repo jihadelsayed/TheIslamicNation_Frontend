@@ -1,0 +1,50 @@
+<section class="group-detail">
+  <div class="banner"></div>
+  <header class="header">
+    <div>
+      <h3>{{ group.name }}</h3>
+      <p class="muted">{{ group.members }} members</p>
+      <p class="desc">{{ group.desc }}</p>
+    </div>
+    <div class="actions">
+      <button class="btn">Join</button>
+      <button class="btn outline">Share</button>
+      <button class="btn outline">Report</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button [class.active]="tab()==='feed'" (click)="tab.set('feed')">Feed</button>
+    <button [class.active]="tab()==='events'" (click)="tab.set('events')">Events</button>
+    <button [class.active]="tab()==='members'" (click)="tab.set('members')">Members</button>
+  </nav>
+
+  <section class="content">
+    <ng-container [ngSwitch]="tab()">
+      <!-- FEED -->
+      <div *ngSwitchCase="'feed'" class="list">
+        <article class="card" *ngFor="let p of posts">
+          <h4>{{ p.title }}</h4>
+          <p class="muted">by {{ p.author }} · {{ p.time | date:'mediumDate' }}</p>
+          <p>{{ p.excerpt }}</p>
+        </article>
+        <div class="empty" *ngIf="!posts.length">No posts yet.</div>
+      </div>
+
+      <!-- EVENTS -->
+      <div *ngSwitchCase="'events'" class="list">
+        <article class="card" *ngFor="let e of events">
+          <h4>{{ e.title }}</h4>
+          <p class="muted">{{ e.when | date:'medium' }} · {{ e.location }}</p>
+        </article>
+        <div class="empty" *ngIf="!events.length">No events.</div>
+      </div>
+
+      <!-- MEMBERS -->
+      <div *ngSwitchCase="'members'" class="chips">
+        <span class="chip" *ngFor="let m of members">{{ m.name }}</span>
+        <div class="empty" *ngIf="!members.length">No members listed.</div>
+      </div>
+    </ng-container>
+  </section>
+</section>

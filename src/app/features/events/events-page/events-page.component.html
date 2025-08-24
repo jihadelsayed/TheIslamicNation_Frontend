@@ -1,0 +1,33 @@
+<section class="events-page">
+  <header class="bar">
+    <h3>Events</h3>
+    <div class="actions">
+      <input type="search" placeholder="Search events…" [(ngModel)]="q" />
+      <select [(ngModel)]="when">
+        <option value="upcoming">Upcoming</option>
+        <option value="past">Past</option>
+        <option value="all">All</option>
+      </select>
+      <a class="btn" routerLink="/events/create">Create Event</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <article class="card" *ngFor="let e of filtered">
+      <div class="date">
+        <div class="d">{{ e.startsAt | date:'dd' }}</div>
+        <div class="m">{{ e.startsAt | date:'MMM' }}</div>
+      </div>
+      <div class="body">
+        <h4><a [routerLink]="['/events', e.id]">{{ e.title }}</a></h4>
+        <p class="muted">{{ e.startsAt | date:'medium' }} · {{ e.location }}</p>
+        <p class="muted" *ngIf="e.group">Group: {{ e.group }}</p>
+      </div>
+      <div class="actions">
+        <a class="btn outline" [routerLink]="['/events', e.id]">Details</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="empty" *ngIf="!filtered.length">No events found.</div>
+</section>

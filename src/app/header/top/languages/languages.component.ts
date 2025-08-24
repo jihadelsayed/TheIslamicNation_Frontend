@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../../../services/languages/language.service';
 import jsonData from '../../../../assets/json/Languages.json';
+import { FormsModule } from '@angular/forms';
 
 interface Language {
   name: string;
@@ -10,7 +11,7 @@ interface Language {
 @Component({
   selector: 'app-languages',
   standalone: true,
-  imports: [CommonModule, ],
+  imports: [CommonModule, FormsModule, ],
   templateUrl: './languages.component.html',
   styleUrl: './languages.component.scss'
 })

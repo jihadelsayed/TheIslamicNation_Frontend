@@ -1,0 +1,23 @@
+<article class="event card">
+  <header class="head">
+    <div class="date">
+      <div class="d">{{ event.startsAt | date:'dd' }}</div>
+      <div class="m">{{ event.startsAt | date:'MMM' }}</div>
+    </div>
+    <div class="info">
+      <h3 class="title">{{ event.title }}</h3>
+      <div class="meta muted">
+        {{ event.startsAt | date:'medium' }}
+        <ng-container *ngIf="event.endsAt">– {{ event.endsAt | date:'shortTime' }}</ng-container>
+        · {{ event.location }}
+        <span *ngIf="event.group">· Group: {{ event.group }}</span>
+      </div>
+      <div class="desc" [innerHTML]="event.descHtml"></div>
+      <div class="actions">
+        <a class="btn" [href]="event.liveUrl" target="_blank" rel="noopener noreferrer">Join Live</a>
+        <button class="btn outline" (click)="copyLink()">Copy Link</button>
+        <button class="btn outline">Add to Calendar</button>
+      </div>
+    </div>
+  </header>
+</article>

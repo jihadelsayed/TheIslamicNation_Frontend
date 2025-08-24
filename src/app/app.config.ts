@@ -1,16 +1,25 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
+// src/app/app.config.ts
+import { ApplicationConfig, APP_INITIALIZER } from '@angular/core';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from './core/interceptors/auth.interceptor';
+import { errorInterceptor } from './core/interceptors/error.interceptor';
+import { loggerInterceptor } from './core/interceptors/logger.interceptor';
+import { ThemeService } from './core/theme/theme.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
-    provideClientHydration(),
-    provideHttpClient(withInterceptorsFromDi())
-
+    provideRouter(
+      routes,
+      withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled' })
+    ),
+    provideHttpClient(withInterceptors([authInterceptor, errorInterceptor, loggerInterceptor])),
+    {
+      provide: APP_INITIALIZER,
+      multi: true,
+      deps: [ThemeService],
+      useFactory: (theme: ThemeService) => () => theme.init(),
+    },
   ],
 };

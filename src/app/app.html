@@ -1,20 +1,54 @@
-
-<!-- Header Section -->
 <app-header></app-header>
 
+<main class="app-shell">
+  <!-- LEFT rail -->
+  <aside class="app-shell__left sticky">
+    <app-side-nav></app-side-nav>
+  </aside>
 
+  <!-- CENTER feed (router views) -->
+  <section class="app-shell__main">
+    <router-outlet></router-outlet>
+  </section>
 
+  <!-- RIGHT rail -->
+  <aside class="app-shell__aside sticky">
+    <section class="card">
+      <h3>Announcements</h3>
+      <ul class="list">
+        <li><a routerLink="/ann/1">Welcome to TheIslamicNation</a></li>
+        <li><a routerLink="/ann/2">Weekly Q&amp;A with Scholars</a></li>
+      </ul>
+    </section>
 
-<router-outlet></router-outlet>
+    <section class="card">
+      <h3>Upcoming Events</h3>
+      <ul class="list">
+        <li>Jumu'ah — Friday 1:30 PM</li>
+        <li>Fiqh Study Circle — Sat 7 PM</li>
+      </ul>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 Your Website. All rights reserved.</p>
-    <nav>
-        <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
+    <section class="card">
+      <h3>Resources</h3>
+      <ul class="list">
+        <li><a routerLink="/resources/quran">Quran</a></li>
+        <li><a routerLink="/resources/library">Library</a></li>
+      </ul>
+    </section>
+  </aside>
+</main>
+
+<footer class="app-footer">
+  <div class="footer__inner">
+    <span>© {{ currentYear }} TheIslamicNation</span>
+    <nav class="footer__nav">
+      <a routerLink="/about">About</a>
+      <a routerLink="/terms">Terms</a>
+      <a routerLink="/privacy">Privacy</a>
+      <a routerLink="/contact">Contact</a>
     </nav>
+  </div>
 </footer>
+
+<div class="toast" id="global-toast"></div>

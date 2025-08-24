@@ -1,0 +1,59 @@
+@use 'styles/styles.variables.scss' as *;
+
+/* 3-col layout: left 260 | center 600 | right 350 */
+/* Feels like Twitter; rails stay sticky under header */
+.app-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 600px) 350px;
+  gap: 20px;
+  align-items: start;
+
+  &__main { min-width: 0; }     /* prevent overflow */
+  &__left { min-width: 0; }
+  &__aside { min-width: 0; }
+}
+
+.sticky { position: sticky; top: 72px; } /* match your header height */
+
+/* Generic card + lists (used by right rail) */
+.card {
+  background: $card-background;
+  color: $font-color-primary;
+  border: 1px solid $neutral-color-medium-light;
+  border-radius: 16px;
+  padding: 14px;
+
+  h3 { margin-bottom: 8px; font-size: 15px; font-weight: 700; color: $font-color-h2; }
+  .list { display: grid; gap: 6px; padding: 0; margin: 0; list-style: none; }
+  .list a { color: $font-color-link; text-decoration: none; }
+  .list a:hover { color: $font-color-link-hover; text-decoration: underline; }
+}
+
+/* Footer stays the same */
+.app-footer {
+  margin-top: 20px;
+  border-top: 1px solid $neutral-color-medium-light;
+  background: $section-background;
+  color: $font-color-secondary;
+
+  .footer__inner {
+    max-width: 1280px; margin: 0 auto; padding: 16px;
+    display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  }
+  .footer__nav { display: flex; gap: 12px; }
+  .footer__nav a { color: $font-color-link; text-decoration: none; }
+  .footer__nav a:hover { color: $font-color-link-hover; text-decoration: underline; }
+}
+.sticky { position: sticky; top: var(--header-height); }
+/* Breakpoints: hide right rail at 1200px, single column at 900px */
+@media (max-width: 1200px) {
+  .app-shell { grid-template-columns: 220px minmax(0, 1fr); }
+  .app-shell__aside { display: none; }
+}
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: minmax(0, 1fr); }
+  .app-shell__left, .app-shell__aside { display: none; }
+}

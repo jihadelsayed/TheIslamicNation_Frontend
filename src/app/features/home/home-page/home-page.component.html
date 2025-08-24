@@ -1,0 +1,11 @@
+<section class="feed">
+  <article class="composer card">
+    <input class="composer-input" placeholder="What’s happening?" />
+    <div class="composer-actions">
+      <button class="btn">Post</button>
+    </div>
+  </article>
+
+  <app-post-card *ngFor="let p of posts" [post]="p"></app-post-card>
+  <div class="empty" *ngIf="!posts?.length">No posts yet.</div>
+</section>

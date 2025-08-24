@@ -1,0 +1,42 @@
+@use 'styles/styles.variables.scss' as *;
+
+.feed { display: grid; gap: 12px; }
+/* Keep feed visually 600px wide even if center column grows on wider screens */
+:host ::ng-deep .feed,
+.feed {
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* composer bar */
+.card {
+  background: $card-background;
+  border: 1px solid $neutral-color-medium-light;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.composer {
+  display: grid; gap: 10px;
+
+  .composer-input {
+    width: 100%;
+    border: 1px solid $neutral-color-medium-light;
+    background: $white;
+    color: $font-color-primary;
+    border-radius: 9999px;
+    padding: 10px 14px;
+    &::placeholder { color: $font-color-muted; }
+    &:focus {
+      outline: none;
+      border-color: $highlight-quaternary-color;
+      box-shadow: 0 0 0 3px rgba(16,185,129,.15);
+    }
+  }
+
+  .composer-actions { display: flex; justify-content: flex-end; }
+  .btn {
+    border: 0; border-radius: 9999px; padding: 8px 14px;
+    background: $tertiary-color; color: $septenary-color; cursor: pointer;
+    &:hover { background: $quaternary-color; }
+  }
+}

@@ -1,0 +1,33 @@
+@use 'styles/styles.variables.scss' as *;
+
+.notif-panel { display: grid; gap: 1rem; }
+
+.bar {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem;
+  .actions { display: flex; gap: .5rem; }
+}
+
+.list { display: grid; gap: .6rem; }
+
+.row {
+  display: grid; grid-template-columns: 120px 1fr auto; gap: .75rem; align-items: center;
+  background: $card-background; border: 1px solid $neutral-color-medium-light; border-radius: 12px; padding: .6rem .75rem;
+}
+
+.badge {
+  text-transform: capitalize; border-radius: 9999px; padding: .25rem .6rem; text-align: center;
+  background: $section-background; border: 1px solid $neutral-color-medium-light; color: $font-color-secondary; width: max-content;
+  &.unread { background: $highlight-secondary-color; color: $font-color-primary; }
+}
+
+.link { color: $font-color-link; text-decoration: none; &:hover { color: $font-color-link-hover; text-decoration: underline; } }
+.meta { color: $font-color-tertiary; font-size: .85rem; margin-top: .15rem; }
+
+.btn {
+  padding: .45rem .8rem; border-radius: 9999px; border: 0; background: $tertiary-color; color: $septenary-color;
+  &:hover { background: $quaternary-color; }
+  &.outline { background: transparent; color: $font-color-secondary; border: 1px solid $neutral-color-medium-light; &:hover { border-color: $highlight-quaternary-color; } }
+  &.mini { padding: .35rem .65rem; }
+}
+
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }

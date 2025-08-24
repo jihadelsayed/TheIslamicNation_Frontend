@@ -1,0 +1,89 @@
+<header class="header">
+  <!-- Top bar -->
+  <div class="header__bar">
+    <!-- Left: Logo -->
+    <a class="header__logo" routerLink="/" aria-label="TheIslamicNation Home">
+      <span class="logo__mark">🌙</span>
+      <span class="logo__text">TheIslamicNation</span>
+    </a>
+
+    <!-- Center: Primary nav (desktop) -->
+    <nav class="header__nav" aria-label="Primary">
+      <a routerLink="/home" routerLinkActive="is-active">Home</a>
+      <a routerLink="/search" routerLinkActive="is-active">Search</a>
+      <a routerLink="/groups" routerLinkActive="is-active">Groups</a>
+      <a routerLink="/posts" routerLinkActive="is-active">Posts</a>
+      <a routerLink="/qa" routerLinkActive="is-active">Q&amp;A</a>
+      <a routerLink="/events" routerLinkActive="is-active">Events</a>
+      <a routerLink="/resources" routerLinkActive="is-active">Resources</a>
+    </nav>
+
+    <!-- Right: Actions -->
+    <div class="header__actions">
+      <!-- Centered inline search (desktop) -->
+      <div class="actions__search">
+        <app-search-bar [inline]="true"></app-search-bar>
+      </div>
+
+      <!-- Notifications -->
+      <a class="icon-btn" routerLink="/notifications" aria-label="Notifications">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 22a2 2 0 0 0 2-2H10a2 2 0 0 0 2 2m6-6v-5a6 6 0 0 0-5-5.91V4a1 1 0 0 0-2 0v1.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1z"/>
+        </svg>
+        <span class="badge" aria-hidden="true">3</span>
+      </a>
+
+      <!-- Messages -->
+      <a class="icon-btn" routerLink="/messages" aria-label="Messages">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+        </svg>
+        <span class="badge badge--alt" aria-hidden="true">1</span>
+      </a>
+
+      <theme-toggle></theme-toggle>
+
+      <!-- Profile -->
+      <a class="avatar" routerLink="/profile" aria-label="Profile">
+        <img src="/assets/avatar.png" alt="" />
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="hamburger"
+        (click)="toggleMobile()"
+        aria-label="Open menu"
+        [attr.aria-expanded]="mobileOpen()"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile slide-out -->
+  <aside class="mobile" [class.is-open]="mobileOpen()">
+    <div class="mobile__header">
+      <span class="mobile__title">Menu</span>
+      <button class="mobile__close" (click)="closeMobile()" aria-label="Close menu">✕</button>
+    </div>
+
+    <!-- Put search at the top for mobile -->
+    <div class="mobile__search">
+      <app-search-bar [inline]="true" (submitted)="closeMobile()"></app-search-bar>
+    </div>
+
+    <nav class="mobile__nav" (click)="closeMobile()">
+      <a routerLink="/home" routerLinkActive="is-active">Home</a>
+      <a routerLink="/search" routerLinkActive="is-active">Search</a>
+      <a routerLink="/groups" routerLinkActive="is-active">Groups</a>
+      <a routerLink="/posts" routerLinkActive="is-active">Posts</a>
+      <a routerLink="/qa" routerLinkActive="is-active">Q&amp;A</a>
+      <a routerLink="/events" routerLinkActive="is-active">Events</a>
+      <a routerLink="/resources" routerLinkActive="is-active">Resources</a>
+      <a routerLink="/profile" routerLinkActive="is-active">Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Backdrop -->
+  <div class="backdrop" [class.is-open]="mobileOpen()" (click)="closeMobile()" aria-hidden="true"></div>
+</header>

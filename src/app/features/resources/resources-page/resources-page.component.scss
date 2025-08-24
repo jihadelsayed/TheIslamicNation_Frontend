@@ -1,0 +1,38 @@
+@use 'styles/styles.variables.scss' as *;
+
+.resources-page { display: grid; gap: 1rem; }
+
+.bar {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem;
+  .actions { display: flex; gap: .5rem; align-items: center; }
+  input, select {
+    border: 1px solid $neutral-color-medium-light; background: $white;
+    border-radius: 9999px; padding: .5rem .8rem;
+    &:focus { outline: none; border-color: $highlight-quaternary-color; box-shadow: 0 0 0 3px rgba(16,185,129,.15); }
+  }
+}
+
+.grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+
+.card {
+  display: grid; grid-template-columns: 120px 1fr auto; gap: 1rem; align-items: center;
+  background: $card-background; border: 1px solid $neutral-color-medium-light; border-radius: 12px; padding: .9rem;
+
+  .icon {
+    width: 120px; height: 80px; border-radius: 12px; display: grid; place-items: center;
+    background: $section-background; border: 1px solid $neutral-color-medium-light; color: $font-color-secondary; font-weight: 700;
+  }
+  h4 { margin-bottom: .2rem; color: $font-color-primary; }
+  .muted { color: $font-color-tertiary; }
+  .desc { color: $font-color-secondary; margin-top: .25rem; }
+  .tags { display: flex; gap: .4rem; margin-top: .4rem; flex-wrap: wrap; }
+  .tag { background: $section-background; border: 1px solid $neutral-color-medium-light; color: $font-color-secondary; border-radius: 9999px; padding: .2rem .6rem; }
+
+  .actions .btn {
+    background: transparent; color: $font-color-secondary; border: 1px solid $neutral-color-medium-light; border-radius: 9999px;
+    padding: .45rem .8rem; text-decoration: none;
+    &:hover { border-color: $highlight-quaternary-color; }
+  }
+}
+
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }

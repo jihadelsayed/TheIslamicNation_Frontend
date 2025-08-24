@@ -1,0 +1,48 @@
+<!-- thread list -->
+<div class="dock__threads" *ngIf="state()==='list'">
+  <div class="thread" *ngFor="let t of threads()" (click)="openThread(t)">
+    <img class="avatar" [src]="t.avatar" alt="" />
+    <div class="meta">
+      <div class="row">
+        <span class="name">{{ t.name }}</span>
+        <span class="time">{{ t.time | timeAgo }}</span>
+      </div>
+      <div class="preview">{{ t.preview }}</div>
+    </div>
+    <span class="badge" *ngIf="t.unread > 0">{{ t.unread }}</span>
+  </div>
+  <div class="empty" *ngIf="!threads()?.length">No conversations yet.</div>
+</div>
+
+<!-- single thread -->
+<div class="dock__thread" *ngIf="state()==='thread'">
+  <header class="thread__bar">
+    <button class="back icon-btn" (click)="back()">‹</button>
+    <img class="avatar" [src]="active()?.avatar" alt="" />
+    <div class="info">
+      <div class="name">{{ active()?.name }}</div>
+      <div class="status small-text">online</div>
+    </div>
+    <span class="spacer"></span>
+    <button class="icon-btn">⋯</button>
+  </header>
+
+  <div class="messages" #scrollRegion>
+    <div class="msg" *ngFor="let m of activeMessages()" [class.me]="m.me">
+      <img *ngIf="!m.me" class="avatar" [src]="active()?.avatar" alt="" />
+      <div class="bubble">
+        <div class="text" [innerHTML]="m.html"></div>
+        <div class="ts small-text">{{ m.at | date:'shortTime' }}</div>
+      </div>
+    </div>
+  </div>
+
+  <form class="composer" (ngSubmit)="send()">
+    <input type="text" placeholder="Write a message…" [ngModel]="draft()" name="draft"
+           (ngModelChange)="draft.set($event)" />
+    <div class="actions">
+      <button type="button" class="icon-btn" (click)="attach()">📎</button>
+      <button type="submit" class="send-btn">Send</button>
+    </div>
+  </form>
+</div>

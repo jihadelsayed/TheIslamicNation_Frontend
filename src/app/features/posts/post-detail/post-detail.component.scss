@@ -1,0 +1,24 @@
+@use 'styles/styles.variables.scss' as *;
+
+.card {
+  background: $card-background; border: 1px solid $neutral-color-medium-light;
+  border-radius: 12px; padding: 1rem; margin-bottom: 1rem;
+}
+
+.meta .title { margin-bottom: .25rem; color: $font-color-primary; }
+.muted { color: $font-color-tertiary; }
+.content { color: $font-color-secondary; margin-top: .5rem; }
+
+.actions { display: flex; gap: .5rem; margin-top: 1rem; }
+.btn {
+  padding: .5rem .9rem; border-radius: 9999px; border: 0; background: $tertiary-color; color: $septenary-color;
+  &:hover { background: $quaternary-color; }
+  &.outline { background: transparent; color: $font-color-secondary; border: 1px solid $neutral-color-medium-light; &:hover { border-color: $highlight-quaternary-color; } }
+}
+
+.comments { display: grid; gap: .75rem; }
+.comment {
+  background: $card-background; border: 1px solid $neutral-color-medium-light; border-radius: 10px; padding: .75rem .9rem;
+  .body { color: $font-color-secondary; margin-top: .25rem; }
+}
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }

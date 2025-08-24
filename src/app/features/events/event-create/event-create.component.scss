@@ -1,0 +1,10 @@
+@use 'styles/styles.variables.scss' as *;
+
+.row.two {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 840px) { grid-template-columns: 1fr; }
+}
+
+.row { display: flex; justify-content: flex-end; gap: .5rem; }

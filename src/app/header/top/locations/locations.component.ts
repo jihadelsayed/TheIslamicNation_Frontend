@@ -2,6 +2,8 @@ import { LocationService } from '../../../../services/location/location.service'
 import { Component, ElementRef, HostListener } from '@angular/core';
 import jsonData from '../../../../assets/json/Locations.json';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 interface Location {
   name: string;
   image: string;
@@ -9,7 +11,7 @@ interface Location {
 @Component({
   selector: 'app-locations',
   standalone: true,
-  imports: [CommonModule, ],
+  imports: [CommonModule, FormsModule, ],
   templateUrl: './locations.component.html',
   styleUrl: './locations.component.scss'
 })

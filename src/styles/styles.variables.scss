@@ -1,7 +1,6 @@
-/* src/styles/styles.variables.scss */
-
 /* ========= LIGHT THEME ========= */
 :root {
+  --header-height: 72px;
   /* Brand */
   --primary-color: #F2F200;
   --secondary-color: #87D100;
@@ -17,6 +16,8 @@
   --highlight-tertiary-color: #34D399;
   --highlight-quaternary-color: #10B981;
   --highlight-quinary-color: #059669;
+  --highlight-senary-color: #047857;     /* ADDED */
+  --highlight-septenary-color: #065F46;  /* ADDED */
 
   /* Accent */
   --accent-color-light: #E0F7FA;
@@ -40,6 +41,7 @@
   --font-color-primary: #212121;
   --font-color-secondary: #424242;
   --font-color-tertiary: #616161;
+  --font-color-muted: #9E9E9E;          /* ADDED */
   --font-color-paragraph: var(--font-color-secondary);
   --font-color-link: #10B981;
   --font-color-link-hover: #059669;
@@ -52,11 +54,12 @@
   --font-color-h1: var(--font-color-primary);
   --font-color-h2: var(--font-color-secondary);
   --font-color-h3: var(--font-color-tertiary);
-  
 }
 
 /* ========= DARK THEME ========= */
 .dark-theme {
+  --header-height: 72px;
+  /* Brand */
   --primary-color: #F2F200;
   --secondary-color: #87D100;
   --tertiary-color: #EB7B00;
@@ -65,14 +68,16 @@
   --senary-color: #4D8000;
   --septenary-color: #161616;
 
-  /* Highlight (same palette) */
+  /* Highlight */
   --highlight-color: #E3FCEC;
   --highlight-secondary-color: #A7F3D0;
   --highlight-tertiary-color: #34D399;
   --highlight-quaternary-color: #10B981;
   --highlight-quinary-color: #059669;
+  --highlight-senary-color: #047857;     /* ADDED */
+  --highlight-septenary-color: #065F46;  /* ADDED */
 
-  /* Accent (same palette) */
+  /* Accent */
   --accent-color-light: #E0F7FA;
   --accent-color-medium-light: #B2EBF2;
   --accent-color-medium: #26C6DA;
@@ -94,6 +99,7 @@
   --font-color-primary: #FFFFFF;
   --font-color-secondary: #AFAFAF;
   --font-color-tertiary: #7C7C7C;
+  --font-color-muted: #636363;          /* ADDED; used for placeholders etc. */
   --font-color-paragraph: var(--font-color-secondary);
   --font-color-link: #F2F200;
   --font-color-link-hover: #B3B300;
@@ -108,40 +114,76 @@
   --font-color-h3: var(--font-color-tertiary);
 }
 
-/* ========= SCSS ALIASES to CSS VARS ========= */
-/* Use these $-vars anywhere after @use '...styles.variables' as *; */
+/* ========= SCSS MAPPINGS (convenience) ========= */
+/* Brand */
 $primary-color: var(--primary-color);
 $secondary-color: var(--secondary-color);
 $tertiary-color: var(--tertiary-color);
 $quaternary-color: var(--quaternary-color);
 $quinary-color: var(--quinary-color);
+$senary-color: var(--senary-color);
+$septenary-color: var(--septenary-color);
 
+/* Highlight */
 $highlight-color: var(--highlight-color);
 $highlight-secondary-color: var(--highlight-secondary-color);
 $highlight-tertiary-color: var(--highlight-tertiary-color);
 $highlight-quaternary-color: var(--highlight-quaternary-color);
 $highlight-quinary-color: var(--highlight-quinary-color);
+$highlight-senary-color: var(--highlight-senary-color);       /* ADDED */
+$highlight-septenary-color: var(--highlight-septenary-color); /* ADDED */
 
+/* Accent */
+$accent-color-light: var(--accent-color-light);
+$accent-color-medium-light: var(--accent-color-medium-light);
+$accent-color-medium: var(--accent-color-medium);
+$accent-color-medium-dark: var(--accent-color-medium-dark);
+$accent-color-dark: var(--accent-color-dark);
+$accent-color-darker: var(--accent-color-darker);
+$accent-color-darkest: var(--accent-color-darkest);
+
+/* Neutrals */
 $neutral-color-light: var(--neutral-color-light);
+$neutral-color-medium-light: var(--neutral-color-medium-light);
 $neutral-color-medium: var(--neutral-color-medium);
 $neutral-color-medium-dark: var(--neutral-color-medium-dark);
+$neutral-color-dark: var(--neutral-color-dark);
+$neutral-color-darker: var(--neutral-color-darker);
+$neutral-color-darkest: var(--neutral-color-darkest);
 
+/* Fonts */
 $font-color-primary: var(--font-color-primary);
 $font-color-secondary: var(--font-color-secondary);
 $font-color-tertiary: var(--font-color-tertiary);
+$font-color-muted: var(--font-color-muted);        /* ADDED */
 $font-color-paragraph: var(--font-color-paragraph);
 $font-color-link: var(--font-color-link);
 $font-color-link-hover: var(--font-color-link-hover);
 
+/* Backgrounds */
 $card-background: var(--card-background);
+$section-background: var(--section-background);
 
-/* Extras used in your files */
-$white: #ffffff;
-/* Used in toast as comments hinted */
-$level-bonus-color: #e74c3c; /* red */
-$level-intro-color: #3498db; /* blue */
+/* Headings */
 $font-color-h1: var(--font-color-h1);
 $font-color-h2: var(--font-color-h2);
 $font-color-h3: var(--font-color-h3);
 
-//
+/* Extras */
+$white: #ffffff;
+$level-bonus-color: #e74c3c; /* red */
+$level-intro-color: #3498db; /* blue */
+$level-intermediate-color: #f1c40f; /* yellow */
+$level-advanced-color: #2ecc71; /* green */
+$level-expert-color: #9b59b6; /* purple */
+$level-master-color: #e67e22; /* orange */
+$level-guru-color: #1abc9c; /* turquoise */
+$level-legendary-color: #34495e; /* dark blue-gray */
+$level-mythical-color: #7f8c8d; /* gray */
+$level-immortal-color: #95a5a6; /* light gray */
+$level-divine-color: #d35400; /* dark orange */
+$level-celestial-color: #8e44ad; /* dark purple */
+$level-ethereal-color: #27ae60; /* dark green */
+$level-arcane-color: #2980b9; /* dark blue */
+$level-ancient-color: #c0392b; /* dark red */
+$level-mystic-color: #f39c12; /* dark yellow */

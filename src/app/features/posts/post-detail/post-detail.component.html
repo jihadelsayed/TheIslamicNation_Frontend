@@ -1,0 +1,23 @@
+<article class="post-detail card">
+  <header class="meta">
+    <h3 class="title">{{ post.title }}</h3>
+    <div class="sub muted">by {{ post.author }} · {{ post.time | timeAgo }} · in {{ post.group }}</div>
+  </header>
+
+  <section class="content" [innerHTML]="post.bodyHtml"></section>
+
+  <footer class="actions">
+    <button class="btn">Like</button>
+    <button class="btn outline">Share</button>
+    <button class="btn outline">Report</button>
+  </footer>
+</article>
+
+<section class="comments">
+  <h4>Comments</h4>
+  <div class="comment" *ngFor="let c of comments">
+    <div class="meta muted">{{ c.author }} · {{ c.time | timeAgo }}</div>
+    <div class="body" [innerHTML]="c.html"></div>
+  </div>
+  <div class="empty" *ngIf="!comments.length">No comments yet.</div>
+</section>

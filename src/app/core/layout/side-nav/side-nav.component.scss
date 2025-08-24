@@ -1,0 +1,46 @@
+@use 'styles/styles.variables.scss' as *;
+
+.left-nav {
+  display: grid;
+  gap: 6px;
+}
+
+.item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 9999px;
+  color: $font-color-secondary;
+  text-decoration: none;
+
+  &:hover {
+    background: $section-background;
+    color: $font-color-primary;
+  }
+
+  &.active {
+    color: $font-color-primary;
+    font-weight: 600;
+    background: color-mix(in srgb, $section-background 70%, transparent);
+    border: 1px solid $neutral-color-medium-light;
+  }
+}
+
+.icon { font-size: 18px; line-height: 1; }
+.label { font-size: 15px; }
+
+.post-cta {
+  margin-top: 8px;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  border: 0;
+  background: $tertiary-color;
+  color: $septenary-color;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover { background: $quaternary-color; }
+}

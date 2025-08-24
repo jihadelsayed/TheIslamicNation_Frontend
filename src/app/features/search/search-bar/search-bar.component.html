@@ -1,0 +1,35 @@
+<div class="search" [class.inline]="inline">
+  <form (ngSubmit)="onSubmit()">
+    <!-- use a template ref; no TS cast in template -->
+    <input
+      #box
+      type="search"
+      [value]="q()"
+      (input)="handleInput()"
+      (keydown.escape)="closePanel()"
+      (focus)="focused.set(true)"
+      (blur)="focused.set(false)"
+      placeholder="Search…"
+      aria-label="Search"
+    />
+
+  </form>
+
+  <div class="panel" *ngIf="focused() && suggestions().length">
+    <button
+      class="row"
+      type="button"
+      *ngFor="let s of suggestions()"
+      (mousedown)="$event.preventDefault()"
+      (click)="select(s)"
+    >
+      <span class="badge"
+            [class.group]="s.kind==='group'"
+            [class.user]="s.kind==='user'"
+            [class.post]="s.kind==='post'">
+        {{ s.kind }}
+      </span>
+      <span class="label">{{ s.label }}</span>
+    </button>
+  </div>
+</div>

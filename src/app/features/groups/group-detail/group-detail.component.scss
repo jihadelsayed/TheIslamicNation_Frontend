@@ -1,0 +1,55 @@
+@use 'styles/styles.variables.scss' as *;
+
+.group-detail {
+  display: grid; gap: 1rem;
+}
+
+.banner {
+  height: 140px;
+  border-radius: 12px;
+  background: linear-gradient(120deg, $accent-color-medium, $accent-color-medium-dark);
+}
+
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  .muted { color: $font-color-tertiary; }
+  .desc  { color: $font-color-secondary; margin-top: .25rem; }
+
+  .actions { display: flex; gap: .5rem; }
+  .btn {
+    padding: .5rem .9rem; border-radius: 9999px; border: 0; background: $tertiary-color; color: $septenary-color;
+    &:hover { background: $quaternary-color; }
+    &.outline {
+      background: transparent; color: $font-color-secondary; border: 1px solid $neutral-color-medium-light;
+      &:hover { border-color: $highlight-quaternary-color; }
+    }
+  }
+}
+
+.tabs {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  button {
+    border: 1px solid $neutral-color-medium-light; background: $card-background; color: $font-color-secondary;
+    padding: .45rem .9rem; border-radius: 9999px; cursor: pointer;
+    &.active,
+    &:hover { border-color: $highlight-quaternary-color; color: $font-color-primary; box-shadow: 0 0 0 3px rgba(16,185,129,.12); }
+  }
+}
+
+.content { display: grid; gap: 1rem; }
+
+.card {
+  background: $card-background; border: 1px solid $neutral-color-medium-light;
+  border-radius: 12px; padding: .9rem;
+  h4 { margin-bottom: .25rem; color: $font-color-primary; }
+  .muted { color: $font-color-tertiary; }
+}
+
+.list { display: grid; gap: .75rem; }
+.chips { display: flex; gap: .5rem; flex-wrap: wrap; }
+.chip {
+  background: $section-background; border: 1px solid $neutral-color-medium-light; color: $font-color-secondary;
+  padding: .35rem .7rem; border-radius: 9999px;
+}
+
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }

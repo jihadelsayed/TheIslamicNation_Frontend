@@ -1,0 +1,67 @@
+<section class="search-page">
+  <form class="searchbar" (ngSubmit)="doSearch()">
+    <input
+      type="search"
+      name="q"
+      placeholder="Search everything…"
+      [(ngModel)]="q"
+    />
+    <button type="submit" class="cta-button">Search</button>
+  </form>
+
+  <div class="filters">
+    <button (click)="setTab('all')"    [class.active]="tab==='all'">All</button>
+    <button (click)="setTab('posts')"  [class.active]="tab==='posts'">Posts</button>
+    <button (click)="setTab('groups')" [class.active]="tab==='groups'">Groups</button>
+    <button (click)="setTab('qa')"     [class.active]="tab==='qa'">Q&amp;A</button>
+    <button (click)="setTab('events')" [class.active]="tab==='events'">Events</button>
+  </div>
+
+  <div class="hint" *ngIf="!q">Type a query and hit Enter.</div>
+
+  <div class="results" *ngIf="q">
+    <ng-container [ngSwitch]="tab">
+      <!-- POSTS -->
+      <div *ngSwitchCase="'posts'" class="grid">
+        <app-post-card *ngFor="let p of mock.posts" [post]="p"></app-post-card>
+        <div class="empty" *ngIf="!mock.posts.length">No posts found.</div>
+      </div>
+
+      <!-- GROUPS (UI placeholder) -->
+      <div *ngSwitchCase="'groups'" class="grid">
+        <article class="card" *ngFor="let g of mock.groups">
+          <h4>{{ g.name }}</h4>
+          <p class="muted">{{ g.members }} members</p>
+          <p>{{ g.desc }}</p>
+        </article>
+        <div class="empty" *ngIf="!mock.groups.length">No groups found.</div>
+      </div>
+
+      <!-- Q&A (UI placeholder) -->
+      <div *ngSwitchCase="'qa'" class="list">
+        <div class="row" *ngFor="let qitem of mock.qa">
+          <a class="link">{{ qitem.title }}</a>
+          <span class="muted">{{ qitem.answers }} answers</span>
+        </div>
+        <div class="empty" *ngIf="!mock.qa.length">No questions found.</div>
+      </div>
+
+      <!-- EVENTS (UI placeholder) -->
+      <div *ngSwitchCase="'events'" class="grid">
+        <article class="card" *ngFor="let e of mock.events">
+          <h4>{{ e.title }}</h4>
+          <p class="muted">{{ e.startsAt | date:'mediumDate' }} · {{ e.location }}</p>
+        </article>
+        <div class="empty" *ngIf="!mock.events.length">No events found.</div>
+      </div>
+
+      <!-- ALL -->
+      <div *ngSwitchDefault class="all">
+        <h4>Top results</h4>
+        <div class="grid">
+          <app-post-card *ngFor="let p of mock.posts" [post]="p"></app-post-card>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="posts-list">
+  <header class="bar">
+    <h3>Posts</h3>
+    <div class="actions">
+      <input type="search" placeholder="Search posts…" [(ngModel)]="q" />
+      <select [(ngModel)]="type">
+        <option value="all">All types</option>
+        <option value="post">Posts</option>
+        <option value="video">Videos</option>
+        <option value="link">Links</option>
+      </select>
+      <a class="btn" routerLink="/posts/compose">Compose</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <app-post-card *ngFor="let p of filtered" [post]="p"></app-post-card>
+  </div>
+
+  <div class="empty" *ngIf="!filtered.length">No posts match your filters.</div>
+</section>

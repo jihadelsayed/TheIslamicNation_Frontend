@@ -1,0 +1,26 @@
+<section class="groups-list">
+  <header class="bar">
+    <h3>Groups</h3>
+    <div class="actions">
+      <input type="search" placeholder="Search groups…" [(ngModel)]="q" />
+      <a routerLink="/groups/create" class="btn">Create Group</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <article class="card" *ngFor="let g of filtered">
+      <div class="cover"></div>
+      <div class="body">
+        <h4><a [routerLink]="['/groups', g.slug]">{{ g.name }}</a></h4>
+        <p class="muted">{{ g.members }} members</p>
+        <p class="desc">{{ g.desc }}</p>
+        <div class="row">
+          <a class="btn outline" [routerLink]="['/groups', g.slug]">View</a>
+          <button class="btn">Join</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="empty" *ngIf="!filtered.length">No groups found.</div>
+</section>

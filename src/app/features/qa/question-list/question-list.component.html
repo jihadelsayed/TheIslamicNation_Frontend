@@ -1,0 +1,33 @@
+<section class="qa-list">
+  <header class="bar">
+    <h3>Q&amp;A</h3>
+    <div class="actions">
+      <input type="search" placeholder="Search questions…" [(ngModel)]="q" />
+      <input type="text" placeholder="Filter tag (e.g., fiqh)" [(ngModel)]="tag" />
+      <select [(ngModel)]="sort">
+        <option value="new">Newest</option>
+        <option value="votes">Most votes</option>
+        <option value="answers">Most answers</option>
+      </select>
+      <a class="btn" routerLink="/qa/ask">Ask Question</a>
+    </div>
+  </header>
+
+  <div class="list">
+    <article class="row" *ngFor="let item of filtered">
+      <div class="stats">
+        <div class="stat"><strong>{{ item.votes }}</strong><span>votes</span></div>
+        <div class="stat"><strong>{{ item.answers }}</strong><span>answers</span></div>
+      </div>
+      <div class="content">
+        <a class="title" [routerLink]="['/qa', item.id]">{{ item.title }}</a>
+        <div class="tags">
+          <span class="tag" *ngFor="let t of item.tags">{{ t }}</span>
+        </div>
+        <div class="meta">asked by {{ item.author }}</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="empty" *ngIf="!filtered.length">No questions found.</div>
+</section>

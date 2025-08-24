@@ -1,0 +1,5 @@
+@use 'styles/styles.variables.scss' as *;
+
+.form-default { max-width: 720px; }
+
+.row { display: flex; gap: .5rem; justify-content: flex-end; }

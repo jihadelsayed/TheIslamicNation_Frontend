@@ -1,0 +1,34 @@
+<section class="resources-page">
+  <header class="bar">
+    <h3>Resources</h3>
+    <div class="actions">
+      <input type="search" placeholder="Search resources…" [(ngModel)]="q" />
+      <select [(ngModel)]="kind">
+        <option value="all">All</option>
+        <option value="article">Articles</option>
+        <option value="pdf">PDFs</option>
+        <option value="video">Videos</option>
+        <option value="book">Books</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="grid">
+    <article class="card" *ngFor="let r of filtered">
+      <div class="icon">{{ r.kind | uppercase }}</div>
+      <div class="body">
+        <h4><a [routerLink]="['/resources', r.id]">{{ r.title }}</a></h4>
+        <p class="muted" *ngIf="r.author">by {{ r.author }}</p>
+        <p class="desc">{{ r.desc }}</p>
+        <div class="tags">
+          <span class="tag" *ngFor="let t of r.tags">{{ t }}</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn outline" [routerLink]="['/resources', r.id]">Open</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="empty" *ngIf="!filtered.length">No resources found.</div>
+</section>

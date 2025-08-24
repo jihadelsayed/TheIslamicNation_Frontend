@@ -1,0 +1,26 @@
+@use 'styles/styles.variables.scss' as *;
+
+.card {
+  background: $card-background; border: 1px solid $neutral-color-medium-light;
+  border-radius: 12px; padding: 1rem; margin-bottom: 1rem;
+}
+
+.head { display: grid; grid-template-columns: 96px 1fr; gap: 1rem; }
+
+.date {
+  width: 96px; height: 96px; border-radius: 12px;
+  display: grid; place-items: center; background: $section-background; border: 1px solid $neutral-color-medium-light;
+  .d { font-size: 2rem; font-weight: 800; line-height: 1; }
+  .m { color: $font-color-tertiary; margin-top: .15rem; }
+}
+
+.title { color: $font-color-primary; margin-bottom: .25rem; }
+.meta { color: $font-color-tertiary; }
+.desc { color: $font-color-secondary; margin-top: .5rem; }
+
+.actions { display: flex; gap: .5rem; margin-top: .75rem; }
+.btn {
+  padding: .5rem .9rem; border-radius: 9999px; border: 0; background: $tertiary-color; color: $septenary-color;
+  &:hover { background: $quaternary-color; }
+  &.outline { background: transparent; color: $font-color-secondary; border: 1px solid $neutral-color-medium-light; &:hover { border-color: $highlight-quaternary-color; } }
+}

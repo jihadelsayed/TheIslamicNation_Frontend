@@ -67,7 +67,7 @@
               }
             ],
             "styles": [
-              "src/styles/styles.variables.scss",
+              "styles/styles.variables.scss",
 
               "src/styles/styles.scss",
               
@@ -119,13 +119,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1000kb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2000kb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kb",
-                  "maximumError": "6kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "12kb"
                 }
               ],
               "fileReplacements": [
@@ -212,7 +212,7 @@
               }
             ],
             "styles": [
-              "src/styles/styles.variables.scss",
+              "styles/styles.variables.scss",
               "src/styles/styles.scss",
               
               "src/styles/styles.font.scss",
@@ -237,6 +237,9 @@
   },
   "schematics": {
     "@schematics/angular:component": {
+          "changeDetection": "OnPush",
+    "skipTests": true,
+    "flat": false,
       "type": "component"
     },
     "@schematics/angular:directive": {

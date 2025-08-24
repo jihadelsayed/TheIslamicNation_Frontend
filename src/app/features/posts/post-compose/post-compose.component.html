@@ -1,0 +1,84 @@
+<form class="form-default compose" (ngSubmit)="submit()">
+  <h3>Create Post</h3>
+
+  <div class="form-group">
+    <label>Title</label>
+    <input name="title"
+           [ngModel]="model().title"
+           (ngModelChange)="update('title', $event)"
+           required />
+  </div>
+
+  <div class="form-group">
+    <label>Type</label>
+    <select name="type"
+            [ngModel]="model().type"
+            (ngModelChange)="update('type', $event)">
+      <option value="post">Post</option>
+      <option value="video">Video</option>
+      <option value="link">Link</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Group</label>
+    <select name="group"
+            [ngModel]="model().group"
+            (ngModelChange)="update('group', $event)"
+            required>
+      <option value="" disabled>Select a group…</option>
+      <option *ngFor="let g of groups" [value]="g.slug">{{ g.name }}</option>
+    </select>
+  </div>
+
+  <!-- Content (Post) -->
+  <ng-container *ngIf="model().type === 'post'">
+    <div class="form-group">
+      <label>Content</label>
+      <textarea name="content"
+                rows="8"
+                placeholder="Write your post…"
+                [ngModel]="model().content"
+                (ngModelChange)="update('content', $event)"></textarea>
+    </div>
+  </ng-container>
+
+  <!-- Video URL -->
+  <ng-container *ngIf="model().type === 'video'">
+    <div class="form-group">
+      <label>YouTube URL</label>
+      <input name="videoUrl"
+             placeholder="https://www.youtube.com/watch?v=..."
+             [ngModel]="model().videoUrl"
+             (ngModelChange)="update('videoUrl', $event)" />
+      <span class="small-text">We’ll embed it on the post.</span>
+    </div>
+  </ng-container>
+
+  <!-- Link URL -->
+  <ng-container *ngIf="model().type === 'link'">
+    <div class="form-group">
+      <label>External Link</label>
+      <input name="linkUrl"
+             placeholder="https://example.com/article"
+             [ngModel]="model().linkUrl"
+             (ngModelChange)="update('linkUrl', $event)" />
+    </div>
+  </ng-container>
+
+  <!-- Attachments -->
+  <div class="form-group">
+    <label>Attachments</label>
+    <input type="file" (change)="onFileChange($event)" multiple />
+    <ul class="attachments" *ngIf="model().attachments.length">
+      <li *ngFor="let f of model().attachments; let i = index">
+        {{ f.name }}
+        <button type="button" class="link" (click)="removeAttachment(i)">remove</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <button type="submit">Publish</button>
+  </div>
+</form>

@@ -11,6 +11,24 @@
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
   <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> -->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+   <script>
+  (function () {
+    try {
+      var key = 'tin_theme';
+      var saved = localStorage.getItem(key);
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var isDark = saved === 'dark' || (saved === 'system' && prefersDark);
+      if (isDark) {
+        document.documentElement.classList.add('dark-theme');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark-theme');
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (_) {}
+  })();
+</script>
+
 </head>
 
 <body>

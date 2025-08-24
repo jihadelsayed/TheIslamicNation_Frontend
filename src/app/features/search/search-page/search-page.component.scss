@@ -1,0 +1,110 @@
+@use 'styles/styles.variables.scss' as *;
+
+.search-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.searchbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem;
+
+  input {
+    border: 1px solid $neutral-color-medium-light;
+    background: $white;
+    border-radius: 9999px;
+    padding: .6rem .9rem;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: $highlight-quaternary-color;
+      box-shadow: 0 0 0 3px rgba(16,185,129,.15);
+    }
+  }
+
+  .cta-button {
+    align-self: center;
+  }
+}
+
+.filters {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+
+  button {
+    border: 1px solid $neutral-color-medium-light;
+    background: $card-background;
+    color: $font-color-secondary;
+    padding: .4rem .75rem;
+    border-radius: 9999px;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      border-color: $highlight-quaternary-color;
+      color: $font-color-primary;
+      box-shadow: 0 0 0 3px rgba(16,185,129,.12);
+    }
+  }
+}
+
+.hint {
+  color: $font-color-tertiary;
+}
+
+.results {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1080px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 720px) { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: $card-background;
+  border: 1px solid $neutral-color-medium-light;
+  border-radius: 12px;
+  padding: .9rem;
+
+  h4 { margin-bottom: .25rem; color: $font-color-primary; }
+  .muted { color: $font-color-tertiary; }
+}
+
+.list {
+  display: grid;
+  gap: .5rem;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .6rem .75rem;
+    background: $card-background;
+    border: 1px solid $neutral-color-medium-light;
+    border-radius: 10px;
+
+    .link {
+      color: $font-color-link;
+      text-decoration: none;
+
+      &:hover { color: $font-color-link-hover; text-decoration: underline; }
+    }
+
+    .muted { color: $font-color-tertiary; }
+  }
+}
+
+.empty {
+  color: $font-color-tertiary;
+  text-align: center;
+  padding: .75rem;
+}

@@ -1,0 +1,46 @@
+<article class="question card">
+  <header class="q-head">
+    <div class="votes">
+      <button class="vote" (click)="upvoteQ()">▲</button>
+      <div class="count">{{ question.votes }}</div>
+      <button class="vote" (click)="downvoteQ()">▼</button>
+    </div>
+    <div class="content">
+      <h3 class="title">{{ question.title }}</h3>
+      <div class="meta muted">asked by {{ question.author }} · {{ question.time | timeAgo }}</div>
+      <div class="tags">
+        <span class="tag" *ngFor="let t of question.tags">{{ t }}</span>
+      </div>
+      <div class="body" [innerHTML]="question.bodyHtml"></div>
+    </div>
+  </header>
+</article>
+
+<section class="answers">
+  <h4>{{ answers.length }} Answers</h4>
+
+  <article class="answer card" *ngFor="let a of answers">
+    <div class="votes">
+      <button class="vote" (click)="upvoteA(a)">▲</button>
+      <div class="count">{{ a.votes }}</div>
+      <button class="vote" (click)="downvoteA(a)">▼</button>
+    </div>
+    <div class="content">
+      <div class="meta muted">
+        {{ a.author }} · {{ a.time | timeAgo }}
+        <span class="badge" *ngIf="a.accepted">Accepted</span>
+      </div>
+      <div class="body" [innerHTML]="a.html"></div>
+    </div>
+  </article>
+
+  <div class="empty" *ngIf="!answers.length">No answers yet.</div>
+</section>
+
+<section class="answer-form card">
+  <h4>Your Answer</h4>
+  <textarea [(ngModel)]="draft" name="draft" rows="6" placeholder="Write a clear, sourced answer…"></textarea>
+  <div class="row">
+    <button (click)="submitAnswer()">Post Answer</button>
+  </div>
+</section>

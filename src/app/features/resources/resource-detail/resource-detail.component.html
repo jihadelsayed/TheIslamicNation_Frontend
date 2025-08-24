@@ -1,0 +1,22 @@
+<article class="resource card">
+  <header class="head">
+    <div class="icon">{{ resource.kind | uppercase }}</div>
+    <div class="info">
+      <h3 class="title">{{ resource.title }}</h3>
+      <div class="meta muted">
+        <span *ngIf="resource.author">by {{ resource.author }} · </span>
+        <span class="tags">
+          <span class="tag" *ngFor="let t of resource.tags">{{ t }}</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <section class="content" [innerHTML]="resource.bodyHtml"></section>
+
+  <footer class="actions">
+    <a class="btn" [href]="resource.link" target="_blank" rel="noopener noreferrer">Open Source</a>
+    <button class="btn outline" (click)="copyLink()">Copy Link</button>
+    <button class="btn outline">Report</button>
+  </footer>
+</article>

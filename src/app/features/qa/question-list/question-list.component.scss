@@ -1,0 +1,42 @@
+@use 'styles/styles.variables.scss' as *;
+
+.qa-list { display: grid; gap: 1rem; }
+
+.bar {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem;
+  .actions { display: flex; gap: .5rem; align-items: center; }
+  input, select {
+    border: 1px solid $neutral-color-medium-light; background: $white;
+    border-radius: 9999px; padding: .5rem .8rem;
+    &:focus { outline: none; border-color: $highlight-quaternary-color; box-shadow: 0 0 0 3px rgba(16,185,129,.15); }
+  }
+  .btn {
+    padding: .5rem .9rem; border-radius: 9999px; text-decoration: none;
+    background: $tertiary-color; color: $septenary-color; border: 0;
+    &:hover { background: $quaternary-color; }
+  }
+}
+
+.list { display: grid; gap: .75rem; }
+
+.row {
+  display: grid; grid-template-columns: 120px 1fr; gap: .75rem;
+  background: $card-background; border: 1px solid $neutral-color-medium-light; border-radius: 12px; padding: .75rem .9rem;
+
+  .stats {
+    display: flex; gap: .5rem;
+    .stat { background: $section-background; border: 1px solid $neutral-color-medium-light; border-radius: 10px; padding: .4rem .6rem; text-align: center;
+      strong{ display:block; }
+      span{ color: $font-color-tertiary; font-size: .8rem; }
+    }
+  }
+
+  .content {
+    .title { color: $font-color-link; text-decoration: none; font-weight: 600; &:hover{ color: $font-color-link-hover; text-decoration: underline; } }
+    .tags { display:flex; gap:.4rem; margin:.3rem 0; flex-wrap: wrap; }
+    .tag { background:$section-background; border:1px solid $neutral-color-medium-light; border-radius:9999px; padding:.2rem .6rem; color:$font-color-secondary; }
+    .meta { color: $font-color-tertiary; }
+  }
+}
+
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }

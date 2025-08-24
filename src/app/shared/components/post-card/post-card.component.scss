@@ -1,0 +1,18 @@
+@use 'styles/styles.variables.scss' as *;
+
+.post {
+  display: grid; grid-template-columns: 48px 1fr; gap: 10px;
+  padding: 12px;
+  background: $card-background;
+  border: 1px solid $neutral-color-medium-light;
+  border-radius: 16px;
+
+  .avatar { width: 48px; height: 48px; border-radius: 50%; background: $neutral-color-medium-light; }
+  .header { display: flex; gap: 6px; align-items: baseline; }
+  .author { color: $font-color-primary; font-weight: 600; }
+  .meta { color: $font-color-tertiary; font-size: 12px; }
+  .text { margin-top: 4px; color: $font-color-primary; white-space: pre-wrap; }
+  .actions { margin-top: 8px; display: flex; gap: 16px; color: $font-color-tertiary; font-size: 13px; }
+  .actions button { background: transparent; border: 0; color: inherit; cursor: pointer; }
+  .actions button:hover { color: $font-color-primary; }
+}

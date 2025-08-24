@@ -1,0 +1,52 @@
+@use 'styles/styles.variables.scss' as *;
+
+.events-page { display: grid; gap: 1rem; }
+
+.bar {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem;
+
+  .actions {
+    display: flex; gap: .5rem; align-items: center;
+
+    input, select {
+      border: 1px solid $neutral-color-medium-light; background: $white;
+      border-radius: 9999px; padding: .5rem .8rem;
+      &:focus { outline: none; border-color: $highlight-quaternary-color; box-shadow: 0 0 0 3px rgba(16,185,129,.15); }
+    }
+
+    .btn {
+      padding: .5rem .9rem; border-radius: 9999px; text-decoration: none;
+      background: $tertiary-color; color: $septenary-color; border: 0;
+      &:hover { background: $quaternary-color; }
+    }
+  }
+}
+
+.grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  display: grid; grid-template-columns: 80px 1fr auto; gap: 1rem; align-items: center;
+  background: $card-background; border: 1px solid $neutral-color-medium-light; border-radius: 12px; padding: .9rem;
+
+  .date {
+    width: 80px; height: 80px;
+    border: 1px solid $neutral-color-medium-light; border-radius: 12px;
+    display: grid; place-items: center; background: $section-background;
+    .d { font-size: 1.4rem; font-weight: 800; line-height: 1; }
+    .m { color: $font-color-tertiary; margin-top: .15rem; }
+  }
+
+  h4 { margin-bottom: .2rem; color: $font-color-primary; }
+  .muted { color: $font-color-tertiary; }
+
+  .actions .btn {
+    background: transparent; color: $font-color-secondary; border: 1px solid $neutral-color-medium-light; border-radius: 9999px;
+    padding: .45rem .8rem; text-decoration: none;
+    &:hover { border-color: $highlight-quaternary-color; }
+  }
+}
+
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }

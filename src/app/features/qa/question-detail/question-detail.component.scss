@@ -1,0 +1,51 @@
+@use 'styles/styles.variables.scss' as *;
+
+.card {
+  background: $card-background; border: 1px solid $neutral-color-medium-light;
+  border-radius: 12px; padding: 1rem; margin-bottom: 1rem;
+}
+
+.q-head {
+  display: grid; grid-template-columns: 64px 1fr; gap: 1rem;
+}
+
+.votes {
+  display: flex; flex-direction: column; align-items: center; gap: .25rem;
+  .vote {
+    background: transparent; border: 1px solid $neutral-color-medium-light; border-radius: 8px;
+    width: 36px; height: 28px; cursor: pointer; color: $font-color-secondary;
+    &:hover { border-color: $highlight-quaternary-color; }
+  }
+  .count { font-weight: 700; }
+}
+
+.title { color: $font-color-primary; margin-bottom: .25rem; }
+.muted { color: $font-color-tertiary; }
+
+.tags { display:flex; gap:.4rem; margin:.3rem 0 .5rem; flex-wrap: wrap; }
+.tag {
+  background:$section-background; border:1px solid $neutral-color-medium-light; border-radius:9999px;
+  padding:.2rem .6rem; color:$font-color-secondary;
+}
+
+.body { color: $font-color-secondary; }
+
+.answers .answer {
+  display: grid; grid-template-columns: 64px 1fr; gap: 1rem;
+  .badge { background: $highlight-quaternary-color; color: $septenary-color; border-radius: 9999px; padding: .1rem .5rem; margin-left: .5rem; font-size: .8rem; }
+}
+
+.answer-form {
+  display: grid; gap: .5rem;
+  textarea {
+    border: 1px solid $neutral-color-medium-light; border-radius: 8px; padding: .6rem .75rem; background: $white;
+    &:focus { outline: none; border-color: $highlight-quaternary-color; box-shadow: 0 0 0 3px rgba(16,185,129,.15); }
+  }
+  .row { display: flex; justify-content: flex-end;
+    button { padding: .5rem .9rem; border-radius: 9999px; border: 0; background: $tertiary-color; color: $septenary-color;
+      &:hover { background: $quaternary-color; }
+    }
+  }
+}
+
+.empty { color: $font-color-tertiary; text-align: center; padding: .75rem; }
