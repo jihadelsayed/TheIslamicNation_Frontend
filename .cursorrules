@@ -1,0 +1,33 @@
+# === Project Context ===
+Stack:
+- Frontend: Angular 20 + SSR (Vite). Standalone components. SCSS only. No Tailwind or tp-* junk.
+- Backend: Django + Channels + Knox, Postgres, S3 for static/media.
+- Auth: Hybrid — OTP (phone/email) first, optional password after. Resend cooldown, attempt limits per IP/device.
+- Security: Cookies for tokens (HttpOnly/SameSite=Lax/Strict). No tokens in localStorage.
+- Infra: Nginx + Gunicorn on Linode. GitHub Actions CI/CD. Domain-aware runtime config.
+
+# === Agent Rules ===
+Edits:
+- Propose a short plan first if touching >2 modules. Then apply **minimal diffs**.
+- Keep SSR-safe code (no direct `window`/`document` on server; use injection guards).
+- Update imports/exports, module wiring, and tests when moving files.
+- Never invent secrets; use env variables (.env, settings.py, Angular env service).
+- Keep commit messages atomic and descriptive.
+- Prefer pure TypeScript for triage logic; deterministic rule-runner.
+
+Testing & Lint:
+- Angular: run `npm run lint` and `npm run test` before/after big refactors.
+- Django: run `pytest -q` and `python manage.py check`.
+
+Style:
+- Strict TS. No `any`.
+- SCSS only.
+- Keep comments concise; remove dead code.
+
+Touch scope (default allow):
+- `frontend/src/app/**`, `frontend/src/environments/**`
+- `backend/**` (Django apps: chat, profile, service, auth, etc.)
+- tests in both stacks
+
+Do NOT touch:
+- `node_modules/`, `dist/`, `.venv/`, `.git/`, media, migrations (unless asked)
